@@ -1,0 +1,42 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "required": ["success", "data"],
+  "properties": {
+    "success": { "type": "boolean", "enum": [true] },
+    "data": {
+      "type": "object",
+      "required": ["id", "idEstacion", "codigo", "nombre", "clusterId"],
+      "properties": {
+        "id": { "type": "integer" },
+        "idEstacion": { "type": "integer" },
+        "codigo": { "type": "string" },
+        "nombre": { "type": "string" },
+        "regionId": { "type": "integer" },
+        "estadoId": { "type": "integer" },
+        "municipioId": { "type": "integer" },
+        "parroquiaId": { "type": "integer" },
+        "direccion": { "type": "string" },
+        "codigoPais": { "type": "string" },
+        "mercadoId": { "type": "integer" },
+        "clusterId": { "type": "integer" },
+        "atributos": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "additionalProp1": { "type": "string" },
+              "additionalProp2": { "type": "string" },
+              "additionalProp3": { "type": "string" }
+            }
+          }
+        },
+        "comentAprobacion": { "type": "string" },
+        "tmveOwner": { "type": "boolean" },
+        "estatus": { "type": "integer" },
+        "estatusMorinre": { "type": "integer" },
+        "createdBy": { "type": "string" }
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="krt-ms-direcciones" />
+        <module name="krt-ms-ref-parroquias" />
+        <module name="krt-ms-ref-modelo" />
+        <module name="krt-ms-contacto" />
+        <module name="krt-ms-ref-estados" />
+        <module name="krt-ms-ref-regiones1" />
+        <module name="krt-ms-ref-regiones" />
+        <module name="krt-ms-estaciones" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>

@@ -1,0 +1,42 @@
+{
+  "codigo": "cod241",
+  "nombre": "Estacion Cliente Central",
+  "regionId": 3,
+  "estadoId": 7,
+  "municipioId": 12,
+  "parroquiaId": 45,
+  "atributos": [
+    {
+      "additionalProp1": "TipoA",
+      "additionalProp2": "Activo",
+      "additionalProp3": "Interior"
+    }
+  ],
+  "direccion": {
+    "conglomerado": "CGL-21",
+    "nombreConglomerado": "Conglomerado Central",
+    "inmueble": "Edificio A",
+    "nombreInmueble": "Torre Norte",
+    "piso": "3",
+    "numero": "301",
+    "vialidad": "Av. Principal",
+    "nombreVialidad": "Avenida Bolívar",
+    "vialidad2": "Calle Secundaria",
+    "nombreVialidad2": "Calle 8",
+    "puntoReferencia": "Frente al centro comercial",
+    "codigoPostal": "1010",
+    "ciudad": "Caracas",
+    "parroquia": "Altagracia",
+    "municipio": "Libertador",
+    "estado": "Distrito Capital",
+    "pais": "Venezuela",
+    "tipoUbicacion": "Urbana"
+  },
+  "codigoPais": "VE",
+  "mercadoId": 2,
+  "clusterId": 5,
+  "comentAprobacion": "Estacion cliente aprobada para pruebas",
+  "estatus": 1,
+  "estatusMorinre": 0,
+  "createdBy": "Karate Cliente"
+}

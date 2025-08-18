@@ -1,0 +1,41 @@
+{
+  "codigo": "COD78",
+  "nombre": "Estacion Movistar Morinre",
+  "regionId": 1,
+  "estadoId": 1,
+  "municipioId": 1,
+  "parroquiaId": 1,
+  "atributos": [
+    {
+      "Estacion Prueba1": "Prueba1",
+      "Estacion Prueba2": "Prueba2",
+      "Estacion Prueba3": "Prueba3"
+    }
+  ],
+  "direccion": {
+    "conglomerado": "conglomerado",
+    "nombreConglomerado": "Movistar",
+    "inmueble": "inmueble",
+    "nombreInmueble": "nombreInmueble",
+    "piso": "1",
+    "numero": "1",
+    "vialidad": "7",
+    "nombreVialidad": "nombreVialidad",
+    "vialidad2": "vialidad2",
+    "nombreVialidad2": "nombreVialidad2",
+    "puntoReferencia": "Prueba morinre",
+    "codigoPostal": "CP:codigoPostal",
+    "ciudad": "ciudad",
+    "parroquia": "parroquia",
+    "municipio": "municipio",
+    "estado": "estado",
+    "pais": "Venezuela",
+    "tipoUbicacion": "tipoUbicacion"
+  },
+  "codigoPais": "VE",
+  "mercadoId": 1,
+  "clusterId": 1,
+  "comentAprobacion": "Prueba morinre--",
+  "tmveOwner": true,
+  "updatedBy": "Movistar"
+}

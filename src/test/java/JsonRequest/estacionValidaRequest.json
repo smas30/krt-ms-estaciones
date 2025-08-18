@@ -1,0 +1,46 @@
+{
+  "codigo": "ESTKRT",
+  "nombre": "Estacion Central KARATE",
+  "regionId": 1,
+  "estadoId": 1,
+  "municipioId": 1,
+  "parroquiaId": 1,
+  "atributos": [
+    {
+      "tipo": "CAPACIDAD",
+      "valor": "1000",
+      "descripcion": "Capacidad maxima de usuarios"
+    },
+    {
+      "tipo": "TECNOLOGIA",
+      "valor": "4G",
+      "descripcion": "Tecnologia disponible"
+    }
+  ],
+  "direccion": {
+    "conglomerado": "CENTRO",
+    "nombreConglomerado": "Centro Comercial",
+    "inmueble": "EDIFICIO",
+    "nombreInmueble": "Torre Principal",
+    "piso": "1",
+    "numero": "123",
+    "vialidad": "AVENIDA",
+    "nombreVialidad": "Av. Principal",
+    "vialidad2": "CALLE",
+    "nombreVialidad2": "Calle Secundaria",
+    "puntoReferencia": "Frente al Parque Central",
+    "codigoPostal": "1001",
+    "ciudad": "Ciudad Capital",
+    "parroquia": "Centro",
+    "municipio": "Capital",
+    "estado": "Distrito Capital",
+    "pais": "Venezuela",
+    "tipoUbicacion": "URBANA"
+  },
+  "codigoPais": "VE",
+  "mercadoId": 1,
+  "clusterId": 1,
+  "comentAprobacion": "Estacion aprobada para operacion KARATE",
+  "estatus": 1,
+  "createdBy": "E11011"
+}

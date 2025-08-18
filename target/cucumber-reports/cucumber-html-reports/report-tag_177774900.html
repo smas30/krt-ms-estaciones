@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports (no 1.0) - Tag: @obtenerEstacionPorCodigo</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+        <th>Number</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>krt-ms-estaciones</td>
+        <td>1.0</td>
+      <td>18 ago. 2025, 18:24</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Tag Report</h2>
+  </div>
+</div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table class="stats-table">
+
+
+<thead>
+  <tr class="header dont-sort">
+      <th></th>
+    <th colspan="6">Steps</th>
+    <th colspan="3">Scenarios</th>
+    <th colspan="2">Features</th>
+  </tr>
+  <tr>
+    <th>Tag</th>
+    <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="skipped">Skipped</th>
+    <th class="pending">Pending</th>
+    <th class="undefined">Undefined</th>
+    <th class="total">Total</th>
+
+    <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="total">Total</th>
+
+    <th>Duration</th>
+    <th>Status</th>
+  </tr>
+</thead>
+
+
+        <tbody>
+        <tr>
+          <td class="tagname">@obtenerEstacionPorCodigo</td>
+          <td      class="passed"    >7</td>
+          <td >0</td>
+          <td >0</td>
+          <td >0</td>
+          <td >0</td>
+          <td class="total">7</td>
+
+          <td  class="passed"    >1</td>
+          <td >0</td>
+          <td class="total">1</td>
+
+          <td class="duration" data-value="316366000">0.316</td>
+          <td class="passed">Passed</td>
+        </tr>
+        </tbody>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-1 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <div class="elements">
+
+
+<div class="element">
+    <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_2_487078569.html">api/obtenerEstacion.feature</a>
+    </div>
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_177774900.html">@obtenerEstacionPorCodigo</a>
+       <a href="report-tag_3721902660.html">@obtenerEstaciones</a>
+</div>
+
+
+  <span class="lead-duration duration">0.316</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
+
+<div class="brief passed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Obtener estaciones por codigo</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-1" class="collapse collapsable-details ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-2">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-2" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url baseUrl</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">param codigo = 'cod600'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">method GET</span>
+
+  <span class="lead-duration duration">0.297</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-3">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-3" class="collapse collapsable-details">
+        <pre>18:24:14.892 request:
+1 &gt; GET http://10.161.169.27:8517/api/v1/estaciones?codigo=cod600
+1 &gt; Content-Type: application/json
+1 &gt; X-USER-ID: E11011
+1 &gt; X-CORRELATION-ID: 1445|E11011|234234
+1 &gt; X-TOKEN-ID: eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IkU3Mzc4MURCNzAwNkVDQjc3NzFGMENEQkNEQzUzNEU5Iiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU1NTU1ODU0LCJleHAiOjE3NTU1NTk0NTR9.7MsbLbIQGN5nte-Iig6juq3ip7L8k89AwEuXTadk9CNV9fhzy9_AeCm2g0Vy9_f5
+1 &gt; Host: 10.161.169.27:8517
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+18:24:15.187 response time in milliseconds: 293
+1 &lt; 200
+1 &lt; transfer-encoding: chunked
+1 &lt; Content-Type: application/json;charset=UTF-8
+{&quot;success&quot;:true,&quot;data&quot;:{&quot;data&quot;:[{&quot;id&quot;:6009,&quot;idEstacion&quot;:17160,&quot;codigo&quot;:&quot;cod6009&quot;,&quot;nombre&quot;:&quot;COP_ACARIGUACTRONORT\t\t\t\t\t\t\t\t\t\t  &quot;,&quot;regionId&quot;:6,&quot;estadoId&quot;:1,&quot;municipioId&quot;:1,&quot;parroquiaId&quot;:-1,&quot;direccion&quot;:&quot;COMPLEJO POLIDEPORTIVO J. A. PAEZ. VELODROMO CIUDAD DE ARAURE. AVENIDA TEO CAPRILES CON AVENIDA E. CHOLLET. ARAURE. ESTADO. PORTUGUESA. \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t&quot;,&quot;codigoPais&quot;:&quot;VE&quot;,&quot;mercadoId&quot;:1,&quot;clusterId&quot;:108,&quot;atributos&quot;:[{&quot;21&quot;:{&quot;latitud_grados_s56&quot;:9,&quot;latitud_decimal_s56&quot;:&quot;&quot;,&quot;latitud_minutos_s56&quot;:34,&quot;longitud_grados_s56&quot;:-69,&quot;latitud_grados_wgs84&quot;:9,&quot;latitud_segundos_s56&quot;:31.0,&quot;longitud_decimal_s56&quot;:&quot;&quot;,&quot;longitud_minutos_s56&quot;:12,&quot;latitud_decimal_wgs84&quot;:9.572078,&quot;latitud_minutos_wgs84&quot;:34,&quot;longitud_grados_wgs84&quot;:-68,&quot;longitud_segundos_s56&quot;:35.0,&quot;latitud_segundos_wgs84&quot;:19.48,&quot;longitud_decimal_wgs84&quot;:-68.792078,&quot;longitud_minutos_wgs84&quot;:47,&quot;longitud_segundos_wgs84&quot;:31.48}}],&quot;comentAprobacion&quot;:&quot;&quot;,&quot;tmveOwner&quot;:true,&quot;estatus&quot;:1,&quot;estatusMorinre&quot;:1,&quot;createdBy&quot;:&quot;ROOT&quot;,&quot;region&quot;:{&quot;id&quot;:6,&quot;nombre&quot;:&quot;Centro Occidente&quot;,&quot;descripcion&quot;:&quot;Regi&oacute;n Centro Occidental, conformada por los estados YARACUY, BARINAS, COJEDES, LARA y PORTUGUESA&quot;,&quot;estatus&quot;:1,&quot;fechaModificacion&quot;:&quot;2024-08-26T14:10:06.656&quot;,&quot;fechaCreacion&quot;:&quot;2024-08-26T14:18:32.213&quot;},&quot;mercado&quot;:{&quot;id&quot;:1,&quot;nombre&quot;:&quot;Maturin Foranea&quot;,&quot;descripcion&quot;:&quot;Maturin Foranea&quot;,&quot;estatus&quot;:1,&quot;fechaModificacion&quot;:&quot;2025-05-06T14:43:59.086&quot;,&quot;fechaCreacion&quot;:&quot;1970-01-01T00:00:00.001&quot;},&quot;cluster&quot;:{&quot;id&quot;:108,&quot;label&quot;:&quot;Sta. Elena de Uairen&quot;,&quot;name&quot;:&quot;Sta. Elena de Uairen&quot;,&quot;refClusterStatus&quot;:0,&quot;idCluster&quot;:4,&quot;regionId&quot;:8}},{&quot;id&quot;:6008,&quot;idEstacion&quot;:36355,&quot;codigo&quot;:&quot;cod6008&quot;,&quot;nombre&quot;:&quot;INVERS_SBR\t\t\t\t\t\t\t\t\t\t\t  &quot;,&quot;regionId&quot;:1,&quot;estadoId&quot;:15,&quot;municipioId&quot;:133,&quot;parroquiaId&quot;:0,&quot;direccion&quot;:&quot;CALLE 2. EDIFICIO GALPON INVERSIONES SBR. LOCALIDAD LA YAGUARA. \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t&quot;,&quot;codigoPais&quot;:&quot;VE&quot;,&quot;mercadoId&quot;:1,&quot;clusterId&quot;:72,&quot;atributos&quot;:[{&quot;21&quot;:{&quot;latitud_grados_s56&quot;:0,&quot;latitud_decimal_s56&quot;:&quot;&quot;,&quot;latitud_minutos_s56&quot;:0,&quot;longitud_grados_s56&quot;:0,&quot;latitud_grados_wgs84&quot;:10,&quot;latitud_segundos_s56&quot;:0.0,&quot;longitud_decimal_s56&quot;:&quot;&quot;,&quot;longitud_minutos_s56&quot;:0,&quot;latitud_decimal_wgs84&quot;:10.43845,&quot;latitud_minutos_wgs84&quot;:26,&quot;longitud_grados_wgs84&quot;:-66,&quot;longitud_segundos_s56&quot;:0.0,&quot;latitud_segundos_wgs84&quot;:18.42,&quot;longitud_decimal_wgs84&quot;:-66.6989138888889,&quot;longitud_minutos_wgs84&quot;:41,&quot;longitud_segundos_wgs84&quot;:56.09}}],&quot;comentAprobacion&quot;:&quot;&quot;,&quot;tmveOwner&quot;:true,&quot;estatus&quot;:1,&quot;estatusMorinre&quot;:1,&quot;createdBy&quot;:&quot;ROOT&quot;,&quot;region&quot;:{&quot;id&quot;:1,&quot;nombre&quot;:&quot;Gran Caracas&quot;,&quot;descripcion&quot;:&quot;Regi&oacute;n de la Gran Caracas, conformada por los estados DISTRITO CAPITAL, MIRANDA, LA GUAIRA y DEPENDENCIAS FEDERALES&quot;,&quot;estatus&quot;:1,&quot;fechaModificacion&quot;:&quot;2024-08-26T14:10:06.656&quot;,&quot;fechaCreacion&quot;:&quot;2024-08-26T14:10:06.656&quot;},&quot;mercado&quot;:{&quot;id&quot;:1,&quot;nombre&quot;:&quot;Maturin Foranea&quot;,&quot;descripcion&quot;:&quot;Maturin Foranea&quot;,&quot;estatus&quot;:1,&quot;fechaModificacion&quot;:&quot;2025-05-06T14:43:59.086&quot;,&quot;fechaCreacion&quot;:&quot;1970-01-01T00:00:00.001&quot;},&quot;cluster&quot;:{&quot;id&quot;:72,&quot;label&quot;:&quot;La Victoria&quot;,&quot;name&quot;:&quot;La Victoria&quot;,&quot;refClusterStatus&quot;:1,&quot;idCluster&quot;:2,&quot;regionId&quot;:3}},{&quot;id&quot;:6004,&quot;idEstacion&quot;:31654,&quot;codigo&quot;:&quot;cod6004&quot;,&quot;nombre&quot;:&quot;MI CASA EAP SEDE PPAL MATURIN\t\t\t\t\t\t\t\t\t  &quot;,&quot;regionId&quot;:8,&quot;estadoId&quot;:16,&quot;municipioId&quot;:151,&quot;parroquiaId&quot;:645,&quot;direccion&quot;:&quot;AVENIDA JUNCAL.EDIFICIO LA PYRAMIDE.ADM.PISO 1.LOCALIDAD MATURIN.\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t&quot;,&quot;codigoPais&quot;:&quot;VE&quot;,&quot;mercadoId&quot;:1,&quot;clusterId&quot;:96,&quot;atributos&quot;:[{&quot;21&quot;:{&quot;latitud_grados_s56&quot;:9,&quot;latitud_decimal_s56&quot;:&quot;&quot;,&quot;latitud_minutos_s56&quot;:45,&quot;longitud_grados_s56&quot;:-62,&quot;latitud_grados_wgs84&quot;:9,&quot;latitud_segundos_s56&quot;:20.62,&quot;longitud_decimal_s56&quot;:&quot;&quot;,&quot;longitud_minutos_s56&quot;:48,&quot;latitud_decimal_wgs84&quot;:9.745278,&quot;latitud_minutos_wgs84&quot;:44,&quot;longitud_grados_wgs84&quot;:-63,&quot;longitud_segundos_s56&quot;:18.42,&quot;latitud_segundos_wgs84&quot;:43.0,&quot;longitud_decimal_wgs84&quot;:-63.167778,&quot;longitud_minutos_wgs84&quot;:10,&quot;longitud_segundos_wgs84&quot;:3.999939}}],&quot;comentAprobacion&quot;:&quot;&quot;,&quot;tmveOwner&quot;:true,&quot;estatus&quot;:1,&quot;estatusMorinre&quot;:1,&quot;createdBy&quot;:&quot;ROOT&quot;,&quot;region&quot;:{&quot;id&quot;:8,&quot;nombre&quot;:&quot;Guayana&quot;,&quot;descripcion&quot;:&quot;Regi&oacute;n Guayana,. conformada por los estados AMAZONAS, BOL&Iacute;VAR, DELTA AMACURO y MONAGAS&quot;,&quot;estatus&quot;:1,&quot;fechaModificacion&quot;:&quot;2024-08-26T14:10:06.656&quot;,&quot;fechaCreacion&quot;:&quot;2024-08-26T14:18:32.213&quot;},&quot;mercado&quot;:{&quot;id&quot;:1,&quot;nombre&quot;:&quot;Maturin Foranea&quot;,&quot;descripcion&quot;:&quot;Maturin Foranea&quot;,&quot;estatus&quot;:1,&quot;fechaModificacion&quot;:&quot;2025-05-06T14:43:59.086&quot;,&quot;fechaCreacion&quot;:&quot;1970-01-01T00:00:00.001&quot;},&quot;cluster&quot;:{&quot;id&quot;:96,&quot;label&quot;:&quot;Default&quot;,&quot;name&quot;:&quot;Default&quot;,&quot;refClusterStatus&quot;:1,&quot;idCluster&quot;:0,&quot;regionId&quot;:1}},{&quot;id&quot;:6007,&quot;idEstacion&quot;:36351,&quot;codigo&quot;:&quot;cod6007&quot;,&quot;nombre&quot;:&quot;BLVAR_CCVI\t\t\t\t\t\t\t\t\t\t\t  &quot;,&quot;regionId&quot;:1,&quot;estadoId&quot;:15,&quot;municipioId&quot;:128,&quot;parroquiaId&quot;:578,&quot;direccion&quot;:&quot;URBANIZACION VISCAYA. CENTRO COMERCIAL VISCAYA. LOCAL 46. PISO 3. LOCALIDAD VISCAYA. PARROQUIA EL CAFETAL. MUNICIPIO BARUTA.\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t&quot;,&quot;codigoPais&quot;:&quot;VE&quot;,&quot;mercadoId&quot;:1,&quot;clusterId&quot;:88,&quot;atributos&quot;:[{&quot;21&quot;:{&quot;latitud_grados_s56&quot;:10,&quot;latitud_decimal_s56&quot;:&quot;&quot;,&quot;latitud_minutos_s56&quot;:27,&quot;longitud_grados_s56&quot;:-65,&quot;latitud_grados_wgs84&quot;:10,&quot;latitud_segundos_s56&quot;:39.52,&quot;longitud_decimal_s56&quot;:&quot;&quot;,&quot;longitud_minutos_s56&quot;:9,&quot;latitud_decimal_wgs84&quot;:10.457777777777778,&quot;latitud_minutos_wgs84&quot;:27,&quot;longitud_grados_wgs84&quot;:-66,&quot;longitud_segundos_s56&quot;:18.52,&quot;latitud_segundos_wgs84&quot;:28.0,&quot;longitud_decimal_wgs84&quot;:-66.84305555555555,&quot;longitud_minutos_wgs84&quot;:50,&quot;longitud_segundos_wgs84&quot;:35.0}}],&quot;comentAprobacion&quot;:&quot;&quot;,&quot;tmveOwner&quot;:true,&quot;estatus&quot;:1,&quot;estatusMorinre&quot;:1,&quot;createdBy&quot;:&quot;ROOT&quot;,&quot;region&quot;:{&quot;id&quot;:1,&quot;nombre&quot;:&quot;Gran Caracas&quot;,&quot;descripcion&quot;:&quot;Regi&oacute;n de la Gran Caracas, conformada por los estados DISTRITO CAPITAL, MIRANDA, LA GUAIRA y DEPENDENCIAS FEDERALES&quot;,&quot;estatus&quot;:1,&quot;fechaModificacion&quot;:&quot;2024-08-26T14:10:06.656&quot;,&quot;fechaCreacion&quot;:&quot;2024-08-26T14:10:06.656&quot;},&quot;mercado&quot;:{&quot;id&quot;:1,&quot;nombre&quot;:&quot;Maturin Foranea&quot;,&quot;descripcion&quot;:&quot;Maturin Foranea&quot;,&quot;estatus&quot;:1,&quot;fechaModificacion&quot;:&quot;2025-05-06T14:43:59.086&quot;,&quot;fechaCreacion&quot;:&quot;1970-01-01T00:00:00.001&quot;},&quot;cluster&quot;:{&quot;id&quot;:88,&quot;label&quot;:&quot;San Telmo&quot;,&quot;name&quot;:&quot;San Telmo&quot;,&quot;refClusterStatus&quot;:0,&quot;idCluster&quot;:5,&quot;regionId&quot;:5}},{&quot;id&quot;:6005,&quot;idEstacion&quot;:33568,&quot;codigo&quot;:&quot;cod6005&quot;,&quot;nombre&quot;:&quot;NESTLE GUACARA VE-GUA\t\t\t\t\t\t\t\t\t\t  &quot;,&quot;regionId&quot;:3,&quot;estadoId&quot;:7,&quot;municipioId&quot;:60,&quot;parroquiaId&quot;:222,&quot;direccion&quot;:&quot;CARRETERA LOS GUAYOS . REFERENCIA FRENTE A LA 2DA ENTRADA A CIUDAD ALIANZA.\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t&quot;,&quot;codigoPais&quot;:&quot;VE&quot;,&quot;mercadoId&quot;:1,&quot;clusterId&quot;:104,&quot;atributos&quot;:[{&quot;21&quot;:{&quot;latitud_grados_s56&quot;:10,&quot;latitud_decimal_s56&quot;:&quot;&quot;,&quot;latitud_minutos_s56&quot;:12,&quot;longitud_grados_s56&quot;:-67,&quot;latitud_grados_wgs84&quot;:10,&quot;latitud_segundos_s56&quot;:40.0,&quot;longitud_decimal_s56&quot;:&quot;&quot;,&quot;longitud_minutos_s56&quot;:54,&quot;latitud_decimal_wgs84&quot;:10.211222,&quot;latitud_minutos_wgs84&quot;:12,&quot;longitud_grados_wgs84&quot;:-67,&quot;longitud_segundos_s56&quot;:21.0,&quot;latitud_segundos_wgs84&quot;:40.4,&quot;longitud_decimal_wgs84&quot;:-67.905778,&quot;longitud_minutos_wgs84&quot;:54,&quot;longitud_segundos_wgs84&quot;:20.8}}],&quot;comentAprobacion&quot;:&quot;&quot;,&quot;tmveOwner&quot;:true,&quot;estatus&quot;:1,&quot;estatusMorinre&quot;:1,&quot;createdBy&quot;:&quot;ROOT&quot;,&quot;region&quot;:{&quot;id&quot;:3,&quot;nombre&quot;:&quot;Centro Llano&quot;,&quot;descripcion&quot;:&quot;Regi&oacute;n Central Llanera, conformado por los estados APURE, ARAGUA y GUARICO&quot;,&quot;estatus&quot;:1,&quot;fechaModificacion&quot;:&quot;2024-08-26T14:10:06.656&quot;,&quot;fechaCreacion&quot;:&quot;2024-08-26T14:18:32.213&quot;},&quot;mercado&quot;:{&quot;id&quot;:1,&quot;nombre&quot;:&quot;Maturin Foranea&quot;,&quot;descripcion&quot;:&quot;Maturin Foranea&quot;,&quot;estatus&quot;:1,&quot;fechaModificacion&quot;:&quot;2025-05-06T14:43:59.086&quot;,&quot;fechaCreacion&quot;:&quot;1970-01-01T00:00:00.001&quot;},&quot;cluster&quot;:{&quot;id&quot;:104,&quot;label&quot;:&quot;Default&quot;,&quot;name&quot;:&quot;Default&quot;,&quot;refClusterStatus&quot;:1,&quot;idCluster&quot;:0,&quot;regionId&quot;:2}},{&quot;id&quot;:600,&quot;idEstacion&quot;:1,&quot;codigo&quot;:&quot;cod600&quot;,&quot;nombre&quot;:&quot;ESTACION_POR_DEFECTO\t\t\t\t\t\t\t\t\t\t  &quot;,&quot;regionId&quot;:9,&quot;estadoId&quot;:15,&quot;municipioId&quot;:141,&quot;parroquiaId&quot;:0,&quot;direccion&quot;:&quot;SIN DIRECCION\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t&quot;,&quot;codigoPais&quot;:&quot;VE&quot;,&quot;mercadoId&quot;:1,&quot;clusterId&quot;:57,&quot;atributos&quot;:[{&quot;21&quot;:{&quot;latitud_grados_s56&quot;:10,&quot;latitud_decimal_s56&quot;:&quot;&quot;,&quot;latitud_minutos_s56&quot;:26,&quot;longitud_grados_s56&quot;:-66,&quot;latitud_grados_wgs84&quot;:10,&quot;latitud_segundos_s56&quot;:29.73,&quot;longitud_decimal_s56&quot;:&quot;&quot;,&quot;longitud_minutos_s56&quot;:41,&quot;latitud_decimal_wgs84&quot;:10.43845,&quot;latitud_minutos_wgs84&quot;:26,&quot;longitud_grados_wgs84&quot;:-66,&quot;longitud_segundos_s56&quot;:49.43,&quot;latitud_segundos_wgs84&quot;:18.42,&quot;longitud_decimal_wgs84&quot;:-66.6989138888889,&quot;longitud_minutos_wgs84&quot;:41,&quot;longitud_segundos_wgs84&quot;:56.09}}],&quot;comentAprobacion&quot;:&quot;&quot;,&quot;tmveOwner&quot;:true,&quot;estatus&quot;:1,&quot;estatusMorinre&quot;:1,&quot;createdBy&quot;:&quot;ROOT&quot;,&quot;region&quot;:{&quot;id&quot;:9,&quot;nombre&quot;:&quot;No Aplica&quot;,&quot;descripcion&quot;:&quot;-&quot;,&quot;estatus&quot;:1,&quot;fechaModificacion&quot;:&quot;2024-08-26T14:10:06.656&quot;,&quot;fechaCreacion&quot;:&quot;2024-08-26T14:10:06.656&quot;},&quot;mercado&quot;:{&quot;id&quot;:1,&quot;nombre&quot;:&quot;Maturin Foranea&quot;,&quot;descripcion&quot;:&quot;Maturin Foranea&quot;,&quot;estatus&quot;:1,&quot;fechaModificacion&quot;:&quot;2025-05-06T14:43:59.086&quot;,&quot;fechaCreacion&quot;:&quot;1970-01-01T00:00:00.001&quot;},&quot;cluster&quot;:{&quot;id&quot;:57,&quot;label&quot;:&quot;Caracas Este&quot;,&quot;name&quot;:&quot;Caracas Este&quot;,&quot;refClusterStatus&quot;:1,&quot;idCluster&quot;:5,&quot;regionId&quot;:1}},{&quot;id&quot;:6003,&quot;idEstacion&quot;:37604,&quot;codigo&quot;:&quot;cod6003&quot;,&quot;nombre&quot;:&quot;ARTC CENTER OFIC. PPAL\t\t\t\t\t\t\t\t\t\t  &quot;,&quot;regionId&quot;:6,&quot;estadoId&quot;:13,&quot;municipioId&quot;:111,&quot;parroquiaId&quot;:462,&quot;direccion&quot;:&quot;CALLE FE. AVENIDA BOLIVAR Y MIRANDA. EDIFICIO ARTPC CENTER. PLANTA BAJA. LOCALIDAD SANARE. PARROQUIA SARARE. MUNICIPIO SIMON PLANAS.\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t&quot;,&quot;codigoPais&quot;:&quot;VE&quot;,&quot;mercadoId&quot;:1,&quot;clusterId&quot;:58,&quot;atributos&quot;:[{}],&quot;comentAprobacion&quot;:&quot;&quot;,&quot;tmveOwner&quot;:true,&quot;estatus&quot;:1,&quot;estatusMorinre&quot;:1,&quot;createdBy&quot;:&quot;ROOT&quot;,&quot;region&quot;:{&quot;id&quot;:6,&quot;nombre&quot;:&quot;Centro Occidente&quot;,&quot;descripcion&quot;:&quot;Regi&oacute;n Centro Occidental, conformada por los estados YARACUY, BARINAS, COJEDES, LARA y PORTUGUESA&quot;,&quot;estatus&quot;:1,&quot;fechaModificacion&quot;:&quot;2024-08-26T14:10:06.656&quot;,&quot;fechaCreacion&quot;:&quot;2024-08-26T14:18:32.213&quot;},&quot;mercado&quot;:{&quot;id&quot;:1,&quot;nombre&quot;:&quot;Maturin Foranea&quot;,&quot;descripcion&quot;:&quot;Maturin Foranea&quot;,&quot;estatus&quot;:1,&quot;fechaModificacion&quot;:&quot;2025-05-06T14:43:59.086&quot;,&quot;fechaCreacion&quot;:&quot;1970-01-01T00:00:00.001&quot;},&quot;cluster&quot;:{&quot;id&quot;:58,&quot;label&quot;:&quot;Guarenas Guatire&quot;,&quot;name&quot;:&quot;Guarenas Guatire&quot;,&quot;refClusterStatus&quot;:1,&quot;idCluster&quot;:6,&quot;regionId&quot;:1}},{&quot;id&quot;:6006,&quot;idEstacion&quot;:32814,&quot;codigo&quot;:&quot;cod6006&quot;,&quot;nombre&quot;:&quot;DIGITAL WORLD PUNTO FIJO\t\t\t\t\t\t\t\t\t\t  &quot;,&quot;regionId&quot;:2,&quot;estadoId&quot;:11,&quot;municipioId&quot;:83,&quot;parroquiaId&quot;:326,&quot;direccion&quot;:&quot;AVENIDA BOLIVAR (PROLONGACION). MESETA GUARANAO. CENTRO COMERCIAL COSTA DE PARAGUANA. LOCALIDAD PUNTO FIJO. PARROQUIA CARIRUBANA. MUNICIPIO CARIRUBANA. \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t&quot;,&quot;codigoPais&quot;:&quot;VE&quot;,&quot;mercadoId&quot;:1,&quot;clusterId&quot;:98,&quot;atributos&quot;:[{&quot;21&quot;:{&quot;latitud_grados_s56&quot;:11,&quot;latitud_decimal_s56&quot;:&quot;&quot;,&quot;latitud_minutos_s56&quot;:40,&quot;longitud_grados_s56&quot;:-69,&quot;latitud_grados_wgs84&quot;:11,&quot;latitud_segundos_s56&quot;:24.91,&quot;longitud_decimal_s56&quot;:&quot;&quot;,&quot;longitud_minutos_s56&quot;:47,&quot;latitud_decimal_wgs84&quot;:11.67038611111111,&quot;latitud_minutos_wgs84&quot;:40,&quot;longitud_grados_wgs84&quot;:-70,&quot;longitud_segundos_s56&quot;:24.27,&quot;latitud_segundos_wgs84&quot;:13.39,&quot;longitud_decimal_wgs84&quot;:-70.208125,&quot;longitud_minutos_wgs84&quot;:12,&quot;longitud_segundos_wgs84&quot;:29.25}}],&quot;comentAprobacion&quot;:&quot;&quot;,&quot;tmveOwner&quot;:true,&quot;estatus&quot;:1,&quot;estatusMorinre&quot;:1,&quot;createdBy&quot;:&quot;ROOT&quot;,&quot;region&quot;:{&quot;id&quot;:2,&quot;nombre&quot;:&quot;Occidente&quot;,&quot;descripcion&quot;:&quot;Regi&oacute;n Occidental, conformada por los estados ZULIA y FALCON&quot;,&quot;estatus&quot;:1,&quot;fechaModificacion&quot;:&quot;2024-08-26T14:10:06.656&quot;,&quot;fechaCreacion&quot;:&quot;2024-08-26T14:10:06.656&quot;},&quot;mercado&quot;:{&quot;id&quot;:1,&quot;nombre&quot;:&quot;Maturin Foranea&quot;,&quot;descripcion&quot;:&quot;Maturin Foranea&quot;,&quot;estatus&quot;:1,&quot;fechaModificacion&quot;:&quot;2025-05-06T14:43:59.086&quot;,&quot;fechaCreacion&quot;:&quot;1970-01-01T00:00:00.001&quot;},&quot;cluster&quot;:{&quot;id&quot;:98,&quot;label&quot;:&quot;Porlamar&quot;,&quot;name&quot;:&quot;Porlamar&quot;,&quot;refClusterStatus&quot;:1,&quot;idCluster&quot;:2,&quot;regionId&quot;:7}},{&quot;id&quot;:6002,&quot;idEstacion&quot;:30866,&quot;codigo&quot;:&quot;cod6002&quot;,&quot;nombre&quot;:&quot;PEQUIVEN JOSE\t\t\t\t\t\t\t\t\t\t\t  &quot;,&quot;regionId&quot;:7,&quot;estadoId&quot;:3,&quot;municipioId&quot;:17,&quot;parroquiaId&quot;:103,&quot;direccion&quot;:&quot;CARRETERA LA COSTA. COMPLEJO CRIOJENICO JOSE ANTONIO ANZOATEGUI. EDIFICIO PEQUIVEN. LOCALIDAD PUERTO LA CRUZ. PARROQUIA CAPITAL PUERTO LA CRUZ. MUNICIPIO JUAN ANTONIO SOTILLO. \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t&quot;,&quot;codigoPais&quot;:&quot;VE&quot;,&quot;mercadoId&quot;:1,&quot;clusterId&quot;:100,&quot;atributos&quot;:[{&quot;21&quot;:{&quot;latitud_grados_s56&quot;:10,&quot;latitud_decimal_s56&quot;:&quot;&quot;,&quot;latitud_minutos_s56&quot;:4,&quot;longitud_grados_s56&quot;:-63,&quot;latitud_grados_wgs84&quot;:10,&quot;latitud_segundos_s56&quot;:41.52,&quot;longitud_decimal_s56&quot;:&quot;&quot;,&quot;longitud_minutos_s56&quot;:7,&quot;latitud_decimal_wgs84&quot;:10.075,&quot;latitud_minutos_wgs84&quot;:4,&quot;longitud_grados_wgs84&quot;:-64,&quot;longitud_segundos_s56&quot;:17.52,&quot;latitud_segundos_wgs84&quot;:30.0,&quot;longitud_decimal_wgs84&quot;:-64.87666666666667,&quot;longitud_minutos_wgs84&quot;:52,&quot;longitud_segundos_wgs84&quot;:36.0}}],&quot;comentAprobacion&quot;:&quot;&quot;,&quot;tmveOwner&quot;:true,&quot;estatus&quot;:1,&quot;estatusMorinre&quot;:1,&quot;createdBy&quot;:&quot;ROOT&quot;,&quot;region&quot;:{&quot;id&quot;:7,&quot;nombre&quot;:&quot;Oriente&quot;,&quot;descripcion&quot;:&quot;Regi&oacute;n Oriental, conformada por los estados ANZO&Aacute;TEGUI, NUEVA ESPARTA y SUCRE&quot;,&quot;estatus&quot;:1,&quot;fechaModificacion&quot;:&quot;2024-08-26T14:10:06.656&quot;,&quot;fechaCreacion&quot;:&quot;2024-08-26T14:18:32.213&quot;},&quot;mercado&quot;:{&quot;id&quot;:1,&quot;nombre&quot;:&quot;Maturin Foranea&quot;,&quot;descripcion&quot;:&quot;Maturin Foranea&quot;,&quot;estatus&quot;:1,&quot;fechaModificacion&quot;:&quot;2025-05-06T14:43:59.086&quot;,&quot;fechaCreacion&quot;:&quot;1970-01-01T00:00:00.001&quot;},&quot;cluster&quot;:{&quot;id&quot;:100,&quot;label&quot;:&quot;Anaco&quot;,&quot;name&quot;:&quot;Anaco&quot;,&quot;refClusterStatus&quot;:1,&quot;idCluster&quot;:4,&quot;regionId&quot;:7}},{&quot;id&quot;:6000,&quot;idEstacion&quot;:30863,&quot;codigo&quot;:&quot;cod6000&quot;,&quot;nombre&quot;:&quot;BARCELONA \t\t\t\t\t\t\t\t\t\t\t  &quot;,&quot;regionId&quot;:7,&quot;estadoId&quot;:3,&quot;municipioId&quot;:22,&quot;parroquiaId&quot;:0,&quot;direccion&quot;:&quot;AVENIDA JOSE ANTONIO ANZOATEGUI. EDIFICIO LOCAL C. 14. PLANTA BAJA. LOCALIDAD BARCELONA. MUNICIPIO SIMON BOLIVAR.\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t&quot;,&quot;codigoPais&quot;:&quot;VE&quot;,&quot;mercadoId&quot;:1,&quot;clusterId&quot;:79,&quot;atributos&quot;:[{&quot;21&quot;:{&quot;latitud_grados_s56&quot;:10,&quot;latitud_decimal_s56&quot;:&quot;&quot;,&quot;latitud_minutos_s56&quot;:7,&quot;longitud_grados_s56&quot;:-63,&quot;latitud_grados_wgs84&quot;:10,&quot;latitud_segundos_s56&quot;:1.52,&quot;longitud_decimal_s56&quot;:&quot;&quot;,&quot;longitud_minutos_s56&quot;:19,&quot;latitud_decimal_wgs84&quot;:10.113888888888889,&quot;latitud_minutos_wgs84&quot;:6,&quot;longitud_grados_wgs84&quot;:-64,&quot;longitud_segundos_s56&quot;:3.52,&quot;latitud_segundos_wgs84&quot;:50.0,&quot;longitud_decimal_wgs84&quot;:-64.68055555555556,&quot;longitud_minutos_wgs84&quot;:40,&quot;longitud_segundos_wgs84&quot;:50.0}}],&quot;comentAprobacion&quot;:&quot;&quot;,&quot;tmveOwner&quot;:true,&quot;estatus&quot;:1,&quot;estatusMorinre&quot;:1,&quot;createdBy&quot;:&quot;ROOT&quot;,&quot;region&quot;:{&quot;id&quot;:7,&quot;nombre&quot;:&quot;Oriente&quot;,&quot;descripcion&quot;:&quot;Regi&oacute;n Oriental, conformada por los estados ANZO&Aacute;TEGUI, NUEVA ESPARTA y SUCRE&quot;,&quot;estatus&quot;:1,&quot;fechaModificacion&quot;:&quot;2024-08-26T14:10:06.656&quot;,&quot;fechaCreacion&quot;:&quot;2024-08-26T14:18:32.213&quot;},&quot;mercado&quot;:{&quot;id&quot;:1,&quot;nombre&quot;:&quot;Maturin Foranea&quot;,&quot;descripcion&quot;:&quot;Maturin Foranea&quot;,&quot;estatus&quot;:1,&quot;fechaModificacion&quot;:&quot;2025-05-06T14:43:59.086&quot;,&quot;fechaCreacion&quot;:&quot;1970-01-01T00:00:00.001&quot;},&quot;cluster&quot;:{&quot;id&quot;:79,&quot;label&quot;:&quot;Centro Llanos&quot;,&quot;name&quot;:&quot;Centro Llanos&quot;,&quot;refClusterStatus&quot;:0,&quot;idCluster&quot;:9,&quot;regionId&quot;:3}},{&quot;id&quot;:6001,&quot;idEstacion&quot;:30865,&quot;codigo&quot;:&quot;cod6001&quot;,&quot;nombre&quot;:&quot;ANACO\t\t\t\t\t\t\t\t\t\t\t\t  &quot;,&quot;regionId&quot;:7,&quot;estadoId&quot;:15,&quot;municipioId&quot;:133,&quot;parroquiaId&quot;:588,&quot;direccion&quot;:&quot;CARRETERA CUMANA Y CUMANACOA.SECTOR BOCA DE SABANA.\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t&quot;,&quot;codigoPais&quot;:&quot;VE&quot;,&quot;mercadoId&quot;:1,&quot;clusterId&quot;:57,&quot;atributos&quot;:[{&quot;21&quot;:{&quot;latitud_grados_s56&quot;:9,&quot;latitud_decimal_s56&quot;:&quot;&quot;,&quot;latitud_minutos_s56&quot;:26,&quot;longitud_grados_s56&quot;:-63,&quot;latitud_grados_wgs84&quot;:10,&quot;latitud_segundos_s56&quot;:4.52,&quot;longitud_decimal_s56&quot;:&quot;&quot;,&quot;longitud_minutos_s56&quot;:31,&quot;latitud_decimal_wgs84&quot;:10.436806,&quot;latitud_minutos_wgs84&quot;:26,&quot;longitud_grados_wgs84&quot;:-64,&quot;longitud_segundos_s56&quot;:55.02,&quot;latitud_segundos_wgs84&quot;:12.5,&quot;longitud_decimal_wgs84&quot;:-64.160278,&quot;longitud_minutos_wgs84&quot;:9,&quot;longitud_segundos_wgs84&quot;:37.0}}],&quot;comentAprobacion&quot;:&quot;&quot;,&quot;tmveOwner&quot;:true,&quot;estatus&quot;:1,&quot;estatusMorinre&quot;:1,&quot;createdBy&quot;:&quot;ROOT&quot;,&quot;region&quot;:{&quot;id&quot;:7,&quot;nombre&quot;:&quot;Oriente&quot;,&quot;descripcion&quot;:&quot;Regi&oacute;n Oriental, conformada por los estados ANZO&Aacute;TEGUI, NUEVA ESPARTA y SUCRE&quot;,&quot;estatus&quot;:1,&quot;fechaModificacion&quot;:&quot;2024-08-26T14:10:06.656&quot;,&quot;fechaCreacion&quot;:&quot;2024-08-26T14:18:32.213&quot;},&quot;mercado&quot;:{&quot;id&quot;:1,&quot;nombre&quot;:&quot;Maturin Foranea&quot;,&quot;descripcion&quot;:&quot;Maturin Foranea&quot;,&quot;estatus&quot;:1,&quot;fechaModificacion&quot;:&quot;2025-05-06T14:43:59.086&quot;,&quot;fechaCreacion&quot;:&quot;1970-01-01T00:00:00.001&quot;},&quot;cluster&quot;:{&quot;id&quot;:57,&quot;label&quot;:&quot;Caracas Este&quot;,&quot;name&quot;:&quot;Caracas Este&quot;,&quot;refClusterStatus&quot;:1,&quot;idCluster&quot;:5,&quot;regionId&quot;:1}}],&quot;total&quot;:11,&quot;page&quot;:1,&quot;limit&quot;:100,&quot;hasNext&quot;:false,&quot;hasPrev&quot;:false,&quot;next&quot;:1,&quot;prev&quot;:1,&quot;pages&quot;:1,&quot;last&quot;:1,&quot;first&quot;:1},&quot;timestamp&quot;:1755555855101}
+
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">match response.success == true</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">print 'Estacion encontrada:', response.data.data[0]</span>
+
+  <span class="lead-duration duration">0.016</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-4">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-4" class="collapse collapsable-details">
+        <pre>18:24:15.203 [print] Estacion encontrada: {
+  &quot;id&quot;: 6009,
+  &quot;idEstacion&quot;: 17160,
+  &quot;codigo&quot;: &quot;cod6009&quot;,
+  &quot;nombre&quot;: &quot;COP_ACARIGUACTRONORT\t\t\t\t\t\t\t\t\t\t  &quot;,
+  &quot;regionId&quot;: 6,
+  &quot;estadoId&quot;: 1,
+  &quot;municipioId&quot;: 1,
+  &quot;parroquiaId&quot;: -1,
+  &quot;direccion&quot;: &quot;COMPLEJO POLIDEPORTIVO J. A. PAEZ. VELODROMO CIUDAD DE ARAURE. AVENIDA TEO CAPRILES CON AVENIDA E. CHOLLET. ARAURE. ESTADO. PORTUGUESA. \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t&quot;,
+  &quot;codigoPais&quot;: &quot;VE&quot;,
+  &quot;mercadoId&quot;: 1,
+  &quot;clusterId&quot;: 108,
+  &quot;atributos&quot;: [
+    {
+      &quot;21&quot;: {
+        &quot;latitud_grados_s56&quot;: 9,
+        &quot;latitud_decimal_s56&quot;: &quot;&quot;,
+        &quot;latitud_minutos_s56&quot;: 34,
+        &quot;longitud_grados_s56&quot;: -69,
+        &quot;latitud_grados_wgs84&quot;: 9,
+        &quot;latitud_segundos_s56&quot;: 31.0,
+        &quot;longitud_decimal_s56&quot;: &quot;&quot;,
+        &quot;longitud_minutos_s56&quot;: 12,
+        &quot;latitud_decimal_wgs84&quot;: 9.572078,
+        &quot;latitud_minutos_wgs84&quot;: 34,
+        &quot;longitud_grados_wgs84&quot;: -68,
+        &quot;longitud_segundos_s56&quot;: 35.0,
+        &quot;latitud_segundos_wgs84&quot;: 19.48,
+        &quot;longitud_decimal_wgs84&quot;: -68.792078,
+        &quot;longitud_minutos_wgs84&quot;: 47,
+        &quot;longitud_segundos_wgs84&quot;: 31.48
+      }
+    }
+  ],
+  &quot;comentAprobacion&quot;: &quot;&quot;,
+  &quot;tmveOwner&quot;: true,
+  &quot;estatus&quot;: 1,
+  &quot;estatusMorinre&quot;: 1,
+  &quot;createdBy&quot;: &quot;ROOT&quot;,
+  &quot;region&quot;: {
+    &quot;id&quot;: 6,
+    &quot;nombre&quot;: &quot;Centro Occidente&quot;,
+    &quot;descripcion&quot;: &quot;Regi&oacute;n Centro Occidental, conformada por los estados YARACUY, BARINAS, COJEDES, LARA y PORTUGUESA&quot;,
+    &quot;estatus&quot;: 1,
+    &quot;fechaModificacion&quot;: &quot;2024-08-26T14:10:06.656&quot;,
+    &quot;fechaCreacion&quot;: &quot;2024-08-26T14:18:32.213&quot;
+  },
+  &quot;mercado&quot;: {
+    &quot;id&quot;: 1,
+    &quot;nombre&quot;: &quot;Maturin Foranea&quot;,
+    &quot;descripcion&quot;: &quot;Maturin Foranea&quot;,
+    &quot;estatus&quot;: 1,
+    &quot;fechaModificacion&quot;: &quot;2025-05-06T14:43:59.086&quot;,
+    &quot;fechaCreacion&quot;: &quot;1970-01-01T00:00:00.001&quot;
+  },
+  &quot;cluster&quot;: {
+    &quot;id&quot;: 108,
+    &quot;label&quot;: &quot;Sta. Elena de Uairen&quot;,
+    &quot;name&quot;: &quot;Sta. Elena de Uairen&quot;,
+    &quot;refClusterStatus&quot;: 0,
+    &quot;idCluster&quot;: 4,
+    &quot;regionId&quot;: 8
+  }
+}
+ 
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">print '=== TIEMPO DE RESPUESTA DEL FEATURE ===', responseTime / 1000, 's'</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-5">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-5" class="collapse collapsable-details">
+        <pre>18:24:15.206 [print] === TIEMPO DE RESPUESTA DEL FEATURE === 0.293 s 
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-1 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+<br/>
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

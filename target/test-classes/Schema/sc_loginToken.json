@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Schema de validacion para respuesta de token de autenticacion",
+  "description": "Esquema que valida la estructura de respuesta del servicio de autenticacion JWT",
+  "type": "object",
+  "properties": {
+    "token": {
+      "type": "string",
+      "description": "Token JWT valido con formato estandar",
+      "pattern": "^[A-Za-z0-9-_=]+\\.[A-Za-z0-9-_=]+\\.[A-Za-z0-9-_=]+$",
+      "minLength": 10
+    }
+  },
+  "required": ["token"],
+  "additionalProperties": false
+}

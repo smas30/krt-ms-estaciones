@@ -1,0 +1,46 @@
+{
+  "codigo": "",
+  "nombre": null,
+  "regionId": null,
+  "estadoId": null,
+  "municipioId": 1,
+  "parroquiaId": 1,
+  "atributos": [
+    {
+      "tipo": "CAPACIDAD",
+      "valor": "800",
+      "descripcion": "Capacidad media"
+    },
+    {
+      "tipo": "TECNOLOGIA",
+      "valor": "LTE",
+      "descripcion": "Tecnologia intermedia"
+    }
+  ],
+  "direccion": {
+    "conglomerado": "CENTRO",
+    "nombreConglomerado": "Centro Comercial",
+    "inmueble": "EDIFICIO",
+    "nombreInmueble": "Torre Norte",
+    "piso": "3",
+    "numero": "456",
+    "vialidad": "AVENIDA",
+    "nombreVialidad": "Av. Norte",
+    "vialidad2": "CALLE",
+    "nombreVialidad2": "Calle Este",
+    "puntoReferencia": "Diagonal al hospital",
+    "codigoPostal": "1010",
+    "ciudad": "Ciudad Norte",
+    "parroquia": "Centro",
+    "municipio": "Capital",
+    "estado": "Distrito Capital",
+    "pais": "Venezuela",
+    "tipoUbicacion": "URBANA"
+  },
+  "codigoPais": "VE",
+  "mercadoId": 1,
+  "clusterId": 1,
+  "comentAprobacion": "Estacion incompleta",
+  "estatus": 1,
+  "createdBy": "E33033"
+}
