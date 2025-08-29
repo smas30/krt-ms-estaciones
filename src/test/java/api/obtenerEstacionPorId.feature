@@ -3,6 +3,8 @@ Feature: Consultar una estacion por su ID mediante el endpoint GET /estaciones/{
 
   Background:
     # 1. LLAMANDO AL SERVICIO AUTHTOKEN PARA HACER LOGIN Y OBTENER EL TOKEN
+    * configure logPrettyResponse = false
+    * configure logPrettyRequest = false
     * def validBodyRequest = read('classpath:JsonRequest/loginTokenRequest.json')
     * def loginResponse = call read('classpath:api/loginToken.feature') { request: validBodyRequest }
     * def authToken = loginResponse.response.token

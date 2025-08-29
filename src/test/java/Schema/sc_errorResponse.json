@@ -24,5 +24,5 @@
       "minimum": 0
     }
   },
-  "required": ["success", "data", "timestamp"]
+  "required": ["success", "timestamp"]
 }

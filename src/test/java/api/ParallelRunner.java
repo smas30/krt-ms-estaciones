@@ -19,7 +19,7 @@ public class ParallelRunner {
         Results results = Runner.path("classpath:api/")
                 .outputCucumberJson(true)
                 .reportDir("target")
-                .tags("@crearEstacion, @exportEstaciones, @obtenerEstaciones,@obtenerEstacionPorId")
+                .tags("@clusterEnCeroClienteRequest")
                 .parallel(1);
         generateReport(results.getReportDir(), results);
     }
