@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="res/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="res/karate-report.css" type="text/css"/>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <script type="text/javascript" src="res/jquery.min.js"></script>
+    <script type="text/javascript" src="res/jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="res/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="res/bootstrap.min.js"></script>
+    <script type="text/javascript" src="res/karate-report.js"></script>
+    <script type="text/javascript" src="res/Resemble.js"></script>
+    <script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
+  api_host:'https://app.posthog.com',
+  persistence:'localStorage',
+  autocapture:false,
+  capture_pageview:false,
+  api_transport:'sendBeacon',
+  loaded: function(posthog) { 
+    posthog.capture("report_feature",{distinct_id:"f615693a-9ea9-474a-9c0d-2da37f3b2480",karate_version:"1.5.0",karate_meta:null});
+  }
+});
+</script>
+
+    <title>api.crearEstacionCliente</title>
+  </head>
+  <body>
+    <div id="root-container">
+      <div id="leftnav">
+        
+        <div>
+  <div class="nav-logo">
+    <a href="https://karatelabs.io">
+      <img src="karate-labs-logo-ring.svg" alt="Karate Labs"/>
+    </a>
+    <div class="nav-count">
+      <div id="nav-pass" class="bg-success">1</div>
+      <div id="nav-fail" class="bg-danger">0</div>
+    </div>
+  </div>
+  <div id="nav-env">
+    <div></div>
+  </div>
+  <div id="nav-type">
+    <div>Scenarios</div>
+  </div>
+  <div id="nav-date">
+    <div>2025-08-29 10:46:28 a. m.</div>
+  </div>
+</div>
+
+        <div class="nav-container">
+          <div class="nav-item passed">
+            <a href="#[3:51]"><span>[3:51]</span> <span>El endpoint debe rechazar cuando se envia un cluster id en cero</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="content">
+        <div class="page-heading alert alert-primary">
+          <a href="karate-summary.html">Summary</a><span class="feature-label">|</span>
+          <a href="karate-tags.html">Tags</a><span class="feature-label">|</span>
+          <span class="feature-label">Feature:</span>
+          <span class="feature-path">api/crearEstacionCliente.feature</span><span class="feature-label">|</span>
+          <span class="feature-name">Crear una nueva estacion del lado cliente mediante POST /estaciones</span>
+          <span class="feature-description"></span>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[3:51]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">clusterEnCeroClienteRequest</a><a class="badge badge-primary" href="karate-tags.html">crearEstacionCliente</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[3:51]</span>
+                <span class="scenario-name">El endpoint debe rechazar cuando se envia un cluster id en cero</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>2365</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[3:51]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[3:51]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>configure logPrettyResponse = false</span>
+      </div>
+    </div>
+    <div class="time-cell passed">3</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:51]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.6">
+      <div class="step-ref bg-step">6</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>configure logPrettyRequest = false</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:51]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.7">
+      <div class="step-ref bg-step">7</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def validBodyRequest = read(&#39;classpath:JsonRequest/loginTokenRequest.json&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">39</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:51]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.8">
+      <div class="step-ref bg-step">8</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def loginResponse = call read(&#39;classpath:api/loginToken.feature&#39;) { request: validBodyRequest }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1569</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  <div>
+        
+    <div class="step-row">
+      <div class="step-container" id="0.8.0.call">
+        <div class="step-ref bg-step">&gt;&gt;</div>
+        <div class="step-indent"></div>
+        <div class="step-cell passed">api.loginToken</div>
+      </div>
+      <div class="time-cell passed">1557</div>
+    </div>
+    <div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.8.0.call">
+    <div class="step-container" id="0.8.0.call.0.4">
+      <div class="step-ref bg-step">4</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url loginUrl</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.8.0.call">
+    <div class="step-container" id="0.8.0.call.0.5">
+      <div class="step-ref bg-step">5</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>print loginUrl</span>
+      </div>
+    </div>
+    <div class="time-cell passed">4</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.8.0.call.0.5">10:46:26.062 [print] http://ms-auth-oss-git-dev-front-oss.apps.tmve-nprod-1.tmve-qa.com/intraLogin 
+</div>   
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.8.0.call">
+    <div class="step-container" id="0.8.0.call.0.6">
+      <div class="step-ref bg-step">6</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def schemaUtil = Java.type(&#39;util.JsonSchemaUtil&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">5</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.8.0.call">
+    <div class="step-container" id="0.8.0.call.0.7">
+      <div class="step-ref bg-step">7</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def schemaText = karate.readAsString(&#39;classpath:Schema/sc_loginToken.json&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.8.0.call">
+    <div class="step-container" id="0.8.0.call.0.8">
+      <div class="step-ref bg-step">8</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def validBodyRequest = read(&#39;classpath:JsonRequest/loginTokenRequest.json&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.8.0.call">
+    <div class="step-container" id="0.8.0.call.0.12">
+      <div class="step-ref bg-step">12</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>request validBodyRequest</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.8.0.call">
+    <div class="step-container" id="0.8.0.call.0.13">
+      <div class="step-ref bg-step">13</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1157</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.8.0.call.0.13">10:46:26.406 request:
+1 &gt; POST http://ms-auth-oss-git-dev-front-oss.apps.tmve-nprod-1.tmve-qa.com/intraLogin
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 39
+1 &gt; Host: ms-auth-oss-git-dev-front-oss.apps.tmve-nprod-1.tmve-qa.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;login&quot;:&quot;tns01&quot;,&quot;clave&quot;:&quot;T3st2024.+-&quot;}
+
+10:46:27.221 response time in milliseconds: 809
+1 &lt; 200
+1 &lt; content-type: application/json
+1 &lt; content-length: 326
+1 &lt; set-cookie: 346a326bcc8fc21fd3f034fd94d160bb=b93258c5db05ebda8c79fad18868405b; path=/; HttpOnly
+1 &lt; Set-Cookie: 346a326bcc8fc21fd3f034fd94d160bb=b93258c5db05ebda8c79fad18868405b; path=/; HttpOnly
+{&quot;token&quot;:&quot;eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IjU2NDE3NDkwRjMyQzVFOTI1OTQxMzM3NzZCNkJGMTdCIiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU2NDc4Nzg2LCJleHAiOjE3NTY0ODIzODZ9._dchK9nmlR1oqipQWtOpAQ68C4iGIzCzjbbvod913LtsJGTuLUcbqwq7ZE4YeQH4&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.8.0.call">
+    <div class="step-container" id="0.8.0.call.0.14">
+      <div class="step-ref bg-step">14</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  <div class="step-row" data-parent="0.8.0.call">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      <div class="step-indent"></div>
+      <div class="step-cell comment"># Validar que la respuesta contenga el campo token</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row" data-parent="0.8.0.call">
+    <div class="step-container" id="0.8.0.call.0.17">
+      <div class="step-ref bg-step">17</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.token == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">15</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  <div class="step-row" data-parent="0.8.0.call">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      <div class="step-indent"></div>
+      <div class="step-cell comment"># Validar la estructura completa de la respuesta usando el schema JSON</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row" data-parent="0.8.0.call">
+    <div class="step-container" id="0.8.0.call.0.20">
+      <div class="step-ref bg-step">20</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def responseText = karate.pretty(response)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">34</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.8.0.call">
+    <div class="step-container" id="0.8.0.call.0.21">
+      <div class="step-ref bg-step">21</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def isValid = schemaUtil.isValid(schemaText, responseText)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">332</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.8.0.call">
+    <div class="step-container" id="0.8.0.call.0.22">
+      <div class="step-ref bg-step">22</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>match isValid == true</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  <div class="step-row" data-parent="0.8.0.call">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      <div class="step-indent"></div>
+      <div class="step-cell comment"># Tiempo de respuesta</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row" data-parent="0.8.0.call">
+    <div class="step-container" id="0.8.0.call.0.25">
+      <div class="step-ref bg-step">25</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>print &#39;=== TIEMPO DE RESPUESTA DEL FEATURE loginToken ===&#39;, responseTime / 1000, &#39;s&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">7</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.8.0.call.0.25">10:46:27.614 [print] === TIEMPO DE RESPUESTA DEL FEATURE loginToken === 0.809 s 
+</div>   
+
+  
+
+</div>
+</div>
+    </div>    
+  </div>
+
+</div>
+</div>
+          <div data-parent="[3:51]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.9">
+      <div class="step-ref bg-step">9</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def authToken = loginResponse.response.token</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:51]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.10">
+      <div class="step-ref bg-step">10</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def headers = headersEstacionesConToken(authToken)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:51]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.11">
+      <div class="step-ref bg-step">11</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>configure headers = headers</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:51]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.12">
+      <div class="step-ref bg-step">12</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def clienteValidaRequest = read(&#39;classpath:JsonRequest/estacionClienteValidaRequest.json&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:51]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.13">
+      <div class="step-ref bg-step">13</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def camposFaltantesClienteRequest = read(&#39;classpath:JsonRequest/camposFaltantesClienteRequest.json&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:51]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def clusterEnCeroClienteRequest = read(&#39;classpath:JsonRequest/clusterEnCeroClienteRequest.json&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:51]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def errorSchema = karate.readAsString(&#39;classpath:Schema/sc_errorResponse.json&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:51]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def schemaUtil = Java.type(&#39;util.JsonSchemaUtil&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:51]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.17">
+      <div class="step-ref bg-step">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def schemaText = karate.readAsString(&#39;classpath:Schema/sc_crearEstacion.json&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.52">
+      <div class="step-ref passed">52</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>url baseUrl</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.53">
+      <div class="step-ref passed">53</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request clusterEnCeroClienteRequest</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.54">
+      <div class="step-ref passed">54</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">719</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.54">10:46:27.629 request:
+1 &gt; POST http://estaciones-bff-git-dev-front-oss.apps.tmve-nprod-1.tmve-qa.com/api/v1/estaciones/
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; X-USER-ID: E11011
+1 &gt; X-CORRELATION-ID: 1445|E11011|234234
+1 &gt; X-TOKEN-ID: eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IjU2NDE3NDkwRjMyQzVFOTI1OTQxMzM3NzZCNkJGMTdCIiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU2NDc4Nzg2LCJleHAiOjE3NTY0ODIzODZ9._dchK9nmlR1oqipQWtOpAQ68C4iGIzCzjbbvod913LtsJGTuLUcbqwq7ZE4YeQH4
+1 &gt; Content-Length: 813
+1 &gt; Host: estaciones-bff-git-dev-front-oss.apps.tmve-nprod-1.tmve-qa.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;codigo&quot;:&quot;krt60&quot;,&quot;nombre&quot;:&quot;Estacion Movistar krt&quot;,&quot;regionId&quot;:1,&quot;estadoId&quot;:1,&quot;municipioId&quot;:1,&quot;parroquiaId&quot;:1,&quot;atributos&quot;:[{&quot;Estacion Prueba1&quot;:&quot;Prueba1&quot;,&quot;Estacion Prueba2&quot;:&quot;Prueba2&quot;,&quot;Estacion Prueba3&quot;:&quot;Prueba3&quot;}],&quot;direccion&quot;:{&quot;conglomerado&quot;:&quot;conglomerado&quot;,&quot;nombreConglomerado&quot;:&quot;nombreConglomerado&quot;,&quot;inmueble&quot;:&quot;inmueble&quot;,&quot;nombreInmueble&quot;:&quot;nombreInmueble&quot;,&quot;piso&quot;:&quot;1&quot;,&quot;numero&quot;:&quot;1&quot;,&quot;vialidad&quot;:&quot;7&quot;,&quot;nombreVialidad&quot;:&quot;nombreVialidad&quot;,&quot;vialidad2&quot;:&quot;vialidad2&quot;,&quot;nombreVialidad2&quot;:&quot;nombreVialidad2&quot;,&quot;puntoReferencia&quot;:&quot;puntoReferencia&quot;,&quot;codigoPostal&quot;:&quot;codigoPostal&quot;,&quot;ciudad&quot;:&quot;ciudad&quot;,&quot;parroquia&quot;:&quot;parroquia&quot;,&quot;municipio&quot;:&quot;municipio&quot;,&quot;estado&quot;:&quot;estado&quot;,&quot;pais&quot;:&quot;Venezuela&quot;,&quot;tipoUbicacion&quot;:&quot;tipoUbicacion&quot;},&quot;codigoPais&quot;:&quot;VE&quot;,&quot;mercadoId&quot;:1,&quot;clusterId&quot;:0,&quot;comentAprobacion&quot;:&quot;Prueba krt&quot;,&quot;tmveOwner&quot;:true,&quot;estatus&quot;:0,&quot;createdBy&quot;:&quot;krt&quot;}
+
+10:46:28.348 response time in milliseconds: 719
+1 &lt; 400
+1 &lt; content-length: 302
+1 &lt; content-type: application/json
+1 &lt; set-cookie: 7ebc866ebb4d2d727ca53353a6c0c030=739fd5a9a7733606de7260d59fb218e7; path=/; HttpOnly
+1 &lt; Set-Cookie: 7ebc866ebb4d2d727ca53353a6c0c030=739fd5a9a7733606de7260d59fb218e7; path=/; HttpOnly
+{&quot;success&quot;:false,&quot;data&quot;:{&quot;code&quot;:&quot;400&quot;,&quot;status&quot;:&quot;BAD_REQUEST&quot;,&quot;message&quot;:&quot;create.request.clusterId: must be greater than or equal to 1&quot;,&quot;errors&quot;:[&quot;ve.com.telefonica.application.resources.StationController_Subclass create.request.clusterId: must be greater than or equal to 1&quot;]},&quot;timestamp&quot;:1756478788191}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.55">
+      <div class="step-ref passed">55</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 400</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.56">
+      <div class="step-ref passed">56</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.success == false</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.57">
+      <div class="step-ref passed">57</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.data.code == &quot;400&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.58">
+      <div class="step-ref passed">58</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def responseText = karate.pretty(response)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">4</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.59">
+      <div class="step-ref passed">59</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def isValid = schemaUtil.isValid(errorSchema, responseText)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">15</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.60">
+      <div class="step-ref passed">60</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>match isValid == true</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.61">
+      <div class="step-ref passed">61</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>print &#39;Error creando estacion con cluster en 0:&#39;, response.data.message</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.61">10:46:28.374 [print] Error creando estacion con cluster en 0: create.request.clusterId: must be greater than or equal to 1 
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.62">
+      <div class="step-ref passed">62</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>print &#39;=== TIEMPO DE RESPUESTA DEL FEATURE ===&#39;, responseTime / 1000, &#39;s&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.62">10:46:28.375 [print] === TIEMPO DE RESPUESTA DEL FEATURE === 0.719 s 
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

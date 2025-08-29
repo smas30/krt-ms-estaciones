@@ -41,7 +41,7 @@ $(document).ready(function() {
 
 
 
-<title>Cucumber Reports (no 1.0) - Tag: @estacionCodigoDuplicado</title>
+<title>Cucumber Reports (no 1.0) - Tag: @crearEstacionCliente</title>
 
 </head>
 <body>
@@ -76,7 +76,7 @@ $(document).ready(function() {
     <tr class="info">
       <td>krt-ms-estaciones</td>
         <td>1.0</td>
-      <td>18 ago. 2025, 18:24</td>
+      <td>29 ago. 2025, 10:46</td>
     </tr>
   </tbody>
 </table>
@@ -128,20 +128,20 @@ $(document).ready(function() {
 
         <tbody>
         <tr>
-          <td class="tagname">@estacionCodigoDuplicado</td>
-          <td      class="passed"    >3</td>
-          <td      class="failed"    >1</td>
-          <td     class="skipped"   >8</td>
+          <td class="tagname">@crearEstacionCliente</td>
+          <td      class="passed"    >11</td>
           <td >0</td>
           <td >0</td>
-          <td class="total">12</td>
+          <td >0</td>
+          <td >0</td>
+          <td class="total">11</td>
 
+          <td  class="passed"    >1</td>
           <td >0</td>
-          <td  class="failed"    >1</td>
           <td class="total">1</td>
 
-          <td class="duration" data-value="113282500">0.113</td>
-          <td class="failed">Failed</td>
+          <td class="duration" data-value="744687300">0.744</td>
+          <td class="passed">Passed</td>
         </tr>
         </tbody>
 
@@ -173,25 +173,25 @@ $(document).ready(function() {
 <div class="element">
     <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_2266774105.html">api/crearEstacion.feature</a>
+      <a href="report-feature_1_148897615.html">api/crearEstacionCliente.feature</a>
     </div>
 
 
 <div class="tags indention">
     <b>Tags:</b>
-       <a href="report-tag_2220277830.html">@crearEstacion</a>
-       <a href="report-tag_373857611.html">@estacionCodigoDuplicado</a>
+       <a href="report-tag_2011338902.html">@clusterEnCeroClienteRequest</a>
+       <a href="report-tag_1451806642.html">@crearEstacionCliente</a>
 </div>
 
 
-  <span class="lead-duration duration">0.113</span>
+  <span class="lead-duration duration">0.744</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Scenario</span>
-  <span class="name">El endpoint debe rechazar cuando se envia un codigo de estacion ya existente</span>
+  <span class="name">El endpoint debe rechazar cuando se envia un cluster id en cero</span>
 
 
      <i class="chevron fa fa-fw"></i>
@@ -200,16 +200,16 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-1" class="collapse collapsable-details  in ">
+  <div id="element-1" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-2">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-2">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -219,9 +219,8 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-2" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-2" class="inner-level collapse collapsable-details ">
       <div class="step">
-          <div class="comment indention"># Este escenario usa el mismo codigo que una estacion ya registrada para simular duplicidad</div>
 
 
 <div class="brief step-name-Given passed">
@@ -253,7 +252,7 @@ $(document).ready(function() {
 
 <div class="brief step-name-And passed">
   <span class="keyword indention">And</span>
-  <span class="name">request duplicadoCodigoRequest</span>
+  <span class="name">request clusterEnCeroClienteRequest</span>
 
   <span class="lead-duration duration">0.000</span>
 
@@ -282,7 +281,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method POST</span>
 
-  <span class="lead-duration duration">0.112</span>
+  <span class="lead-duration duration">0.719</span>
 
 </div>
 
@@ -300,24 +299,26 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-3" class="collapse collapsable-details">
-        <pre>18:24:10.180 request:
-1 &gt; POST http://10.161.169.27:8517/api/v1/estaciones
+        <pre>10:46:27.629 request:
+1 &gt; POST http://estaciones-bff-git-dev-front-oss.apps.tmve-nprod-1.tmve-qa.com/api/v1/estaciones/
 1 &gt; Content-Type: application/json; charset=UTF-8
 1 &gt; X-USER-ID: E11011
 1 &gt; X-CORRELATION-ID: 1445|E11011|234234
-1 &gt; X-TOKEN-ID: eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IjUzOEYyRTc5RDM1MkZENzRBQTI2RjdDOTk5MkYwMTFFIiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU1NTU1ODUwLCJleHAiOjE3NTU1NTk0NTB9.M7Ov6lchdFsU3UYJxy_VuYEMKDnCFPDDyE3YCLxkhjlpeSVDHIey1lvvPqw8InJy
-1 &gt; Content-Length: 858
-1 &gt; Host: 10.161.169.27:8517
+1 &gt; X-TOKEN-ID: eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IjU2NDE3NDkwRjMyQzVFOTI1OTQxMzM3NzZCNkJGMTdCIiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU2NDc4Nzg2LCJleHAiOjE3NTY0ODIzODZ9._dchK9nmlR1oqipQWtOpAQ68C4iGIzCzjbbvod913LtsJGTuLUcbqwq7ZE4YeQH4
+1 &gt; Content-Length: 813
+1 &gt; Host: estaciones-bff-git-dev-front-oss.apps.tmve-nprod-1.tmve-qa.com
 1 &gt; Connection: Keep-Alive
 1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
 1 &gt; Accept-Encoding: gzip,deflate
-{&quot;codigo&quot;:&quot;ESTKRT&quot;,&quot;nombre&quot;:&quot;Estacion Duplicada KARATE&quot;,&quot;regionId&quot;:2,&quot;estadoId&quot;:2,&quot;municipioId&quot;:2,&quot;parroquiaId&quot;:2,&quot;atributos&quot;:[{&quot;tipo&quot;:&quot;CAPACIDAD&quot;,&quot;valor&quot;:&quot;500&quot;,&quot;descripcion&quot;:&quot;Capacidad reducida&quot;},{&quot;tipo&quot;:&quot;ENERGIA&quot;,&quot;valor&quot;:&quot;SOLAR&quot;,&quot;descripcion&quot;:&quot;Fuente alternativa&quot;}],&quot;direccion&quot;:{&quot;conglomerado&quot;:&quot;OESTE&quot;,&quot;nombreConglomerado&quot;:&quot;Centro Empresarial&quot;,&quot;inmueble&quot;:&quot;GALPON&quot;,&quot;nombreInmueble&quot;:&quot;Modulo C&quot;,&quot;piso&quot;:&quot;PB&quot;,&quot;numero&quot;:&quot;789&quot;,&quot;vialidad&quot;:&quot;CALLE&quot;,&quot;nombreVialidad&quot;:&quot;Calle Oeste&quot;,&quot;vialidad2&quot;:&quot;AVENIDA&quot;,&quot;nombreVialidad2&quot;:&quot;Av. Secundaria&quot;,&quot;puntoReferencia&quot;:&quot;Junto al centro log&iacute;stico&quot;,&quot;codigoPostal&quot;:&quot;3003&quot;,&quot;ciudad&quot;:&quot;Ciudad Oeste&quot;,&quot;parroquia&quot;:&quot;Oeste&quot;,&quot;municipio&quot;:&quot;Empresarial&quot;,&quot;estado&quot;:&quot;Estado Oeste&quot;,&quot;pais&quot;:&quot;Venezuela&quot;,&quot;tipoUbicacion&quot;:&quot;INDUSTRIAL&quot;},&quot;codigoPais&quot;:&quot;VE&quot;,&quot;mercadoId&quot;:2,&quot;clusterId&quot;:2,&quot;comentAprobacion&quot;:&quot;Intento duplicado&quot;,&quot;estatus&quot;:1,&quot;createdBy&quot;:&quot;E22022&quot;}
+{&quot;codigo&quot;:&quot;krt60&quot;,&quot;nombre&quot;:&quot;Estacion Movistar krt&quot;,&quot;regionId&quot;:1,&quot;estadoId&quot;:1,&quot;municipioId&quot;:1,&quot;parroquiaId&quot;:1,&quot;atributos&quot;:[{&quot;Estacion Prueba1&quot;:&quot;Prueba1&quot;,&quot;Estacion Prueba2&quot;:&quot;Prueba2&quot;,&quot;Estacion Prueba3&quot;:&quot;Prueba3&quot;}],&quot;direccion&quot;:{&quot;conglomerado&quot;:&quot;conglomerado&quot;,&quot;nombreConglomerado&quot;:&quot;nombreConglomerado&quot;,&quot;inmueble&quot;:&quot;inmueble&quot;,&quot;nombreInmueble&quot;:&quot;nombreInmueble&quot;,&quot;piso&quot;:&quot;1&quot;,&quot;numero&quot;:&quot;1&quot;,&quot;vialidad&quot;:&quot;7&quot;,&quot;nombreVialidad&quot;:&quot;nombreVialidad&quot;,&quot;vialidad2&quot;:&quot;vialidad2&quot;,&quot;nombreVialidad2&quot;:&quot;nombreVialidad2&quot;,&quot;puntoReferencia&quot;:&quot;puntoReferencia&quot;,&quot;codigoPostal&quot;:&quot;codigoPostal&quot;,&quot;ciudad&quot;:&quot;ciudad&quot;,&quot;parroquia&quot;:&quot;parroquia&quot;,&quot;municipio&quot;:&quot;municipio&quot;,&quot;estado&quot;:&quot;estado&quot;,&quot;pais&quot;:&quot;Venezuela&quot;,&quot;tipoUbicacion&quot;:&quot;tipoUbicacion&quot;},&quot;codigoPais&quot;:&quot;VE&quot;,&quot;mercadoId&quot;:1,&quot;clusterId&quot;:0,&quot;comentAprobacion&quot;:&quot;Prueba krt&quot;,&quot;tmveOwner&quot;:true,&quot;estatus&quot;:0,&quot;createdBy&quot;:&quot;krt&quot;}
 
-18:24:10.290 response time in milliseconds: 109
+10:46:28.348 response time in milliseconds: 719
 1 &lt; 400
-1 &lt; content-length: 259
-1 &lt; Content-Type: application/json
-{&quot;success&quot;:false,&quot;data&quot;:{&quot;code&quot;:&quot;400&quot;,&quot;status&quot;:&quot;BAD_REQUEST&quot;,&quot;message&quot;:&quot;Cannot invoke \&quot;String.split(String)\&quot; because \&quot;correlationId\&quot; is null&quot;,&quot;errors&quot;:[&quot;Cannot invoke \&quot;String.split(String)\&quot; because \&quot;correlationId\&quot; is null&quot;]},&quot;timestamp&quot;:1755555850328}
+1 &lt; content-length: 302
+1 &lt; content-type: application/json
+1 &lt; set-cookie: 7ebc866ebb4d2d727ca53353a6c0c030=739fd5a9a7733606de7260d59fb218e7; path=/; HttpOnly
+1 &lt; Set-Cookie: 7ebc866ebb4d2d727ca53353a6c0c030=739fd5a9a7733606de7260d59fb218e7; path=/; HttpOnly
+{&quot;success&quot;:false,&quot;data&quot;:{&quot;code&quot;:&quot;400&quot;,&quot;status&quot;:&quot;BAD_REQUEST&quot;,&quot;message&quot;:&quot;create.request.clusterId: must be greater than or equal to 1&quot;,&quot;errors&quot;:[&quot;ve.com.telefonica.application.resources.StationController_Subclass create.request.clusterId: must be greater than or equal to 1&quot;]},&quot;timestamp&quot;:1756478788191}
 
 </pre>
       </div>
@@ -334,9 +335,9 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then failed">
+<div class="brief step-name-Then passed">
   <span class="keyword indention">Then</span>
-  <span class="name">status 409</span>
+  <span class="name">status 400</span>
 
   <span class="lead-duration duration">0.000</span>
 
@@ -347,37 +348,9 @@ $(document).ready(function() {
 
 
 
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-4">
-          <a>status</a>
-      </div>
-      <div id="msg-4" class="collapse collapsable-details  in ">
-        <pre>status code was: 400, expected: 409, response time in milliseconds: 109, url: http://10.161.169.27:8517/api/v1/estaciones, response: 
-{&quot;success&quot;:false,&quot;data&quot;:{&quot;code&quot;:&quot;400&quot;,&quot;status&quot;:&quot;BAD_REQUEST&quot;,&quot;message&quot;:&quot;Cannot invoke \&quot;String.split(String)\&quot; because \&quot;correlationId\&quot; is null&quot;,&quot;errors&quot;:[&quot;Cannot invoke \&quot;String.split(String)\&quot; because \&quot;correlationId\&quot; is null&quot;]},&quot;timestamp&quot;:1755555850328}
-classpath:api/crearEstacion.feature:66</pre>
-      </div>
-    </div>
-  </div>
 
 
 
-
-  <div class="inner-level">
-    <div class="docstring indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-5">
-          <a>Doc string</a>
-      </div>
-      <div id="msg-5" class="collapse collapsable-details">
-        <pre>18:24:10.290 classpath:api/crearEstacion.feature:66
-Then status 409
-status code was: 400, expected: 409, response time in milliseconds: 109, url: http://10.161.169.27:8517/api/v1/estaciones, response: 
-{&quot;success&quot;:false,&quot;data&quot;:{&quot;code&quot;:&quot;400&quot;,&quot;status&quot;:&quot;BAD_REQUEST&quot;,&quot;message&quot;:&quot;Cannot invoke \&quot;String.split(String)\&quot; because \&quot;correlationId\&quot; is null&quot;,&quot;errors&quot;:[&quot;Cannot invoke \&quot;String.split(String)\&quot; because \&quot;correlationId\&quot; is null&quot;]},&quot;timestamp&quot;:1755555850328}
-classpath:api/crearEstacion.feature:66
-</pre>
-      </div>
-    </div>
-  </div>
 
 
 
@@ -389,11 +362,11 @@ classpath:api/crearEstacion.feature:66
       <div class="step">
 
 
-<div class="brief step-name-And skipped">
+<div class="brief step-name-And passed">
   <span class="keyword indention">And</span>
   <span class="name">match response.success == false</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.002</span>
 
 </div>
 
@@ -416,38 +389,11 @@ classpath:api/crearEstacion.feature:66
       <div class="step">
 
 
-<div class="brief step-name-And skipped">
+<div class="brief step-name-And passed">
   <span class="keyword indention">And</span>
-  <span class="name">match response.data.code == &quot;409&quot;</span>
+  <span class="name">match response.data.code == &quot;400&quot;</span>
 
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-And skipped">
-  <span class="keyword indention">And</span>
-  <span class="name">match response.data.message contains 'Codigo ya registrado'</span>
-
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.001</span>
 
 </div>
 
@@ -470,11 +416,11 @@ classpath:api/crearEstacion.feature:66
       <div class="step">
 
 
-<div class="brief step-name-* skipped">
+<div class="brief step-name-* passed">
   <span class="keyword indention">*</span>
   <span class="name">def responseText = karate.pretty(response)</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.004</span>
 
 </div>
 
@@ -497,11 +443,11 @@ classpath:api/crearEstacion.feature:66
       <div class="step">
 
 
-<div class="brief step-name-* skipped">
+<div class="brief step-name-* passed">
   <span class="keyword indention">*</span>
   <span class="name">def isValid = schemaUtil.isValid(errorSchema, responseText)</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.014</span>
 
 </div>
 
@@ -524,7 +470,7 @@ classpath:api/crearEstacion.feature:66
       <div class="step">
 
 
-<div class="brief step-name-* skipped">
+<div class="brief step-name-* passed">
   <span class="keyword indention">*</span>
   <span class="name">match isValid == true</span>
 
@@ -551,11 +497,11 @@ classpath:api/crearEstacion.feature:66
       <div class="step">
 
 
-<div class="brief step-name-And skipped">
+<div class="brief step-name-And passed">
   <span class="keyword indention">And</span>
-  <span class="name">print 'Error por codigo duplicado:', response.data.message</span>
+  <span class="name">print 'Error creando estacion con cluster en 0:', response.data.message</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.001</span>
 
 </div>
 
@@ -567,6 +513,17 @@ classpath:api/crearEstacion.feature:66
 
 
 
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-4">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-4" class="collapse collapsable-details">
+        <pre>10:46:28.374 [print] Error creando estacion con cluster en 0: create.request.clusterId: must be greater than or equal to 1 
+</pre>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -578,11 +535,11 @@ classpath:api/crearEstacion.feature:66
       <div class="step">
 
 
-<div class="brief step-name-And skipped">
+<div class="brief step-name-And passed">
   <span class="keyword indention">And</span>
   <span class="name">print '=== TIEMPO DE RESPUESTA DEL FEATURE ===', responseTime / 1000, 's'</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.001</span>
 
 </div>
 
@@ -594,6 +551,17 @@ classpath:api/crearEstacion.feature:66
 
 
 
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-5">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-5" class="collapse collapsable-details">
+        <pre>10:46:28.375 [print] === TIEMPO DE RESPUESTA DEL FEATURE === 0.719 s 
+</pre>
+      </div>
+    </div>
+  </div>
 
 
 

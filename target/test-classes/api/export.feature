@@ -18,17 +18,15 @@ Feature: Exportar estaciones mediante el endpoint GET /estaciones/export
   Scenario: El endpoint debe permitir descargar el archivo Excel con las estaciones registradas
     Given url baseUrl + '/export'
     And headers headers
-    And param page = 2
+    ##And param page = 1
     When method POST
     Then status 200
     And match header Content-Type contains 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
-    
-    # Obtener informacion del archivo sin mostrar contenido binario
+
     * def fileName = responseHeaders['content-disposition'] ? responseHeaders['content-disposition'].split('filename=')[1] : 'estaciones_export.xlsx'
     * def fileSize = responseHeaders['content-length'] || 'desconocido'
-    
-    # Mostrar informacion del archivo sin el contenido binario
-    And print '=== ARCHIVO EXCEL GENERADO ==='
+
+    # === ARCHIVO EXCEL GENERADO ===
     And print 'Nombre del archivo:', fileName
     And print 'Tamaño del archivo:', fileSize, 'bytes'
     And print '=== TIEMPO DE RESPUESTA DEL FEATURE ===', responseTime / 1000, 's'

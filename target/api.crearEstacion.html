@@ -39,7 +39,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
     </a>
     <div class="nav-count">
       <div id="nav-pass" class="bg-success">1</div>
-      <div id="nav-fail" class="bg-danger">2</div>
+      <div id="nav-fail" class="bg-danger">0</div>
     </div>
   </div>
   <div id="nav-env">
@@ -49,19 +49,13 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
     <div>Scenarios</div>
   </div>
   <div id="nav-date">
-    <div>2025-08-18 06:24:10 p. m.</div>
+    <div>2025-08-29 10:42:39 a. m.</div>
   </div>
 </div>
 
         <div class="nav-container">
-          <div class="nav-item failed">
-            <a href="#[1:27]"><span>[1:27]</span> <span>Crear estacion con datos validos</span></a>
-          </div>
           <div class="nav-item passed">
-            <a href="#[2:43]"><span>[2:43]</span> <span>El endpoint debe rechazar cuando se envian campos obligatorios vacios o nulos</span></a>
-          </div>
-          <div class="nav-item failed">
-            <a href="#[3:61]"><span>[3:61]</span> <span>El endpoint debe rechazar cuando se envia un codigo de estacion ya existente</span></a>
+            <a href="#[4:79]"><span>[4:79]</span> <span>El endpoint debe rechazar cuando se envia un id de mercado en cero</span></a>
           </div>
         </div>
       </div>
@@ -75,29 +69,29 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
           <span class="feature-description"></span>
         </div>
         <div class="scenario">
-          <div class="scenario-heading" id="[1:27]">
+          <div class="scenario-heading" id="[4:79]">
             <div class="heading-container">
               <div class="scenario-tags">
-                <a class="badge badge-primary" href="karate-tags.html">estacionValida</a><a class="badge badge-primary" href="karate-tags.html">crearEstacion</a>
+                <a class="badge badge-primary" href="karate-tags.html">crearEstacion</a><a class="badge badge-primary" href="karate-tags.html">mercadoIdEnCeroRequest</a>
               </div>
               <div class="scenario-keyword">
-                Scenario: <span>[1:27]</span>
-                <span class="scenario-name">Crear estacion con datos validos</span>
+                Scenario: <span>[4:79]</span>
+                <span class="scenario-name">El endpoint debe rechazar cuando se envia un id de mercado en cero</span>
                 <span></span>
               </div>
             </div>
-            <div class="scenario-time failed">
-              <span>ms:</span>&nbsp;<span>1663</span>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>2449</span>
             </div>
           </div>
           <div class="step-row">
-            <div class="step-container" id="[1:27]bg">
+            <div class="step-container" id="[4:79]bg">
               <div class="step-ref bg-step">&gt;&gt;</div>
               <div class="step-cell passed">Background:</div>
             </div>
             <div class="time-cell passed"></div>
           </div>
-          <div data-parent="[1:27]bg"><div>
+          <div data-parent="[4:79]bg"><div>
   
 
   <div class="step-row">
@@ -114,10 +108,10 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref bg-step">6</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def validBodyRequest = read(&#39;classpath:JsonRequest/loginTokenRequest.json&#39;)</span>
+        <span>*</span>&nbsp;<span>configure logPrettyResponse = false</span>
       </div>
     </div>
-    <div class="time-cell passed">57</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
@@ -132,7 +126,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-          <div data-parent="[1:27]bg"><div>
+          <div data-parent="[4:79]bg"><div>
   
 
   
@@ -142,10 +136,66 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref bg-step">7</div>
       
       <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>configure logPrettyRequest = false</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[4:79]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.8">
+      <div class="step-ref bg-step">8</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def validBodyRequest = read(&#39;classpath:JsonRequest/loginTokenRequest.json&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">32</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[4:79]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.9">
+      <div class="step-ref bg-step">9</div>
+      
+      <div class="step-cell passed">
         <span>*</span>&nbsp;<span>def loginResponse = call read(&#39;classpath:api/loginToken.feature&#39;) { request: validBodyRequest }</span>
       </div>
     </div>
-    <div class="time-cell passed">1440</div>
+    <div class="time-cell passed">1474</div>
   </div>
 
    
@@ -159,12 +209,12 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   <div>
         
     <div class="step-row">
-      <div class="step-container" id="0.7.0.call">
+      <div class="step-container" id="0.9.0.call">
         <div class="step-ref bg-step">&gt;&gt;</div>
         <div class="step-indent"></div>
         <div class="step-cell passed">api.loginToken</div>
       </div>
-      <div class="time-cell passed">1424</div>
+      <div class="time-cell passed">1462</div>
     </div>
     <div>
       <div><div>
@@ -172,8 +222,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="step-row" data-parent="0.7.0.call">
-    <div class="step-container" id="0.7.0.call.0.4">
+  <div class="step-row" data-parent="0.9.0.call">
+    <div class="step-container" id="0.9.0.call.0.4">
       <div class="step-ref bg-step">4</div>
       <div class="step-indent"></div>
       <div class="step-cell passed">
@@ -200,1127 +250,12 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="step-row" data-parent="0.7.0.call">
-    <div class="step-container" id="0.7.0.call.0.5">
+  <div class="step-row" data-parent="0.9.0.call">
+    <div class="step-container" id="0.9.0.call.0.5">
       <div class="step-ref bg-step">5</div>
       <div class="step-indent"></div>
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>print loginUrl</span>
-      </div>
-    </div>
-    <div class="time-cell passed">6</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="0.7.0.call.0.5">18:24:08.163 [print] http://10.161.169.27:8511/intraLogin 
-</div>   
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="0.7.0.call">
-    <div class="step-container" id="0.7.0.call.0.6">
-      <div class="step-ref bg-step">6</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def schemaUtil = Java.type(&#39;util.JsonSchemaUtil&#39;)</span>
-      </div>
-    </div>
-    <div class="time-cell passed">6</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="0.7.0.call">
-    <div class="step-container" id="0.7.0.call.0.7">
-      <div class="step-ref bg-step">7</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def schemaText = karate.readAsString(&#39;classpath:Schema/sc_loginToken.json&#39;)</span>
-      </div>
-    </div>
-    <div class="time-cell passed">2</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="0.7.0.call">
-    <div class="step-container" id="0.7.0.call.0.8">
-      <div class="step-ref bg-step">8</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def validBodyRequest = read(&#39;classpath:JsonRequest/loginTokenRequest.json&#39;)</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="0.7.0.call">
-    <div class="step-container" id="0.7.0.call.0.12">
-      <div class="step-ref bg-step">12</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>Given</span>&nbsp;<span>request validBodyRequest</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="0.7.0.call">
-    <div class="step-container" id="0.7.0.call.0.13">
-      <div class="step-ref bg-step">13</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>When</span>&nbsp;<span>method POST</span>
-      </div>
-    </div>
-    <div class="time-cell passed">843</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="0.7.0.call.0.13">18:24:08.777 request:
-1 &gt; POST http://10.161.169.27:8511/intraLogin
-1 &gt; Content-Type: application/json; charset=UTF-8
-1 &gt; Content-Length: 39
-1 &gt; Host: 10.161.169.27:8511
-1 &gt; Connection: Keep-Alive
-1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
-1 &gt; Accept-Encoding: gzip,deflate
-{&quot;login&quot;:&quot;tns01&quot;,&quot;clave&quot;:&quot;T3st2024.+-&quot;}
-
-18:24:09.015 response time in milliseconds: 232
-1 &lt; 200
-1 &lt; Content-Type: application/json
-1 &lt; content-length: 326
-{&quot;token&quot;:&quot;eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IkUxNzgyRDdBQjEyQkQyRUIyN0U3MDQ3RDczNkI2QjI1Iiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU1NTU1ODQ4LCJleHAiOjE3NTU1NTk0NDh9.9uHF6XW7KmdOmw2046M0xgTGmpmisGO7GTNoT3Q5fvvdnfvOG3FbZGLxrnXzUQKO&quot;}
-
-</div>   
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="0.7.0.call">
-    <div class="step-container" id="0.7.0.call.0.14">
-      <div class="step-ref bg-step">14</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>Then</span>&nbsp;<span>status 200</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  <div class="step-row" data-parent="0.7.0.call">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
-      <div class="step-indent"></div>
-      <div class="step-cell comment"># Validar que la respuesta contenga el campo token</div>
-    </div>
-    <div class="time-cell comment"></div>            
-  </div>
-
-  <div class="step-row" data-parent="0.7.0.call">
-    <div class="step-container" id="0.7.0.call.0.17">
-      <div class="step-ref bg-step">17</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>match response.token == &#39;#string&#39;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">15</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  <div class="step-row" data-parent="0.7.0.call">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
-      <div class="step-indent"></div>
-      <div class="step-cell comment"># Validar la estructura completa de la respuesta usando el schema JSON</div>
-    </div>
-    <div class="time-cell comment"></div>            
-  </div>
-
-  <div class="step-row" data-parent="0.7.0.call">
-    <div class="step-container" id="0.7.0.call.0.20">
-      <div class="step-ref bg-step">20</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def responseText = karate.pretty(response)</span>
-      </div>
-    </div>
-    <div class="time-cell passed">44</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="0.7.0.call">
-    <div class="step-container" id="0.7.0.call.0.21">
-      <div class="step-ref bg-step">21</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def isValid = schemaUtil.isValid(schemaText, responseText)</span>
-      </div>
-    </div>
-    <div class="time-cell passed">488</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="0.7.0.call">
-    <div class="step-container" id="0.7.0.call.0.22">
-      <div class="step-ref bg-step">22</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>match isValid == true</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  <div class="step-row" data-parent="0.7.0.call">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
-      <div class="step-indent"></div>
-      <div class="step-cell comment"># Tiempo de respuesta</div>
-    </div>
-    <div class="time-cell comment"></div>            
-  </div>
-
-  <div class="step-row" data-parent="0.7.0.call">
-    <div class="step-container" id="0.7.0.call.0.25">
-      <div class="step-ref bg-step">25</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>print &#39;=== TIEMPO DE RESPUESTA DEL FEATURE loginToken ===&#39;, responseTime / 1000, &#39;s&#39;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">16</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="0.7.0.call.0.25">18:24:09.586 [print] === TIEMPO DE RESPUESTA DEL FEATURE loginToken === 0.232 s 
-</div>   
-
-  
-
-</div>
-</div>
-    </div>    
-  </div>
-
-</div>
-</div>
-          <div data-parent="[1:27]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.8">
-      <div class="step-ref bg-step">8</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def authToken = loginResponse.response.token</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div data-parent="[1:27]bg"><div>
-  
-
-  <div class="step-row">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
-      
-      <div class="step-cell comment"># 2. CONFIGURANDO HEADERS PARA ESTACIONES</div>
-    </div>
-    <div class="time-cell comment"></div>            
-  </div>
-
-  <div class="step-row">
-    <div class="step-container" id="0.11">
-      <div class="step-ref bg-step">11</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def headers = headersEstacionesConToken(authToken)</span>
-      </div>
-    </div>
-    <div class="time-cell passed">4</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div data-parent="[1:27]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.12">
-      <div class="step-ref bg-step">12</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>configure headers = headers</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div data-parent="[1:27]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.13">
-      <div class="step-ref bg-step">13</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>print &#39;HEADERS usados en creacion de estacion:&#39;, headers</span>
-      </div>
-    </div>
-    <div class="time-cell passed">2</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="0.13">18:24:09.597 [print] HEADERS usados en creacion de estacion: {
-  &quot;Content-Type&quot;: &quot;application/json&quot;,
-  &quot;X-USER-ID&quot;: &quot;E11011&quot;,
-  &quot;X-CORRELATION-ID&quot;: &quot;1445|E11011|234234&quot;,
-  &quot;X-TOKEN-ID&quot;: &quot;eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IkUxNzgyRDdBQjEyQkQyRUIyN0U3MDQ3RDczNkI2QjI1Iiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU1NTU1ODQ4LCJleHAiOjE3NTU1NTk0NDh9.9uHF6XW7KmdOmw2046M0xgTGmpmisGO7GTNoT3Q5fvvdnfvOG3FbZGLxrnXzUQKO&quot;
-}
- 
-</div>   
-
-  
-
-</div>
-</div>
-          <div data-parent="[1:27]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.14">
-      <div class="step-ref bg-step">14</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>print &#39;TOKEN obtenido:&#39;, authToken</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="0.14">18:24:09.597 [print] TOKEN obtenido: eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IkUxNzgyRDdBQjEyQkQyRUIyN0U3MDQ3RDczNkI2QjI1Iiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU1NTU1ODQ4LCJleHAiOjE3NTU1NTk0NDh9.9uHF6XW7KmdOmw2046M0xgTGmpmisGO7GTNoT3Q5fvvdnfvOG3FbZGLxrnXzUQKO 
-</div>   
-
-  
-
-</div>
-</div>
-          <div data-parent="[1:27]bg"><div>
-  
-
-  <div class="step-row">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
-      
-      <div class="step-cell comment"># 3. CARGANDO (REQUEST) CON DATOS DE PRUEBA</div>
-    </div>
-    <div class="time-cell comment"></div>            
-  </div>
-
-  <div class="step-row">
-    <div class="step-container" id="0.17">
-      <div class="step-ref bg-step">17</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def estacionValidaRequest = read(&#39;classpath:JsonRequest/estacionValidaRequest.json&#39;)</span>
-      </div>
-    </div>
-    <div class="time-cell passed">2</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div data-parent="[1:27]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.18">
-      <div class="step-ref bg-step">18</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def duplicadoCodigoRequest = read(&#39;classpath:JsonRequest/duplicadoCodigoRequest.json&#39;)</span>
-      </div>
-    </div>
-    <div class="time-cell passed">2</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div data-parent="[1:27]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.19">
-      <div class="step-ref bg-step">19</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def camposFaltantesRequest = read(&#39;classpath:JsonRequest/camposFaltantesRequest.json&#39;)</span>
-      </div>
-    </div>
-    <div class="time-cell passed">2</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div data-parent="[1:27]bg"><div>
-  
-
-  <div class="step-row">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
-      
-      <div class="step-cell comment"># 4. CONFIGURANDO VALIDACION DE SCHEMA</div>
-    </div>
-    <div class="time-cell comment"></div>            
-  </div>
-
-  <div class="step-row">
-    <div class="step-container" id="0.22">
-      <div class="step-ref bg-step">22</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def schemaUtil = Java.type(&#39;util.JsonSchemaUtil&#39;)</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div data-parent="[1:27]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.23">
-      <div class="step-ref bg-step">23</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def schemaText = karate.readAsString(&#39;classpath:Schema/sc_crearEstacion.json&#39;)</span>
-      </div>
-    </div>
-    <div class="time-cell passed">2</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div data-parent="[1:27]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.24">
-      <div class="step-ref bg-step">24</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def errorSchema = karate.readAsString(&#39;classpath:Schema/sc_errorResponse.json&#39;)</span>
-      </div>
-    </div>
-    <div class="time-cell passed">2</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  <div class="step-row">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
-      
-      <div class="step-cell comment"># Este escenario valida que el endpoint cree correctamente una estacion con datos completos y correctos</div>
-    </div>
-    <div class="time-cell comment"></div>            
-  </div>
-
-  <div class="step-row">
-    <div class="step-container" id="0.29">
-      <div class="step-ref passed">29</div>
-      
-      <div class="step-cell passed">
-        <span>Given</span>&nbsp;<span>url baseUrl</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.30">
-      <div class="step-ref passed">30</div>
-      
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>request estacionValidaRequest</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.31">
-      <div class="step-ref passed">31</div>
-      
-      <div class="step-cell passed">
-        <span>When</span>&nbsp;<span>method POST</span>
-      </div>
-    </div>
-    <div class="time-cell passed">140</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="0.31">18:24:09.612 request:
-1 &gt; POST http://10.161.169.27:8517/api/v1/estaciones
-1 &gt; Content-Type: application/json; charset=UTF-8
-1 &gt; X-USER-ID: E11011
-1 &gt; X-CORRELATION-ID: 1445|E11011|234234
-1 &gt; X-TOKEN-ID: eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IkUxNzgyRDdBQjEyQkQyRUIyN0U3MDQ3RDczNkI2QjI1Iiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU1NTU1ODQ4LCJleHAiOjE3NTU1NTk0NDh9.9uHF6XW7KmdOmw2046M0xgTGmpmisGO7GTNoT3Q5fvvdnfvOG3FbZGLxrnXzUQKO
-1 &gt; Content-Length: 900
-1 &gt; Host: 10.161.169.27:8517
-1 &gt; Connection: Keep-Alive
-1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
-1 &gt; Accept-Encoding: gzip,deflate
-{&quot;codigo&quot;:&quot;ESTKRT&quot;,&quot;nombre&quot;:&quot;Estacion Central KARATE&quot;,&quot;regionId&quot;:1,&quot;estadoId&quot;:1,&quot;municipioId&quot;:1,&quot;parroquiaId&quot;:1,&quot;atributos&quot;:[{&quot;tipo&quot;:&quot;CAPACIDAD&quot;,&quot;valor&quot;:&quot;1000&quot;,&quot;descripcion&quot;:&quot;Capacidad maxima de usuarios&quot;},{&quot;tipo&quot;:&quot;TECNOLOGIA&quot;,&quot;valor&quot;:&quot;4G&quot;,&quot;descripcion&quot;:&quot;Tecnologia disponible&quot;}],&quot;direccion&quot;:{&quot;conglomerado&quot;:&quot;CENTRO&quot;,&quot;nombreConglomerado&quot;:&quot;Centro Comercial&quot;,&quot;inmueble&quot;:&quot;EDIFICIO&quot;,&quot;nombreInmueble&quot;:&quot;Torre Principal&quot;,&quot;piso&quot;:&quot;1&quot;,&quot;numero&quot;:&quot;123&quot;,&quot;vialidad&quot;:&quot;AVENIDA&quot;,&quot;nombreVialidad&quot;:&quot;Av. Principal&quot;,&quot;vialidad2&quot;:&quot;CALLE&quot;,&quot;nombreVialidad2&quot;:&quot;Calle Secundaria&quot;,&quot;puntoReferencia&quot;:&quot;Frente al Parque Central&quot;,&quot;codigoPostal&quot;:&quot;1001&quot;,&quot;ciudad&quot;:&quot;Ciudad Capital&quot;,&quot;parroquia&quot;:&quot;Centro&quot;,&quot;municipio&quot;:&quot;Capital&quot;,&quot;estado&quot;:&quot;Distrito Capital&quot;,&quot;pais&quot;:&quot;Venezuela&quot;,&quot;tipoUbicacion&quot;:&quot;URBANA&quot;},&quot;codigoPais&quot;:&quot;VE&quot;,&quot;mercadoId&quot;:1,&quot;clusterId&quot;:1,&quot;comentAprobacion&quot;:&quot;Estacion aprobada para operacion KARATE&quot;,&quot;estatus&quot;:1,&quot;createdBy&quot;:&quot;E11011&quot;}
-
-18:24:09.741 response time in milliseconds: 129
-1 &lt; 400
-1 &lt; content-length: 259
-1 &lt; Content-Type: application/json
-{&quot;success&quot;:false,&quot;data&quot;:{&quot;code&quot;:&quot;400&quot;,&quot;status&quot;:&quot;BAD_REQUEST&quot;,&quot;message&quot;:&quot;Cannot invoke \&quot;String.split(String)\&quot; because \&quot;correlationId\&quot; is null&quot;,&quot;errors&quot;:[&quot;Cannot invoke \&quot;String.split(String)\&quot; because \&quot;correlationId\&quot; is null&quot;]},&quot;timestamp&quot;:1755555849790}
-
-</div>   
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.32">
-      <div class="step-ref failed">32</div>
-      
-      <div class="step-cell failed">
-        <span>Then</span>&nbsp;<span>status 200</span>
-      </div>
-    </div>
-    <div class="time-cell failed">7</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="0.32">18:24:09.760 classpath:api/crearEstacion.feature:32
-Then status 200
-status code was: 400, expected: 200, response time in milliseconds: 129, url: http://10.161.169.27:8517/api/v1/estaciones, response: 
-{&quot;success&quot;:false,&quot;data&quot;:{&quot;code&quot;:&quot;400&quot;,&quot;status&quot;:&quot;BAD_REQUEST&quot;,&quot;message&quot;:&quot;Cannot invoke \&quot;String.split(String)\&quot; because \&quot;correlationId\&quot; is null&quot;,&quot;errors&quot;:[&quot;Cannot invoke \&quot;String.split(String)\&quot; because \&quot;correlationId\&quot; is null&quot;]},&quot;timestamp&quot;:1755555849790}
-classpath:api/crearEstacion.feature:32
-</div>   
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.33">
-      <div class="step-ref skipped">33</div>
-      
-      <div class="step-cell skipped">
-        <span>And</span>&nbsp;<span>match response.success == true</span>
-      </div>
-    </div>
-    <div class="time-cell skipped">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.34">
-      <div class="step-ref skipped">34</div>
-      
-      <div class="step-cell skipped">
-        <span>And</span>&nbsp;<span>match response.data.codigo == estacionValidaRequest.codigo</span>
-      </div>
-    </div>
-    <div class="time-cell skipped">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.35">
-      <div class="step-ref skipped">35</div>
-      
-      <div class="step-cell skipped">
-        <span>And</span>&nbsp;<span>match response.data.nombre == estacionValidaRequest.nombre</span>
-      </div>
-    </div>
-    <div class="time-cell skipped">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.36">
-      <div class="step-ref skipped">36</div>
-      
-      <div class="step-cell skipped">
-        <span>*</span>&nbsp;<span>def responseText = karate.pretty(response)</span>
-      </div>
-    </div>
-    <div class="time-cell skipped">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.37">
-      <div class="step-ref skipped">37</div>
-      
-      <div class="step-cell skipped">
-        <span>*</span>&nbsp;<span>def isValid = schemaUtil.isValid(schemaText, responseText)</span>
-      </div>
-    </div>
-    <div class="time-cell skipped">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.38">
-      <div class="step-ref skipped">38</div>
-      
-      <div class="step-cell skipped">
-        <span>*</span>&nbsp;<span>match isValid == true</span>
-      </div>
-    </div>
-    <div class="time-cell skipped">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.39">
-      <div class="step-ref skipped">39</div>
-      
-      <div class="step-cell skipped">
-        <span>And</span>&nbsp;<span>print &#39;Estacion creada exitosamente:&#39;, response</span>
-      </div>
-    </div>
-    <div class="time-cell skipped">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.40">
-      <div class="step-ref skipped">40</div>
-      
-      <div class="step-cell skipped">
-        <span>And</span>&nbsp;<span>print &#39;=== TIEMPO DE RESPUESTA DEL FEATURE ===&#39;, responseTime / 1000, &#39;s&#39;</span>
-      </div>
-    </div>
-    <div class="time-cell skipped">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-        </div>
-        <div class="scenario">
-          <div class="scenario-heading" id="[2:43]">
-            <div class="heading-container">
-              <div class="scenario-tags">
-                <a class="badge badge-primary" href="karate-tags.html">crearEstacion</a><a class="badge badge-primary" href="karate-tags.html">estacionCamposFaltantes</a>
-              </div>
-              <div class="scenario-keyword">
-                Scenario: <span>[2:43]</span>
-                <span class="scenario-name">El endpoint debe rechazar cuando se envian campos obligatorios vacios o nulos</span>
-                <span></span>
-              </div>
-            </div>
-            <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>274</span>
-            </div>
-          </div>
-          <div class="step-row">
-            <div class="step-container" id="[2:43]bg">
-              <div class="step-ref bg-step">&gt;&gt;</div>
-              <div class="step-cell passed">Background:</div>
-            </div>
-            <div class="time-cell passed"></div>
-          </div>
-          <div data-parent="[2:43]bg"><div>
-  
-
-  <div class="step-row">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
-      
-      <div class="step-cell comment"># 1. LLAMANDO AL SERVICIO AUTHTOKEN PARA HACER LOGIN Y OBTENER EL TOKEN</div>
-    </div>
-    <div class="time-cell comment"></div>            
-  </div>
-
-  <div class="step-row">
-    <div class="step-container" id="0.6">
-      <div class="step-ref bg-step">6</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def validBodyRequest = read(&#39;classpath:JsonRequest/loginTokenRequest.json&#39;)</span>
       </div>
     </div>
     <div class="time-cell passed">3</div>
@@ -1332,98 +267,7 @@ classpath:api/crearEstacion.feature:32
 
   
 
-     
-
-  
-
-</div>
-</div>
-          <div data-parent="[2:43]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.7">
-      <div class="step-ref bg-step">7</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def loginResponse = call read(&#39;classpath:api/loginToken.feature&#39;) { request: validBodyRequest }</span>
-      </div>
-    </div>
-    <div class="time-cell passed">112</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  <div>
-        
-    <div class="step-row">
-      <div class="step-container" id="0.7.0.call">
-        <div class="step-ref bg-step">&gt;&gt;</div>
-        <div class="step-indent"></div>
-        <div class="step-cell passed">api.loginToken</div>
-      </div>
-      <div class="time-cell passed">105</div>
-    </div>
-    <div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="0.7.0.call">
-    <div class="step-container" id="0.7.0.call.0.4">
-      <div class="step-ref bg-step">4</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>url loginUrl</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="0.7.0.call">
-    <div class="step-container" id="0.7.0.call.0.5">
-      <div class="step-ref bg-step">5</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>print loginUrl</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="0.7.0.call.0.5">18:24:09.778 [print] http://10.161.169.27:8511/intraLogin 
+  <div class="preformatted" data-parent="0.9.0.call.0.5">10:42:37.100 [print] http://ms-auth-oss-git-dev-front-oss.apps.tmve-nprod-1.tmve-qa.com/intraLogin 
 </div>   
 
   
@@ -1435,15 +279,15 @@ classpath:api/crearEstacion.feature:32
 
   
 
-  <div class="step-row" data-parent="0.7.0.call">
-    <div class="step-container" id="0.7.0.call.0.6">
+  <div class="step-row" data-parent="0.9.0.call">
+    <div class="step-container" id="0.9.0.call.0.6">
       <div class="step-ref bg-step">6</div>
       <div class="step-indent"></div>
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>def schemaUtil = Java.type(&#39;util.JsonSchemaUtil&#39;)</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">6</div>
   </div>
 
    
@@ -1463,15 +307,15 @@ classpath:api/crearEstacion.feature:32
 
   
 
-  <div class="step-row" data-parent="0.7.0.call">
-    <div class="step-container" id="0.7.0.call.0.7">
+  <div class="step-row" data-parent="0.9.0.call">
+    <div class="step-container" id="0.9.0.call.0.7">
       <div class="step-ref bg-step">7</div>
       <div class="step-indent"></div>
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>def schemaText = karate.readAsString(&#39;classpath:Schema/sc_loginToken.json&#39;)</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">2</div>
   </div>
 
    
@@ -1491,8 +335,8 @@ classpath:api/crearEstacion.feature:32
 
   
 
-  <div class="step-row" data-parent="0.7.0.call">
-    <div class="step-container" id="0.7.0.call.0.8">
+  <div class="step-row" data-parent="0.9.0.call">
+    <div class="step-container" id="0.9.0.call.0.8">
       <div class="step-ref bg-step">8</div>
       <div class="step-indent"></div>
       <div class="step-cell passed">
@@ -1519,8 +363,8 @@ classpath:api/crearEstacion.feature:32
 
   
 
-  <div class="step-row" data-parent="0.7.0.call">
-    <div class="step-container" id="0.7.0.call.0.12">
+  <div class="step-row" data-parent="0.9.0.call">
+    <div class="step-container" id="0.9.0.call.0.12">
       <div class="step-ref bg-step">12</div>
       <div class="step-indent"></div>
       <div class="step-cell passed">
@@ -1547,15 +391,15 @@ classpath:api/crearEstacion.feature:32
 
   
 
-  <div class="step-row" data-parent="0.7.0.call">
-    <div class="step-container" id="0.7.0.call.0.13">
+  <div class="step-row" data-parent="0.9.0.call">
+    <div class="step-container" id="0.9.0.call.0.13">
       <div class="step-ref bg-step">13</div>
       <div class="step-indent"></div>
       <div class="step-cell passed">
         <span>When</span>&nbsp;<span>method POST</span>
       </div>
     </div>
-    <div class="time-cell passed">94</div>
+    <div class="time-cell passed">1080</div>
   </div>
 
    
@@ -1564,21 +408,23 @@ classpath:api/crearEstacion.feature:32
 
   
 
-  <div class="preformatted" data-parent="0.7.0.call.0.13">18:24:09.785 request:
-1 &gt; POST http://10.161.169.27:8511/intraLogin
+  <div class="preformatted" data-parent="0.9.0.call.0.13">10:42:37.373 request:
+1 &gt; POST http://ms-auth-oss-git-dev-front-oss.apps.tmve-nprod-1.tmve-qa.com/intraLogin
 1 &gt; Content-Type: application/json; charset=UTF-8
 1 &gt; Content-Length: 39
-1 &gt; Host: 10.161.169.27:8511
+1 &gt; Host: ms-auth-oss-git-dev-front-oss.apps.tmve-nprod-1.tmve-qa.com
 1 &gt; Connection: Keep-Alive
 1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
 1 &gt; Accept-Encoding: gzip,deflate
 {&quot;login&quot;:&quot;tns01&quot;,&quot;clave&quot;:&quot;T3st2024.+-&quot;}
 
-18:24:09.877 response time in milliseconds: 89
+10:42:38.184 response time in milliseconds: 800
 1 &lt; 200
-1 &lt; Content-Type: application/json
+1 &lt; content-type: application/json
 1 &lt; content-length: 326
-{&quot;token&quot;:&quot;eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IkQ3NjY5RDAzQjg1RDQwNzc4OEI5ODNCRURCNUYyNTNEIiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU1NTU1ODQ5LCJleHAiOjE3NTU1NTk0NDl9.vpVG0vNkkJqf10BwUNL7Ct8Rk5s3YWEg3WApzSYRtvhINNKoQAJf2P9xZuDWN1WK&quot;}
+1 &lt; set-cookie: 346a326bcc8fc21fd3f034fd94d160bb=b93258c5db05ebda8c79fad18868405b; path=/; HttpOnly
+1 &lt; Set-Cookie: 346a326bcc8fc21fd3f034fd94d160bb=b93258c5db05ebda8c79fad18868405b; path=/; HttpOnly
+{&quot;token&quot;:&quot;eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IjE0OTFFRTZGREVDNjc1NTVEODdGM0I5RjcxOTdCRjk4Iiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU2NDc4NTU3LCJleHAiOjE3NTY0ODIxNTd9.UPRH8lS0vehi5LU2ObGZ-WqAcg9SWIU8hHFD4kQaLpcaseTANT9iSxrKJ1lAEqnJ&quot;}
 
 </div>   
 
@@ -1591,8 +437,8 @@ classpath:api/crearEstacion.feature:32
 
   
 
-  <div class="step-row" data-parent="0.7.0.call">
-    <div class="step-container" id="0.7.0.call.0.14">
+  <div class="step-row" data-parent="0.9.0.call">
+    <div class="step-container" id="0.9.0.call.0.14">
       <div class="step-ref bg-step">14</div>
       <div class="step-indent"></div>
       <div class="step-cell passed">
@@ -1617,7 +463,7 @@ classpath:api/crearEstacion.feature:32
       <div><div>
   
 
-  <div class="step-row" data-parent="0.7.0.call">
+  <div class="step-row" data-parent="0.9.0.call">
     <div class="step-container">
       <div class="step-ref passed"></div>
       <div class="step-indent"></div>
@@ -1626,15 +472,15 @@ classpath:api/crearEstacion.feature:32
     <div class="time-cell comment"></div>            
   </div>
 
-  <div class="step-row" data-parent="0.7.0.call">
-    <div class="step-container" id="0.7.0.call.0.17">
+  <div class="step-row" data-parent="0.9.0.call">
+    <div class="step-container" id="0.9.0.call.0.17">
       <div class="step-ref bg-step">17</div>
       <div class="step-indent"></div>
       <div class="step-cell passed">
         <span>And</span>&nbsp;<span>match response.token == &#39;#string&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell passed">36</div>
   </div>
 
    
@@ -1652,7 +498,7 @@ classpath:api/crearEstacion.feature:32
       <div><div>
   
 
-  <div class="step-row" data-parent="0.7.0.call">
+  <div class="step-row" data-parent="0.9.0.call">
     <div class="step-container">
       <div class="step-ref passed"></div>
       <div class="step-indent"></div>
@@ -1661,15 +507,15 @@ classpath:api/crearEstacion.feature:32
     <div class="time-cell comment"></div>            
   </div>
 
-  <div class="step-row" data-parent="0.7.0.call">
-    <div class="step-container" id="0.7.0.call.0.20">
+  <div class="step-row" data-parent="0.9.0.call">
+    <div class="step-container" id="0.9.0.call.0.20">
       <div class="step-ref bg-step">20</div>
       <div class="step-indent"></div>
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>def responseText = karate.pretty(response)</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell passed">54</div>
   </div>
 
    
@@ -1689,15 +535,15 @@ classpath:api/crearEstacion.feature:32
 
   
 
-  <div class="step-row" data-parent="0.7.0.call">
-    <div class="step-container" id="0.7.0.call.0.21">
+  <div class="step-row" data-parent="0.9.0.call">
+    <div class="step-container" id="0.9.0.call.0.21">
       <div class="step-ref bg-step">21</div>
       <div class="step-indent"></div>
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>def isValid = schemaUtil.isValid(schemaText, responseText)</span>
       </div>
     </div>
-    <div class="time-cell passed">5</div>
+    <div class="time-cell passed">270</div>
   </div>
 
    
@@ -1717,116 +563,12 @@ classpath:api/crearEstacion.feature:32
 
   
 
-  <div class="step-row" data-parent="0.7.0.call">
-    <div class="step-container" id="0.7.0.call.0.22">
+  <div class="step-row" data-parent="0.9.0.call">
+    <div class="step-container" id="0.9.0.call.0.22">
       <div class="step-ref bg-step">22</div>
       <div class="step-indent"></div>
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>match isValid == true</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  <div class="step-row" data-parent="0.7.0.call">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
-      <div class="step-indent"></div>
-      <div class="step-cell comment"># Tiempo de respuesta</div>
-    </div>
-    <div class="time-cell comment"></div>            
-  </div>
-
-  <div class="step-row" data-parent="0.7.0.call">
-    <div class="step-container" id="0.7.0.call.0.25">
-      <div class="step-ref bg-step">25</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>print &#39;=== TIEMPO DE RESPUESTA DEL FEATURE loginToken ===&#39;, responseTime / 1000, &#39;s&#39;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">2</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="0.7.0.call.0.25">18:24:09.886 [print] === TIEMPO DE RESPUESTA DEL FEATURE loginToken === 0.089 s 
-</div>   
-
-  
-
-</div>
-</div>
-    </div>    
-  </div>
-
-</div>
-</div>
-          <div data-parent="[2:43]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.8">
-      <div class="step-ref bg-step">8</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def authToken = loginResponse.response.token</span>
-      </div>
-    </div>
-    <div class="time-cell passed">2</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div data-parent="[2:43]bg"><div>
-  
-
-  <div class="step-row">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
-      
-      <div class="step-cell comment"># 2. CONFIGURANDO HEADERS PARA ESTACIONES</div>
-    </div>
-    <div class="time-cell comment"></div>            
-  </div>
-
-  <div class="step-row">
-    <div class="step-container" id="0.11">
-      <div class="step-ref bg-step">11</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def headers = headersEstacionesConToken(authToken)</span>
       </div>
     </div>
     <div class="time-cell passed">1</div>
@@ -1844,14 +586,118 @@ classpath:api/crearEstacion.feature:32
 
 </div>
 </div>
-          <div data-parent="[2:43]bg"><div>
+      <div><div>
+  
+
+  <div class="step-row" data-parent="0.9.0.call">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      <div class="step-indent"></div>
+      <div class="step-cell comment"># Tiempo de respuesta</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row" data-parent="0.9.0.call">
+    <div class="step-container" id="0.9.0.call.0.25">
+      <div class="step-ref bg-step">25</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>print &#39;=== TIEMPO DE RESPUESTA DEL FEATURE loginToken ===&#39;, responseTime / 1000, &#39;s&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">8</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.9.0.call.0.25">10:42:38.559 [print] === TIEMPO DE RESPUESTA DEL FEATURE loginToken === 0.8 s 
+</div>   
+
+  
+
+</div>
+</div>
+    </div>    
+  </div>
+
+</div>
+</div>
+          <div data-parent="[4:79]bg"><div>
   
 
   
 
   <div class="step-row">
-    <div class="step-container" id="0.12">
-      <div class="step-ref bg-step">12</div>
+    <div class="step-container" id="0.10">
+      <div class="step-ref bg-step">10</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def authToken = loginResponse.response.token</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[4:79]bg"><div>
+  
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># 2. CONFIGURANDO HEADERS PARA ESTACIONES</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container" id="0.13">
+      <div class="step-ref bg-step">13</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def headers = headersEstacionesConToken(authToken)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[4:79]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.14">
+      <div class="step-ref bg-step">14</div>
       
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>configure headers = headers</span>
@@ -1872,14 +718,14 @@ classpath:api/crearEstacion.feature:32
 
 </div>
 </div>
-          <div data-parent="[2:43]bg"><div>
+          <div data-parent="[4:79]bg"><div>
   
 
   
 
   <div class="step-row">
-    <div class="step-container" id="0.13">
-      <div class="step-ref bg-step">13</div>
+    <div class="step-container" id="0.15">
+      <div class="step-ref bg-step">15</div>
       
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>print &#39;HEADERS usados en creacion de estacion:&#39;, headers</span>
@@ -1894,11 +740,11 @@ classpath:api/crearEstacion.feature:32
 
   
 
-  <div class="preformatted" data-parent="0.13">18:24:09.889 [print] HEADERS usados en creacion de estacion: {
+  <div class="preformatted" data-parent="0.15">10:42:38.559 [print] HEADERS usados en creacion de estacion: {
   &quot;Content-Type&quot;: &quot;application/json&quot;,
   &quot;X-USER-ID&quot;: &quot;E11011&quot;,
   &quot;X-CORRELATION-ID&quot;: &quot;1445|E11011|234234&quot;,
-  &quot;X-TOKEN-ID&quot;: &quot;eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IkQ3NjY5RDAzQjg1RDQwNzc4OEI5ODNCRURCNUYyNTNEIiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU1NTU1ODQ5LCJleHAiOjE3NTU1NTk0NDl9.vpVG0vNkkJqf10BwUNL7Ct8Rk5s3YWEg3WApzSYRtvhINNKoQAJf2P9xZuDWN1WK&quot;
+  &quot;X-TOKEN-ID&quot;: &quot;eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IjE0OTFFRTZGREVDNjc1NTVEODdGM0I5RjcxOTdCRjk4Iiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU2NDc4NTU3LCJleHAiOjE3NTY0ODIxNTd9.UPRH8lS0vehi5LU2ObGZ-WqAcg9SWIU8hHFD4kQaLpcaseTANT9iSxrKJ1lAEqnJ&quot;
 }
  
 </div>   
@@ -1907,20 +753,20 @@ classpath:api/crearEstacion.feature:32
 
 </div>
 </div>
-          <div data-parent="[2:43]bg"><div>
+          <div data-parent="[4:79]bg"><div>
   
 
   
 
   <div class="step-row">
-    <div class="step-container" id="0.14">
-      <div class="step-ref bg-step">14</div>
+    <div class="step-container" id="0.16">
+      <div class="step-ref bg-step">16</div>
       
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>print &#39;TOKEN obtenido:&#39;, authToken</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
@@ -1929,14 +775,14 @@ classpath:api/crearEstacion.feature:32
 
   
 
-  <div class="preformatted" data-parent="0.14">18:24:09.889 [print] TOKEN obtenido: eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IkQ3NjY5RDAzQjg1RDQwNzc4OEI5ODNCRURCNUYyNTNEIiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU1NTU1ODQ5LCJleHAiOjE3NTU1NTk0NDl9.vpVG0vNkkJqf10BwUNL7Ct8Rk5s3YWEg3WApzSYRtvhINNKoQAJf2P9xZuDWN1WK 
+  <div class="preformatted" data-parent="0.16">10:42:38.559 [print] TOKEN obtenido: eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IjE0OTFFRTZGREVDNjc1NTVEODdGM0I5RjcxOTdCRjk4Iiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU2NDc4NTU3LCJleHAiOjE3NTY0ODIxNTd9.UPRH8lS0vehi5LU2ObGZ-WqAcg9SWIU8hHFD4kQaLpcaseTANT9iSxrKJ1lAEqnJ 
 </div>   
 
   
 
 </div>
 </div>
-          <div data-parent="[2:43]bg"><div>
+          <div data-parent="[4:79]bg"><div>
   
 
   <div class="step-row">
@@ -1949,8 +795,8 @@ classpath:api/crearEstacion.feature:32
   </div>
 
   <div class="step-row">
-    <div class="step-container" id="0.17">
-      <div class="step-ref bg-step">17</div>
+    <div class="step-container" id="0.19">
+      <div class="step-ref bg-step">19</div>
       
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>def estacionValidaRequest = read(&#39;classpath:JsonRequest/estacionValidaRequest.json&#39;)</span>
@@ -1971,961 +817,17 @@ classpath:api/crearEstacion.feature:32
 
 </div>
 </div>
-          <div data-parent="[2:43]bg"><div>
+          <div data-parent="[4:79]bg"><div>
   
 
   
 
   <div class="step-row">
-    <div class="step-container" id="0.18">
-      <div class="step-ref bg-step">18</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def duplicadoCodigoRequest = read(&#39;classpath:JsonRequest/duplicadoCodigoRequest.json&#39;)</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div data-parent="[2:43]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.19">
-      <div class="step-ref bg-step">19</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def camposFaltantesRequest = read(&#39;classpath:JsonRequest/camposFaltantesRequest.json&#39;)</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div data-parent="[2:43]bg"><div>
-  
-
-  <div class="step-row">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
-      
-      <div class="step-cell comment"># 4. CONFIGURANDO VALIDACION DE SCHEMA</div>
-    </div>
-    <div class="time-cell comment"></div>            
-  </div>
-
-  <div class="step-row">
-    <div class="step-container" id="0.22">
-      <div class="step-ref bg-step">22</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def schemaUtil = Java.type(&#39;util.JsonSchemaUtil&#39;)</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div data-parent="[2:43]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.23">
-      <div class="step-ref bg-step">23</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def schemaText = karate.readAsString(&#39;classpath:Schema/sc_crearEstacion.json&#39;)</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div data-parent="[2:43]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.24">
-      <div class="step-ref bg-step">24</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def errorSchema = karate.readAsString(&#39;classpath:Schema/sc_errorResponse.json&#39;)</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  <div class="step-row">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
-      
-      <div class="step-cell comment"># Este escenario usa un request con campos faltantes como codigo, nombre y direccion</div>
-    </div>
-    <div class="time-cell comment"></div>            
-  </div>
-
-  <div class="step-row">
-    <div class="step-container" id="0.45">
-      <div class="step-ref passed">45</div>
-      
-      <div class="step-cell passed">
-        <span>Given</span>&nbsp;<span>url baseUrl</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.46">
-      <div class="step-ref passed">46</div>
-      
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>request camposFaltantesRequest</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.47">
-      <div class="step-ref passed">47</div>
-      
-      <div class="step-cell passed">
-        <span>When</span>&nbsp;<span>method POST</span>
-      </div>
-    </div>
-    <div class="time-cell passed">130</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="0.47">18:24:09.895 request:
-1 &gt; POST http://10.161.169.27:8517/api/v1/estaciones
-1 &gt; Content-Type: application/json; charset=UTF-8
-1 &gt; X-USER-ID: E11011
-1 &gt; X-CORRELATION-ID: 1445|E11011|234234
-1 &gt; X-TOKEN-ID: eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IkQ3NjY5RDAzQjg1RDQwNzc4OEI5ODNCRURCNUYyNTNEIiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU1NTU1ODQ5LCJleHAiOjE3NTU1NTk0NDl9.vpVG0vNkkJqf10BwUNL7Ct8Rk5s3YWEg3WApzSYRtvhINNKoQAJf2P9xZuDWN1WK
-1 &gt; Content-Length: 826
-1 &gt; Host: 10.161.169.27:8517
-1 &gt; Connection: Keep-Alive
-1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
-1 &gt; Accept-Encoding: gzip,deflate
-{&quot;codigo&quot;:&quot;&quot;,&quot;nombre&quot;:null,&quot;regionId&quot;:null,&quot;estadoId&quot;:null,&quot;municipioId&quot;:1,&quot;parroquiaId&quot;:1,&quot;atributos&quot;:[{&quot;tipo&quot;:&quot;CAPACIDAD&quot;,&quot;valor&quot;:&quot;800&quot;,&quot;descripcion&quot;:&quot;Capacidad media&quot;},{&quot;tipo&quot;:&quot;TECNOLOGIA&quot;,&quot;valor&quot;:&quot;LTE&quot;,&quot;descripcion&quot;:&quot;Tecnologia intermedia&quot;}],&quot;direccion&quot;:{&quot;conglomerado&quot;:&quot;CENTRO&quot;,&quot;nombreConglomerado&quot;:&quot;Centro Comercial&quot;,&quot;inmueble&quot;:&quot;EDIFICIO&quot;,&quot;nombreInmueble&quot;:&quot;Torre Norte&quot;,&quot;piso&quot;:&quot;3&quot;,&quot;numero&quot;:&quot;456&quot;,&quot;vialidad&quot;:&quot;AVENIDA&quot;,&quot;nombreVialidad&quot;:&quot;Av. Norte&quot;,&quot;vialidad2&quot;:&quot;CALLE&quot;,&quot;nombreVialidad2&quot;:&quot;Calle Este&quot;,&quot;puntoReferencia&quot;:&quot;Diagonal al hospital&quot;,&quot;codigoPostal&quot;:&quot;1010&quot;,&quot;ciudad&quot;:&quot;Ciudad Norte&quot;,&quot;parroquia&quot;:&quot;Centro&quot;,&quot;municipio&quot;:&quot;Capital&quot;,&quot;estado&quot;:&quot;Distrito Capital&quot;,&quot;pais&quot;:&quot;Venezuela&quot;,&quot;tipoUbicacion&quot;:&quot;URBANA&quot;},&quot;codigoPais&quot;:&quot;VE&quot;,&quot;mercadoId&quot;:1,&quot;clusterId&quot;:1,&quot;comentAprobacion&quot;:&quot;Estacion incompleta&quot;,&quot;estatus&quot;:1,&quot;createdBy&quot;:&quot;E33033&quot;}
-
-18:24:10.022 response time in milliseconds: 126
-1 &lt; 400
-1 &lt; content-length: 872
-1 &lt; Content-Type: application/json
-{&quot;success&quot;:false,&quot;data&quot;:{&quot;code&quot;:&quot;400&quot;,&quot;status&quot;:&quot;BAD_REQUEST&quot;,&quot;message&quot;:&quot;create.request.estadoId: must not be null, create.request.regionId: must not be null, create.request.nombre: must not be empty, create.request.codigo: must not be empty, create.request.nombre: must not be null&quot;,&quot;errors&quot;:[&quot;ve.com.telefonica.application.resources.StationController_Subclass create.request.estadoId: must not be null&quot;,&quot;ve.com.telefonica.application.resources.StationController_Subclass create.request.regionId: must not be null&quot;,&quot;ve.com.telefonica.application.resources.StationController_Subclass create.request.nombre: must not be empty&quot;,&quot;ve.com.telefonica.application.resources.StationController_Subclass create.request.codigo: must not be empty&quot;,&quot;ve.com.telefonica.application.resources.StationController_Subclass create.request.nombre: must not be null&quot;]},&quot;timestamp&quot;:1755555850052}
-
-</div>   
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.48">
-      <div class="step-ref passed">48</div>
-      
-      <div class="step-cell passed">
-        <span>Then</span>&nbsp;<span>status 400</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.49">
-      <div class="step-ref passed">49</div>
-      
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>match response.success == false</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.50">
-      <div class="step-ref passed">50</div>
-      
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>match response.data.code == &quot;400&quot;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.51">
-      <div class="step-ref passed">51</div>
-      
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>match response.data.status == &quot;BAD_REQUEST&quot;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.52">
-      <div class="step-ref passed">52</div>
-      
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>match response.data.message contains &quot;must not be null&quot;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.53">
-      <div class="step-ref passed">53</div>
-      
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>match response.data.message contains &quot;must not be empty&quot;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.54">
-      <div class="step-ref passed">54</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def responseText = karate.pretty(response)</span>
-      </div>
-    </div>
-    <div class="time-cell passed">4</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.55">
-      <div class="step-ref passed">55</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def isValid = schemaUtil.isValid(errorSchema, responseText)</span>
-      </div>
-    </div>
-    <div class="time-cell passed">12</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.56">
-      <div class="step-ref passed">56</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>match isValid == true</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.57">
-      <div class="step-ref passed">57</div>
-      
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>print &#39;Error de validacion de campos faltantes:&#39;, response.data.message</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="0.57">18:24:10.046 [print] Error de validacion de campos faltantes: create.request.estadoId: must not be null, create.request.regionId: must not be null, create.request.nombre: must not be empty, create.request.codigo: must not be empty, create.request.nombre: must not be null 
-</div>   
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.58">
-      <div class="step-ref passed">58</div>
-      
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>print &#39;=== TIEMPO DE RESPUESTA DEL FEATURE ===&#39;, responseTime / 1000, &#39;s&#39;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="0.58">18:24:10.047 [print] === TIEMPO DE RESPUESTA DEL FEATURE === 0.126 s 
-</div>   
-
-  
-
-</div>
-</div>
-        </div>
-        <div class="scenario">
-          <div class="scenario-heading" id="[3:61]">
-            <div class="heading-container">
-              <div class="scenario-tags">
-                <a class="badge badge-primary" href="karate-tags.html">crearEstacion</a><a class="badge badge-primary" href="karate-tags.html">estacionCodigoDuplicado</a>
-              </div>
-              <div class="scenario-keyword">
-                Scenario: <span>[3:61]</span>
-                <span class="scenario-name">El endpoint debe rechazar cuando se envia un codigo de estacion ya existente</span>
-                <span></span>
-              </div>
-            </div>
-            <div class="scenario-time failed">
-              <span>ms:</span>&nbsp;<span>234</span>
-            </div>
-          </div>
-          <div class="step-row">
-            <div class="step-container" id="[3:61]bg">
-              <div class="step-ref bg-step">&gt;&gt;</div>
-              <div class="step-cell passed">Background:</div>
-            </div>
-            <div class="time-cell passed"></div>
-          </div>
-          <div data-parent="[3:61]bg"><div>
-  
-
-  <div class="step-row">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
-      
-      <div class="step-cell comment"># 1. LLAMANDO AL SERVICIO AUTHTOKEN PARA HACER LOGIN Y OBTENER EL TOKEN</div>
-    </div>
-    <div class="time-cell comment"></div>            
-  </div>
-
-  <div class="step-row">
-    <div class="step-container" id="0.6">
-      <div class="step-ref bg-step">6</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def validBodyRequest = read(&#39;classpath:JsonRequest/loginTokenRequest.json&#39;)</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div data-parent="[3:61]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.7">
-      <div class="step-ref bg-step">7</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def loginResponse = call read(&#39;classpath:api/loginToken.feature&#39;) { request: validBodyRequest }</span>
-      </div>
-    </div>
-    <div class="time-cell passed">113</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  <div>
-        
-    <div class="step-row">
-      <div class="step-container" id="0.7.0.call">
-        <div class="step-ref bg-step">&gt;&gt;</div>
-        <div class="step-indent"></div>
-        <div class="step-cell passed">api.loginToken</div>
-      </div>
-      <div class="time-cell passed">104</div>
-    </div>
-    <div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="0.7.0.call">
-    <div class="step-container" id="0.7.0.call.0.4">
-      <div class="step-ref bg-step">4</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>url loginUrl</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="0.7.0.call">
-    <div class="step-container" id="0.7.0.call.0.5">
-      <div class="step-ref bg-step">5</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>print loginUrl</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="0.7.0.call.0.5">18:24:10.066 [print] http://10.161.169.27:8511/intraLogin 
-</div>   
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="0.7.0.call">
-    <div class="step-container" id="0.7.0.call.0.6">
-      <div class="step-ref bg-step">6</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def schemaUtil = Java.type(&#39;util.JsonSchemaUtil&#39;)</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="0.7.0.call">
-    <div class="step-container" id="0.7.0.call.0.7">
-      <div class="step-ref bg-step">7</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def schemaText = karate.readAsString(&#39;classpath:Schema/sc_loginToken.json&#39;)</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="0.7.0.call">
-    <div class="step-container" id="0.7.0.call.0.8">
-      <div class="step-ref bg-step">8</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def validBodyRequest = read(&#39;classpath:JsonRequest/loginTokenRequest.json&#39;)</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="0.7.0.call">
-    <div class="step-container" id="0.7.0.call.0.12">
-      <div class="step-ref bg-step">12</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>Given</span>&nbsp;<span>request validBodyRequest</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="0.7.0.call">
-    <div class="step-container" id="0.7.0.call.0.13">
-      <div class="step-ref bg-step">13</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>When</span>&nbsp;<span>method POST</span>
-      </div>
-    </div>
-    <div class="time-cell passed">95</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="0.7.0.call.0.13">18:24:10.070 request:
-1 &gt; POST http://10.161.169.27:8511/intraLogin
-1 &gt; Content-Type: application/json; charset=UTF-8
-1 &gt; Content-Length: 39
-1 &gt; Host: 10.161.169.27:8511
-1 &gt; Connection: Keep-Alive
-1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
-1 &gt; Accept-Encoding: gzip,deflate
-{&quot;login&quot;:&quot;tns01&quot;,&quot;clave&quot;:&quot;T3st2024.+-&quot;}
-
-18:24:10.160 response time in milliseconds: 90
-1 &lt; 200
-1 &lt; Content-Type: application/json
-1 &lt; content-length: 326
-{&quot;token&quot;:&quot;eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IjUzOEYyRTc5RDM1MkZENzRBQTI2RjdDOTk5MkYwMTFFIiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU1NTU1ODUwLCJleHAiOjE3NTU1NTk0NTB9.M7Ov6lchdFsU3UYJxy_VuYEMKDnCFPDDyE3YCLxkhjlpeSVDHIey1lvvPqw8InJy&quot;}
-
-</div>   
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="0.7.0.call">
-    <div class="step-container" id="0.7.0.call.0.14">
-      <div class="step-ref bg-step">14</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>Then</span>&nbsp;<span>status 200</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  <div class="step-row" data-parent="0.7.0.call">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
-      <div class="step-indent"></div>
-      <div class="step-cell comment"># Validar que la respuesta contenga el campo token</div>
-    </div>
-    <div class="time-cell comment"></div>            
-  </div>
-
-  <div class="step-row" data-parent="0.7.0.call">
-    <div class="step-container" id="0.7.0.call.0.17">
-      <div class="step-ref bg-step">17</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>match response.token == &#39;#string&#39;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  <div class="step-row" data-parent="0.7.0.call">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
-      <div class="step-indent"></div>
-      <div class="step-cell comment"># Validar la estructura completa de la respuesta usando el schema JSON</div>
-    </div>
-    <div class="time-cell comment"></div>            
-  </div>
-
-  <div class="step-row" data-parent="0.7.0.call">
-    <div class="step-container" id="0.7.0.call.0.20">
+    <div class="step-container" id="0.20">
       <div class="step-ref bg-step">20</div>
-      <div class="step-indent"></div>
+      
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def responseText = karate.pretty(response)</span>
+        <span>*</span>&nbsp;<span>def clusterEnCeroRequest = read(&#39;classpath:JsonRequest/clusterEnCeroRequest.json&#39;)</span>
       </div>
     </div>
     <div class="time-cell passed">1</div>
@@ -2943,329 +845,14 @@ classpath:api/crearEstacion.feature:32
 
 </div>
 </div>
-      <div><div>
+          <div data-parent="[4:79]bg"><div>
   
 
   
 
-  <div class="step-row" data-parent="0.7.0.call">
-    <div class="step-container" id="0.7.0.call.0.21">
+  <div class="step-row">
+    <div class="step-container" id="0.21">
       <div class="step-ref bg-step">21</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def isValid = schemaUtil.isValid(schemaText, responseText)</span>
-      </div>
-    </div>
-    <div class="time-cell passed">4</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="0.7.0.call">
-    <div class="step-container" id="0.7.0.call.0.22">
-      <div class="step-ref bg-step">22</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>match isValid == true</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  <div class="step-row" data-parent="0.7.0.call">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
-      <div class="step-indent"></div>
-      <div class="step-cell comment"># Tiempo de respuesta</div>
-    </div>
-    <div class="time-cell comment"></div>            
-  </div>
-
-  <div class="step-row" data-parent="0.7.0.call">
-    <div class="step-container" id="0.7.0.call.0.25">
-      <div class="step-ref bg-step">25</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>print &#39;=== TIEMPO DE RESPUESTA DEL FEATURE loginToken ===&#39;, responseTime / 1000, &#39;s&#39;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="0.7.0.call.0.25">18:24:10.170 [print] === TIEMPO DE RESPUESTA DEL FEATURE loginToken === 0.09 s 
-</div>   
-
-  
-
-</div>
-</div>
-    </div>    
-  </div>
-
-</div>
-</div>
-          <div data-parent="[3:61]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.8">
-      <div class="step-ref bg-step">8</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def authToken = loginResponse.response.token</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div data-parent="[3:61]bg"><div>
-  
-
-  <div class="step-row">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
-      
-      <div class="step-cell comment"># 2. CONFIGURANDO HEADERS PARA ESTACIONES</div>
-    </div>
-    <div class="time-cell comment"></div>            
-  </div>
-
-  <div class="step-row">
-    <div class="step-container" id="0.11">
-      <div class="step-ref bg-step">11</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def headers = headersEstacionesConToken(authToken)</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div data-parent="[3:61]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.12">
-      <div class="step-ref bg-step">12</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>configure headers = headers</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div data-parent="[3:61]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.13">
-      <div class="step-ref bg-step">13</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>print &#39;HEADERS usados en creacion de estacion:&#39;, headers</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="0.13">18:24:10.171 [print] HEADERS usados en creacion de estacion: {
-  &quot;Content-Type&quot;: &quot;application/json&quot;,
-  &quot;X-USER-ID&quot;: &quot;E11011&quot;,
-  &quot;X-CORRELATION-ID&quot;: &quot;1445|E11011|234234&quot;,
-  &quot;X-TOKEN-ID&quot;: &quot;eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IjUzOEYyRTc5RDM1MkZENzRBQTI2RjdDOTk5MkYwMTFFIiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU1NTU1ODUwLCJleHAiOjE3NTU1NTk0NTB9.M7Ov6lchdFsU3UYJxy_VuYEMKDnCFPDDyE3YCLxkhjlpeSVDHIey1lvvPqw8InJy&quot;
-}
- 
-</div>   
-
-  
-
-</div>
-</div>
-          <div data-parent="[3:61]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.14">
-      <div class="step-ref bg-step">14</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>print &#39;TOKEN obtenido:&#39;, authToken</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="0.14">18:24:10.171 [print] TOKEN obtenido: eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IjUzOEYyRTc5RDM1MkZENzRBQTI2RjdDOTk5MkYwMTFFIiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU1NTU1ODUwLCJleHAiOjE3NTU1NTk0NTB9.M7Ov6lchdFsU3UYJxy_VuYEMKDnCFPDDyE3YCLxkhjlpeSVDHIey1lvvPqw8InJy 
-</div>   
-
-  
-
-</div>
-</div>
-          <div data-parent="[3:61]bg"><div>
-  
-
-  <div class="step-row">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
-      
-      <div class="step-cell comment"># 3. CARGANDO (REQUEST) CON DATOS DE PRUEBA</div>
-    </div>
-    <div class="time-cell comment"></div>            
-  </div>
-
-  <div class="step-row">
-    <div class="step-container" id="0.17">
-      <div class="step-ref bg-step">17</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def estacionValidaRequest = read(&#39;classpath:JsonRequest/estacionValidaRequest.json&#39;)</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div data-parent="[3:61]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.18">
-      <div class="step-ref bg-step">18</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def duplicadoCodigoRequest = read(&#39;classpath:JsonRequest/duplicadoCodigoRequest.json&#39;)</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div data-parent="[3:61]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.19">
-      <div class="step-ref bg-step">19</div>
       
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>def camposFaltantesRequest = read(&#39;classpath:JsonRequest/camposFaltantesRequest.json&#39;)</span>
@@ -3286,27 +873,20 @@ classpath:api/crearEstacion.feature:32
 
 </div>
 </div>
-          <div data-parent="[3:61]bg"><div>
+          <div data-parent="[4:79]bg"><div>
   
 
-  <div class="step-row">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
-      
-      <div class="step-cell comment"># 4. CONFIGURANDO VALIDACION DE SCHEMA</div>
-    </div>
-    <div class="time-cell comment"></div>            
-  </div>
+  
 
   <div class="step-row">
     <div class="step-container" id="0.22">
       <div class="step-ref bg-step">22</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def schemaUtil = Java.type(&#39;util.JsonSchemaUtil&#39;)</span>
+        <span>*</span>&nbsp;<span>def mercadoIdEnCeroRequest = read(&#39;classpath:JsonRequest/mercadoIdEnCeroRequest.json&#39;)</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell passed">11</div>
   </div>
 
    
@@ -3321,14 +901,49 @@ classpath:api/crearEstacion.feature:32
 
 </div>
 </div>
-          <div data-parent="[3:61]bg"><div>
+          <div data-parent="[4:79]bg"><div>
+  
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># 4. CONFIGURANDO VALIDACION DE SCHEMA</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container" id="0.25">
+      <div class="step-ref bg-step">25</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def schemaUtil = Java.type(&#39;util.JsonSchemaUtil&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[4:79]bg"><div>
   
 
   
 
   <div class="step-row">
-    <div class="step-container" id="0.23">
-      <div class="step-ref bg-step">23</div>
+    <div class="step-container" id="0.26">
+      <div class="step-ref bg-step">26</div>
       
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>def schemaText = karate.readAsString(&#39;classpath:Schema/sc_crearEstacion.json&#39;)</span>
@@ -3349,14 +964,14 @@ classpath:api/crearEstacion.feature:32
 
 </div>
 </div>
-          <div data-parent="[3:61]bg"><div>
+          <div data-parent="[4:79]bg"><div>
   
 
   
 
   <div class="step-row">
-    <div class="step-container" id="0.24">
-      <div class="step-ref bg-step">24</div>
+    <div class="step-container" id="0.27">
+      <div class="step-ref bg-step">27</div>
       
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>def errorSchema = karate.readAsString(&#39;classpath:Schema/sc_errorResponse.json&#39;)</span>
@@ -3390,8 +1005,8 @@ classpath:api/crearEstacion.feature:32
   </div>
 
   <div class="step-row">
-    <div class="step-container" id="0.63">
-      <div class="step-ref passed">63</div>
+    <div class="step-container" id="0.81">
+      <div class="step-ref passed">81</div>
       
       <div class="step-cell passed">
         <span>Given</span>&nbsp;<span>url baseUrl</span>
@@ -3418,11 +1033,144 @@ classpath:api/crearEstacion.feature:32
   
 
   <div class="step-row">
-    <div class="step-container" id="0.64">
-      <div class="step-ref passed">64</div>
+    <div class="step-container" id="0.82">
+      <div class="step-ref passed">82</div>
       
       <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>request duplicadoCodigoRequest</span>
+        <span>And</span>&nbsp;<span>request mercadoIdEnCeroRequest</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.83">
+      <div class="step-ref passed">83</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">894</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.83">10:42:38.586 request:
+1 &gt; POST http://estaciones-bff-git-dev-front-oss.apps.tmve-nprod-1.tmve-qa.com/api/v1/estaciones/
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; X-USER-ID: E11011
+1 &gt; X-CORRELATION-ID: 1445|E11011|234234
+1 &gt; X-TOKEN-ID: eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IjE0OTFFRTZGREVDNjc1NTVEODdGM0I5RjcxOTdCRjk4Iiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU2NDc4NTU3LCJleHAiOjE3NTY0ODIxNTd9.UPRH8lS0vehi5LU2ObGZ-WqAcg9SWIU8hHFD4kQaLpcaseTANT9iSxrKJ1lAEqnJ
+1 &gt; Content-Length: 813
+1 &gt; Host: estaciones-bff-git-dev-front-oss.apps.tmve-nprod-1.tmve-qa.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;codigo&quot;:&quot;krt60&quot;,&quot;nombre&quot;:&quot;Estacion Movistar krt&quot;,&quot;regionId&quot;:1,&quot;estadoId&quot;:1,&quot;municipioId&quot;:1,&quot;parroquiaId&quot;:1,&quot;atributos&quot;:[{&quot;Estacion Prueba1&quot;:&quot;Prueba1&quot;,&quot;Estacion Prueba2&quot;:&quot;Prueba2&quot;,&quot;Estacion Prueba3&quot;:&quot;Prueba3&quot;}],&quot;direccion&quot;:{&quot;conglomerado&quot;:&quot;conglomerado&quot;,&quot;nombreConglomerado&quot;:&quot;nombreConglomerado&quot;,&quot;inmueble&quot;:&quot;inmueble&quot;,&quot;nombreInmueble&quot;:&quot;nombreInmueble&quot;,&quot;piso&quot;:&quot;1&quot;,&quot;numero&quot;:&quot;1&quot;,&quot;vialidad&quot;:&quot;7&quot;,&quot;nombreVialidad&quot;:&quot;nombreVialidad&quot;,&quot;vialidad2&quot;:&quot;vialidad2&quot;,&quot;nombreVialidad2&quot;:&quot;nombreVialidad2&quot;,&quot;puntoReferencia&quot;:&quot;puntoReferencia&quot;,&quot;codigoPostal&quot;:&quot;codigoPostal&quot;,&quot;ciudad&quot;:&quot;ciudad&quot;,&quot;parroquia&quot;:&quot;parroquia&quot;,&quot;municipio&quot;:&quot;municipio&quot;,&quot;estado&quot;:&quot;estado&quot;,&quot;pais&quot;:&quot;Venezuela&quot;,&quot;tipoUbicacion&quot;:&quot;tipoUbicacion&quot;},&quot;codigoPais&quot;:&quot;VE&quot;,&quot;mercadoId&quot;:0,&quot;clusterId&quot;:1,&quot;comentAprobacion&quot;:&quot;Prueba krt&quot;,&quot;tmveOwner&quot;:true,&quot;estatus&quot;:0,&quot;createdBy&quot;:&quot;krt&quot;}
+
+10:42:39.477 response time in milliseconds: 888
+1 &lt; 400
+1 &lt; content-length: 302
+1 &lt; content-type: application/json
+1 &lt; set-cookie: 7ebc866ebb4d2d727ca53353a6c0c030=734d6df9d2a531f96603fab754c67099; path=/; HttpOnly
+1 &lt; Set-Cookie: 7ebc866ebb4d2d727ca53353a6c0c030=734d6df9d2a531f96603fab754c67099; path=/; HttpOnly
+{&quot;success&quot;:false,&quot;data&quot;:{&quot;code&quot;:&quot;400&quot;,&quot;status&quot;:&quot;BAD_REQUEST&quot;,&quot;message&quot;:&quot;create.request.mercadoId: must be greater than or equal to 1&quot;,&quot;errors&quot;:[&quot;ve.com.telefonica.application.resources.StationController_Subclass create.request.mercadoId: must be greater than or equal to 1&quot;]},&quot;timestamp&quot;:1756478559290}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.84">
+      <div class="step-ref passed">84</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 400</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.85">
+      <div class="step-ref passed">85</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.success == false</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.86">
+      <div class="step-ref passed">86</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.data.code == &quot;400&quot;</span>
       </div>
     </div>
     <div class="time-cell passed">1</div>
@@ -3446,178 +1194,14 @@ classpath:api/crearEstacion.feature:32
   
 
   <div class="step-row">
-    <div class="step-container" id="0.65">
-      <div class="step-ref passed">65</div>
+    <div class="step-container" id="0.87">
+      <div class="step-ref passed">87</div>
       
       <div class="step-cell passed">
-        <span>When</span>&nbsp;<span>method POST</span>
-      </div>
-    </div>
-    <div class="time-cell passed">112</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="0.65">18:24:10.180 request:
-1 &gt; POST http://10.161.169.27:8517/api/v1/estaciones
-1 &gt; Content-Type: application/json; charset=UTF-8
-1 &gt; X-USER-ID: E11011
-1 &gt; X-CORRELATION-ID: 1445|E11011|234234
-1 &gt; X-TOKEN-ID: eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IjUzOEYyRTc5RDM1MkZENzRBQTI2RjdDOTk5MkYwMTFFIiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU1NTU1ODUwLCJleHAiOjE3NTU1NTk0NTB9.M7Ov6lchdFsU3UYJxy_VuYEMKDnCFPDDyE3YCLxkhjlpeSVDHIey1lvvPqw8InJy
-1 &gt; Content-Length: 858
-1 &gt; Host: 10.161.169.27:8517
-1 &gt; Connection: Keep-Alive
-1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
-1 &gt; Accept-Encoding: gzip,deflate
-{&quot;codigo&quot;:&quot;ESTKRT&quot;,&quot;nombre&quot;:&quot;Estacion Duplicada KARATE&quot;,&quot;regionId&quot;:2,&quot;estadoId&quot;:2,&quot;municipioId&quot;:2,&quot;parroquiaId&quot;:2,&quot;atributos&quot;:[{&quot;tipo&quot;:&quot;CAPACIDAD&quot;,&quot;valor&quot;:&quot;500&quot;,&quot;descripcion&quot;:&quot;Capacidad reducida&quot;},{&quot;tipo&quot;:&quot;ENERGIA&quot;,&quot;valor&quot;:&quot;SOLAR&quot;,&quot;descripcion&quot;:&quot;Fuente alternativa&quot;}],&quot;direccion&quot;:{&quot;conglomerado&quot;:&quot;OESTE&quot;,&quot;nombreConglomerado&quot;:&quot;Centro Empresarial&quot;,&quot;inmueble&quot;:&quot;GALPON&quot;,&quot;nombreInmueble&quot;:&quot;Modulo C&quot;,&quot;piso&quot;:&quot;PB&quot;,&quot;numero&quot;:&quot;789&quot;,&quot;vialidad&quot;:&quot;CALLE&quot;,&quot;nombreVialidad&quot;:&quot;Calle Oeste&quot;,&quot;vialidad2&quot;:&quot;AVENIDA&quot;,&quot;nombreVialidad2&quot;:&quot;Av. Secundaria&quot;,&quot;puntoReferencia&quot;:&quot;Junto al centro logístico&quot;,&quot;codigoPostal&quot;:&quot;3003&quot;,&quot;ciudad&quot;:&quot;Ciudad Oeste&quot;,&quot;parroquia&quot;:&quot;Oeste&quot;,&quot;municipio&quot;:&quot;Empresarial&quot;,&quot;estado&quot;:&quot;Estado Oeste&quot;,&quot;pais&quot;:&quot;Venezuela&quot;,&quot;tipoUbicacion&quot;:&quot;INDUSTRIAL&quot;},&quot;codigoPais&quot;:&quot;VE&quot;,&quot;mercadoId&quot;:2,&quot;clusterId&quot;:2,&quot;comentAprobacion&quot;:&quot;Intento duplicado&quot;,&quot;estatus&quot;:1,&quot;createdBy&quot;:&quot;E22022&quot;}
-
-18:24:10.290 response time in milliseconds: 109
-1 &lt; 400
-1 &lt; content-length: 259
-1 &lt; Content-Type: application/json
-{&quot;success&quot;:false,&quot;data&quot;:{&quot;code&quot;:&quot;400&quot;,&quot;status&quot;:&quot;BAD_REQUEST&quot;,&quot;message&quot;:&quot;Cannot invoke \&quot;String.split(String)\&quot; because \&quot;correlationId\&quot; is null&quot;,&quot;errors&quot;:[&quot;Cannot invoke \&quot;String.split(String)\&quot; because \&quot;correlationId\&quot; is null&quot;]},&quot;timestamp&quot;:1755555850328}
-
-</div>   
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.66">
-      <div class="step-ref failed">66</div>
-      
-      <div class="step-cell failed">
-        <span>Then</span>&nbsp;<span>status 409</span>
-      </div>
-    </div>
-    <div class="time-cell failed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="0.66">18:24:10.290 classpath:api/crearEstacion.feature:66
-Then status 409
-status code was: 400, expected: 409, response time in milliseconds: 109, url: http://10.161.169.27:8517/api/v1/estaciones, response: 
-{&quot;success&quot;:false,&quot;data&quot;:{&quot;code&quot;:&quot;400&quot;,&quot;status&quot;:&quot;BAD_REQUEST&quot;,&quot;message&quot;:&quot;Cannot invoke \&quot;String.split(String)\&quot; because \&quot;correlationId\&quot; is null&quot;,&quot;errors&quot;:[&quot;Cannot invoke \&quot;String.split(String)\&quot; because \&quot;correlationId\&quot; is null&quot;]},&quot;timestamp&quot;:1755555850328}
-classpath:api/crearEstacion.feature:66
-</div>   
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.67">
-      <div class="step-ref skipped">67</div>
-      
-      <div class="step-cell skipped">
-        <span>And</span>&nbsp;<span>match response.success == false</span>
-      </div>
-    </div>
-    <div class="time-cell skipped">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.68">
-      <div class="step-ref skipped">68</div>
-      
-      <div class="step-cell skipped">
-        <span>And</span>&nbsp;<span>match response.data.code == &quot;409&quot;</span>
-      </div>
-    </div>
-    <div class="time-cell skipped">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.69">
-      <div class="step-ref skipped">69</div>
-      
-      <div class="step-cell skipped">
-        <span>And</span>&nbsp;<span>match response.data.message contains &#39;Codigo ya registrado&#39;</span>
-      </div>
-    </div>
-    <div class="time-cell skipped">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.70">
-      <div class="step-ref skipped">70</div>
-      
-      <div class="step-cell skipped">
         <span>*</span>&nbsp;<span>def responseText = karate.pretty(response)</span>
       </div>
     </div>
-    <div class="time-cell skipped">0</div>
+    <div class="time-cell passed">4</div>
   </div>
 
    
@@ -3638,14 +1222,14 @@ classpath:api/crearEstacion.feature:66
   
 
   <div class="step-row">
-    <div class="step-container" id="0.71">
-      <div class="step-ref skipped">71</div>
+    <div class="step-container" id="0.88">
+      <div class="step-ref passed">88</div>
       
-      <div class="step-cell skipped">
+      <div class="step-cell passed">
         <span>*</span>&nbsp;<span>def isValid = schemaUtil.isValid(errorSchema, responseText)</span>
       </div>
     </div>
-    <div class="time-cell skipped">0</div>
+    <div class="time-cell passed">17</div>
   </div>
 
    
@@ -3666,14 +1250,14 @@ classpath:api/crearEstacion.feature:66
   
 
   <div class="step-row">
-    <div class="step-container" id="0.72">
-      <div class="step-ref skipped">72</div>
+    <div class="step-container" id="0.89">
+      <div class="step-ref passed">89</div>
       
-      <div class="step-cell skipped">
+      <div class="step-cell passed">
         <span>*</span>&nbsp;<span>match isValid == true</span>
       </div>
     </div>
-    <div class="time-cell skipped">0</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
@@ -3694,14 +1278,14 @@ classpath:api/crearEstacion.feature:66
   
 
   <div class="step-row">
-    <div class="step-container" id="0.73">
-      <div class="step-ref skipped">73</div>
+    <div class="step-container" id="0.90">
+      <div class="step-ref passed">90</div>
       
-      <div class="step-cell skipped">
-        <span>And</span>&nbsp;<span>print &#39;Error por codigo duplicado:&#39;, response.data.message</span>
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>print &#39;Error creando estacion con id de Mercado en 0:&#39;, response.data.message</span>
       </div>
     </div>
-    <div class="time-cell skipped">0</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
@@ -3710,7 +1294,8 @@ classpath:api/crearEstacion.feature:66
 
   
 
-     
+  <div class="preformatted" data-parent="0.90">10:42:39.501 [print] Error creando estacion con id de Mercado en 0: create.request.mercadoId: must be greater than or equal to 1 
+</div>   
 
   
 
@@ -3722,14 +1307,14 @@ classpath:api/crearEstacion.feature:66
   
 
   <div class="step-row">
-    <div class="step-container" id="0.74">
-      <div class="step-ref skipped">74</div>
+    <div class="step-container" id="0.91">
+      <div class="step-ref passed">91</div>
       
-      <div class="step-cell skipped">
+      <div class="step-cell passed">
         <span>And</span>&nbsp;<span>print &#39;=== TIEMPO DE RESPUESTA DEL FEATURE ===&#39;, responseTime / 1000, &#39;s&#39;</span>
       </div>
     </div>
-    <div class="time-cell skipped">0</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
@@ -3738,7 +1323,8 @@ classpath:api/crearEstacion.feature:66
 
   
 
-     
+  <div class="preformatted" data-parent="0.91">10:42:39.501 [print] === TIEMPO DE RESPUESTA DEL FEATURE === 0.888 s 
+</div>   
 
   
 

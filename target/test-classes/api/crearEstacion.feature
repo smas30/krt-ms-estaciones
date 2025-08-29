@@ -3,6 +3,8 @@ Feature: Crear una nueva estacion mediante el endpoint POST /estaciones
 
   Background:
     # 1. LLAMANDO AL SERVICIO AUTHTOKEN PARA HACER LOGIN Y OBTENER EL TOKEN
+    * configure logPrettyResponse = false
+    * configure logPrettyRequest = false
     * def validBodyRequest = read('classpath:JsonRequest/loginTokenRequest.json')
     * def loginResponse = call read('classpath:api/loginToken.feature') { request: validBodyRequest }
     * def authToken = loginResponse.response.token
@@ -15,8 +17,9 @@ Feature: Crear una nueva estacion mediante el endpoint POST /estaciones
 
     # 3. CARGANDO (REQUEST) CON DATOS DE PRUEBA
     * def estacionValidaRequest = read('classpath:JsonRequest/estacionValidaRequest.json')
-    * def duplicadoCodigoRequest = read('classpath:JsonRequest/duplicadoCodigoRequest.json')
+    * def clusterEnCeroRequest = read('classpath:JsonRequest/clusterEnCeroRequest.json')
     * def camposFaltantesRequest = read('classpath:JsonRequest/camposFaltantesRequest.json')
+   * def mercadoIdEnCeroRequest = read('classpath:JsonRequest/mercadoIdEnCeroRequest.json')
 
     # 4. CONFIGURANDO VALIDACION DE SCHEMA
     * def schemaUtil = Java.type('util.JsonSchemaUtil')
@@ -57,18 +60,32 @@ Feature: Crear una nueva estacion mediante el endpoint POST /estaciones
     And print 'Error de validacion de campos faltantes:', response.data.message
     And print '=== TIEMPO DE RESPUESTA DEL FEATURE ===', responseTime / 1000, 's'
 
-  @estacionCodigoDuplicado
+  @clusterEnCeroRequest
   Scenario: El endpoint debe rechazar cuando se envia un codigo de estacion ya existente
     # Este escenario usa el mismo codigo que una estacion ya registrada para simular duplicidad
     Given url baseUrl
-    And request duplicadoCodigoRequest
+    And request clusterEnCeroRequest
     When method POST
-    Then status 409
+    Then status 400
     And match response.success == false
-    And match response.data.code == "409"
-    And match response.data.message contains 'Codigo ya registrado'
+    And match response.data.code == "400"
     * def responseText = karate.pretty(response)
     * def isValid = schemaUtil.isValid(errorSchema, responseText)
     * match isValid == true
-    And print 'Error por codigo duplicado:', response.data.message
+    And print 'Error creando estacion con cluster en 0:', response.data.message
     And print '=== TIEMPO DE RESPUESTA DEL FEATURE ===', responseTime / 1000, 's'
+
+  @mercadoIdEnCeroRequest
+  Scenario: El endpoint debe rechazar cuando se envia un id de mercado en cero
+    # Este escenario usa el mismo codigo que una estacion ya registrada para simular duplicidad
+    Given url baseUrl
+    And request mercadoIdEnCeroRequest
+    When method POST
+    Then status 400
+    And match response.success == false
+    And match response.data.code == "400"
+    * def responseText = karate.pretty(response)
+    * def isValid = schemaUtil.isValid(errorSchema, responseText)
+    * match isValid == true
+    And print 'Error creando estacion con id de Mercado en 0:', response.data.message
+   And print '=== TIEMPO DE RESPUESTA DEL FEATURE ===', responseTime / 1000, 's'

@@ -76,7 +76,7 @@ $(document).ready(function() {
     <tr class="info">
       <td>krt-ms-estaciones</td>
         <td>1.0</td>
-      <td>18 ago. 2025, 18:24</td>
+      <td>29 ago. 2025, 10:46</td>
     </tr>
   </tbody>
 </table>
@@ -129,19 +129,19 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">api/crearEstacion.feature</td>
-          <td      class="passed"    >101</td>
-          <td      class="failed"    >2</td>
-          <td     class="skipped"   >16</td>
+          <td      class="passed"    >41</td>
           <td >0</td>
           <td >0</td>
-          <td class="total">119</td>
+          <td >0</td>
+          <td >0</td>
+          <td class="total">41</td>
 
           <td  class="passed"    >1</td>
-          <td  class="failed"    >2</td>
-          <td class="total">3</td>
+          <td >0</td>
+          <td class="total">1</td>
 
-          <td class="duration" data-value="3804357100">3.804</td>
-          <td class="failed">Failed</td>
+          <td class="duration" data-value="3911028800">3.911</td>
+          <td class="passed">Passed</td>
         </tr>
         </tbody>
 
@@ -175,7 +175,7 @@ $(document).ready(function() {
 </div>
 
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Feature</span>
   <span class="name">api/crearEstacion.feature</span>
 
@@ -193,7 +193,7 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">2.940</span>
+  <span class="lead-duration duration">2.990</span>
 
 
   <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
@@ -235,9 +235,63 @@ $(document).ready(function() {
 
 <div class="brief step-name-* passed">
   <span class="keyword indention">*</span>
+  <span class="name">configure logPrettyResponse = false</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">configure logPrettyRequest = false</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
   <span class="name">def validBodyRequest = read('classpath:JsonRequest/loginTokenRequest.json')</span>
 
-  <span class="lead-duration duration">0.057</span>
+  <span class="lead-duration duration">0.031</span>
 
 </div>
 
@@ -264,7 +318,7 @@ $(document).ready(function() {
   <span class="keyword indention">*</span>
   <span class="name">def loginResponse = call read('classpath:api/loginToken.feature') { request: validBodyRequest }</span>
 
-  <span class="lead-duration duration">1.439</span>
+  <span class="lead-duration duration">1.474</span>
 
 </div>
 
@@ -345,7 +399,7 @@ $(document).ready(function() {
   <span class="keyword indention">&gt; *</span>
   <span class="name">print loginUrl</span>
 
-  <span class="lead-duration duration">0.005</span>
+  <span class="lead-duration duration">0.003</span>
 
 </div>
 
@@ -363,7 +417,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-3" class="collapse collapsable-details">
-        <pre>18:24:08.163 [print] http://10.161.169.27:8511/intraLogin 
+        <pre>10:42:37.100 [print] http://ms-auth-oss-git-dev-front-oss.apps.tmve-nprod-1.tmve-qa.com/intraLogin 
 </pre>
       </div>
     </div>
@@ -383,7 +437,7 @@ $(document).ready(function() {
   <span class="keyword indention">&gt; *</span>
   <span class="name">def schemaUtil = Java.type('util.JsonSchemaUtil')</span>
 
-  <span class="lead-duration duration">0.006</span>
+  <span class="lead-duration duration">0.005</span>
 
 </div>
 
@@ -410,7 +464,7 @@ $(document).ready(function() {
   <span class="keyword indention">&gt; *</span>
   <span class="name">def schemaText = karate.readAsString('classpath:Schema/sc_loginToken.json')</span>
 
-  <span class="lead-duration duration">0.002</span>
+  <span class="lead-duration duration">0.001</span>
 
 </div>
 
@@ -437,7 +491,7 @@ $(document).ready(function() {
   <span class="keyword indention">&gt; *</span>
   <span class="name">def validBodyRequest = read('classpath:JsonRequest/loginTokenRequest.json')</span>
 
-  <span class="lead-duration duration">0.001</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -491,7 +545,7 @@ $(document).ready(function() {
   <span class="keyword indention">&gt; When</span>
   <span class="name">method POST</span>
 
-  <span class="lead-duration duration">0.842</span>
+  <span class="lead-duration duration">1.080</span>
 
 </div>
 
@@ -509,21 +563,23 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-4" class="collapse collapsable-details">
-        <pre>18:24:08.777 request:
-1 &gt; POST http://10.161.169.27:8511/intraLogin
+        <pre>10:42:37.373 request:
+1 &gt; POST http://ms-auth-oss-git-dev-front-oss.apps.tmve-nprod-1.tmve-qa.com/intraLogin
 1 &gt; Content-Type: application/json; charset=UTF-8
 1 &gt; Content-Length: 39
-1 &gt; Host: 10.161.169.27:8511
+1 &gt; Host: ms-auth-oss-git-dev-front-oss.apps.tmve-nprod-1.tmve-qa.com
 1 &gt; Connection: Keep-Alive
 1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
 1 &gt; Accept-Encoding: gzip,deflate
 {&quot;login&quot;:&quot;tns01&quot;,&quot;clave&quot;:&quot;T3st2024.+-&quot;}
 
-18:24:09.015 response time in milliseconds: 232
+10:42:38.184 response time in milliseconds: 800
 1 &lt; 200
-1 &lt; Content-Type: application/json
+1 &lt; content-type: application/json
 1 &lt; content-length: 326
-{&quot;token&quot;:&quot;eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IkUxNzgyRDdBQjEyQkQyRUIyN0U3MDQ3RDczNkI2QjI1Iiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU1NTU1ODQ4LCJleHAiOjE3NTU1NTk0NDh9.9uHF6XW7KmdOmw2046M0xgTGmpmisGO7GTNoT3Q5fvvdnfvOG3FbZGLxrnXzUQKO&quot;}
+1 &lt; set-cookie: 346a326bcc8fc21fd3f034fd94d160bb=b93258c5db05ebda8c79fad18868405b; path=/; HttpOnly
+1 &lt; Set-Cookie: 346a326bcc8fc21fd3f034fd94d160bb=b93258c5db05ebda8c79fad18868405b; path=/; HttpOnly
+{&quot;token&quot;:&quot;eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IjE0OTFFRTZGREVDNjc1NTVEODdGM0I5RjcxOTdCRjk4Iiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU2NDc4NTU3LCJleHAiOjE3NTY0ODIxNTd9.UPRH8lS0vehi5LU2ObGZ-WqAcg9SWIU8hHFD4kQaLpcaseTANT9iSxrKJ1lAEqnJ&quot;}
 
 </pre>
       </div>
@@ -572,7 +628,7 @@ $(document).ready(function() {
   <span class="keyword indention">&gt; And</span>
   <span class="name">match response.token == '#string'</span>
 
-  <span class="lead-duration duration">0.014</span>
+  <span class="lead-duration duration">0.036</span>
 
 </div>
 
@@ -600,7 +656,7 @@ $(document).ready(function() {
   <span class="keyword indention">&gt; *</span>
   <span class="name">def responseText = karate.pretty(response)</span>
 
-  <span class="lead-duration duration">0.044</span>
+  <span class="lead-duration duration">0.054</span>
 
 </div>
 
@@ -627,7 +683,7 @@ $(document).ready(function() {
   <span class="keyword indention">&gt; *</span>
   <span class="name">def isValid = schemaUtil.isValid(schemaText, responseText)</span>
 
-  <span class="lead-duration duration">0.487</span>
+  <span class="lead-duration duration">0.269</span>
 
 </div>
 
@@ -654,7 +710,7 @@ $(document).ready(function() {
   <span class="keyword indention">&gt; *</span>
   <span class="name">match isValid == true</span>
 
-  <span class="lead-duration duration">0.001</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -682,7 +738,7 @@ $(document).ready(function() {
   <span class="keyword indention">&gt; And</span>
   <span class="name">print '=== TIEMPO DE RESPUESTA DEL FEATURE loginToken ===', responseTime / 1000, 's'</span>
 
-  <span class="lead-duration duration">0.016</span>
+  <span class="lead-duration duration">0.007</span>
 
 </div>
 
@@ -700,7 +756,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-5" class="collapse collapsable-details">
-        <pre>18:24:09.586 [print] === TIEMPO DE RESPUESTA DEL FEATURE loginToken === 0.232 s 
+        <pre>10:42:38.559 [print] === TIEMPO DE RESPUESTA DEL FEATURE loginToken === 0.8 s 
 </pre>
       </div>
     </div>
@@ -748,7 +804,7 @@ $(document).ready(function() {
   <span class="keyword indention">*</span>
   <span class="name">def headers = headersEstacionesConToken(authToken)</span>
 
-  <span class="lead-duration duration">0.004</span>
+  <span class="lead-duration duration">0.002</span>
 
 </div>
 
@@ -820,11 +876,11 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-6" class="collapse collapsable-details">
-        <pre>18:24:09.597 [print] HEADERS usados en creacion de estacion: {
+        <pre>10:42:38.559 [print] HEADERS usados en creacion de estacion: {
   &quot;Content-Type&quot;: &quot;application/json&quot;,
   &quot;X-USER-ID&quot;: &quot;E11011&quot;,
   &quot;X-CORRELATION-ID&quot;: &quot;1445|E11011|234234&quot;,
-  &quot;X-TOKEN-ID&quot;: &quot;eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IkUxNzgyRDdBQjEyQkQyRUIyN0U3MDQ3RDczNkI2QjI1Iiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU1NTU1ODQ4LCJleHAiOjE3NTU1NTk0NDh9.9uHF6XW7KmdOmw2046M0xgTGmpmisGO7GTNoT3Q5fvvdnfvOG3FbZGLxrnXzUQKO&quot;
+  &quot;X-TOKEN-ID&quot;: &quot;eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IjE0OTFFRTZGREVDNjc1NTVEODdGM0I5RjcxOTdCRjk4Iiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU2NDc4NTU3LCJleHAiOjE3NTY0ODIxNTd9.UPRH8lS0vehi5LU2ObGZ-WqAcg9SWIU8hHFD4kQaLpcaseTANT9iSxrKJ1lAEqnJ&quot;
 }
  
 </pre>
@@ -846,7 +902,7 @@ $(document).ready(function() {
   <span class="keyword indention">*</span>
   <span class="name">print 'TOKEN obtenido:', authToken</span>
 
-  <span class="lead-duration duration">0.001</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -864,7 +920,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-7" class="collapse collapsable-details">
-        <pre>18:24:09.597 [print] TOKEN obtenido: eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IkUxNzgyRDdBQjEyQkQyRUIyN0U3MDQ3RDczNkI2QjI1Iiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU1NTU1ODQ4LCJleHAiOjE3NTU1NTk0NDh9.9uHF6XW7KmdOmw2046M0xgTGmpmisGO7GTNoT3Q5fvvdnfvOG3FbZGLxrnXzUQKO 
+        <pre>10:42:38.559 [print] TOKEN obtenido: eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IjE0OTFFRTZGREVDNjc1NTVEODdGM0I5RjcxOTdCRjk4Iiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU2NDc4NTU3LCJleHAiOjE3NTY0ODIxNTd9.UPRH8lS0vehi5LU2ObGZ-WqAcg9SWIU8hHFD4kQaLpcaseTANT9iSxrKJ1lAEqnJ 
 </pre>
       </div>
     </div>
@@ -885,7 +941,7 @@ $(document).ready(function() {
   <span class="keyword indention">*</span>
   <span class="name">def estacionValidaRequest = read('classpath:JsonRequest/estacionValidaRequest.json')</span>
 
-  <span class="lead-duration duration">0.002</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -910,9 +966,9 @@ $(document).ready(function() {
 
 <div class="brief step-name-* passed">
   <span class="keyword indention">*</span>
-  <span class="name">def duplicadoCodigoRequest = read('classpath:JsonRequest/duplicadoCodigoRequest.json')</span>
+  <span class="name">def clusterEnCeroRequest = read('classpath:JsonRequest/clusterEnCeroRequest.json')</span>
 
-  <span class="lead-duration duration">0.002</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -939,7 +995,34 @@ $(document).ready(function() {
   <span class="keyword indention">*</span>
   <span class="name">def camposFaltantesRequest = read('classpath:JsonRequest/camposFaltantesRequest.json')</span>
 
-  <span class="lead-duration duration">0.001</span>
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def mercadoIdEnCeroRequest = read('classpath:JsonRequest/mercadoIdEnCeroRequest.json')</span>
+
+  <span class="lead-duration duration">0.010</span>
 
 </div>
 
@@ -967,7 +1050,7 @@ $(document).ready(function() {
   <span class="keyword indention">*</span>
   <span class="name">def schemaUtil = Java.type('util.JsonSchemaUtil')</span>
 
-  <span class="lead-duration duration">0.001</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -994,7 +1077,7 @@ $(document).ready(function() {
   <span class="keyword indention">*</span>
   <span class="name">def schemaText = karate.readAsString('classpath:Schema/sc_crearEstacion.json')</span>
 
-  <span class="lead-duration duration">0.001</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -1057,19 +1140,19 @@ $(document).ready(function() {
 
 <div class="tags indention">
     <b>Tags:</b>
-       <a href="report-tag_3316662052.html">@estacionValida</a>
        <a href="report-tag_2220277830.html">@crearEstacion</a>
+       <a href="report-tag_1188508968.html">@mercadoIdEnCeroRequest</a>
 </div>
 
 
-  <span class="lead-duration duration">0.147</span>
+  <span class="lead-duration duration">0.920</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-8">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-8">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Scenario</span>
-  <span class="name">Crear estacion con datos validos</span>
+  <span class="name">El endpoint debe rechazar cuando se envia un id de mercado en cero</span>
 
 
      <i class="chevron fa fa-fw"></i>
@@ -1078,16 +1161,16 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-8" class="collapse collapsable-details  in ">
+  <div id="element-8" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-9">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-9">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -1097,9 +1180,9 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-9" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-9" class="inner-level collapse collapsable-details ">
       <div class="step">
-          <div class="comment indention"># Este escenario valida que el endpoint cree correctamente una estacion con datos completos y correctos</div>
+          <div class="comment indention"># Este escenario usa el mismo codigo que una estacion ya registrada para simular duplicidad</div>
 
 
 <div class="brief step-name-Given passed">
@@ -1131,7 +1214,7 @@ $(document).ready(function() {
 
 <div class="brief step-name-And passed">
   <span class="keyword indention">And</span>
-  <span class="name">request estacionValidaRequest</span>
+  <span class="name">request mercadoIdEnCeroRequest</span>
 
   <span class="lead-duration duration">0.000</span>
 
@@ -1160,7 +1243,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method POST</span>
 
-  <span class="lead-duration duration">0.139</span>
+  <span class="lead-duration duration">0.894</span>
 
 </div>
 
@@ -1178,1329 +1261,26 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-10" class="collapse collapsable-details">
-        <pre>18:24:09.612 request:
-1 &gt; POST http://10.161.169.27:8517/api/v1/estaciones
+        <pre>10:42:38.586 request:
+1 &gt; POST http://estaciones-bff-git-dev-front-oss.apps.tmve-nprod-1.tmve-qa.com/api/v1/estaciones/
 1 &gt; Content-Type: application/json; charset=UTF-8
 1 &gt; X-USER-ID: E11011
 1 &gt; X-CORRELATION-ID: 1445|E11011|234234
-1 &gt; X-TOKEN-ID: eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IkUxNzgyRDdBQjEyQkQyRUIyN0U3MDQ3RDczNkI2QjI1Iiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU1NTU1ODQ4LCJleHAiOjE3NTU1NTk0NDh9.9uHF6XW7KmdOmw2046M0xgTGmpmisGO7GTNoT3Q5fvvdnfvOG3FbZGLxrnXzUQKO
-1 &gt; Content-Length: 900
-1 &gt; Host: 10.161.169.27:8517
+1 &gt; X-TOKEN-ID: eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IjE0OTFFRTZGREVDNjc1NTVEODdGM0I5RjcxOTdCRjk4Iiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU2NDc4NTU3LCJleHAiOjE3NTY0ODIxNTd9.UPRH8lS0vehi5LU2ObGZ-WqAcg9SWIU8hHFD4kQaLpcaseTANT9iSxrKJ1lAEqnJ
+1 &gt; Content-Length: 813
+1 &gt; Host: estaciones-bff-git-dev-front-oss.apps.tmve-nprod-1.tmve-qa.com
 1 &gt; Connection: Keep-Alive
 1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
 1 &gt; Accept-Encoding: gzip,deflate
-{&quot;codigo&quot;:&quot;ESTKRT&quot;,&quot;nombre&quot;:&quot;Estacion Central KARATE&quot;,&quot;regionId&quot;:1,&quot;estadoId&quot;:1,&quot;municipioId&quot;:1,&quot;parroquiaId&quot;:1,&quot;atributos&quot;:[{&quot;tipo&quot;:&quot;CAPACIDAD&quot;,&quot;valor&quot;:&quot;1000&quot;,&quot;descripcion&quot;:&quot;Capacidad maxima de usuarios&quot;},{&quot;tipo&quot;:&quot;TECNOLOGIA&quot;,&quot;valor&quot;:&quot;4G&quot;,&quot;descripcion&quot;:&quot;Tecnologia disponible&quot;}],&quot;direccion&quot;:{&quot;conglomerado&quot;:&quot;CENTRO&quot;,&quot;nombreConglomerado&quot;:&quot;Centro Comercial&quot;,&quot;inmueble&quot;:&quot;EDIFICIO&quot;,&quot;nombreInmueble&quot;:&quot;Torre Principal&quot;,&quot;piso&quot;:&quot;1&quot;,&quot;numero&quot;:&quot;123&quot;,&quot;vialidad&quot;:&quot;AVENIDA&quot;,&quot;nombreVialidad&quot;:&quot;Av. Principal&quot;,&quot;vialidad2&quot;:&quot;CALLE&quot;,&quot;nombreVialidad2&quot;:&quot;Calle Secundaria&quot;,&quot;puntoReferencia&quot;:&quot;Frente al Parque Central&quot;,&quot;codigoPostal&quot;:&quot;1001&quot;,&quot;ciudad&quot;:&quot;Ciudad Capital&quot;,&quot;parroquia&quot;:&quot;Centro&quot;,&quot;municipio&quot;:&quot;Capital&quot;,&quot;estado&quot;:&quot;Distrito Capital&quot;,&quot;pais&quot;:&quot;Venezuela&quot;,&quot;tipoUbicacion&quot;:&quot;URBANA&quot;},&quot;codigoPais&quot;:&quot;VE&quot;,&quot;mercadoId&quot;:1,&quot;clusterId&quot;:1,&quot;comentAprobacion&quot;:&quot;Estacion aprobada para operacion KARATE&quot;,&quot;estatus&quot;:1,&quot;createdBy&quot;:&quot;E11011&quot;}
+{&quot;codigo&quot;:&quot;krt60&quot;,&quot;nombre&quot;:&quot;Estacion Movistar krt&quot;,&quot;regionId&quot;:1,&quot;estadoId&quot;:1,&quot;municipioId&quot;:1,&quot;parroquiaId&quot;:1,&quot;atributos&quot;:[{&quot;Estacion Prueba1&quot;:&quot;Prueba1&quot;,&quot;Estacion Prueba2&quot;:&quot;Prueba2&quot;,&quot;Estacion Prueba3&quot;:&quot;Prueba3&quot;}],&quot;direccion&quot;:{&quot;conglomerado&quot;:&quot;conglomerado&quot;,&quot;nombreConglomerado&quot;:&quot;nombreConglomerado&quot;,&quot;inmueble&quot;:&quot;inmueble&quot;,&quot;nombreInmueble&quot;:&quot;nombreInmueble&quot;,&quot;piso&quot;:&quot;1&quot;,&quot;numero&quot;:&quot;1&quot;,&quot;vialidad&quot;:&quot;7&quot;,&quot;nombreVialidad&quot;:&quot;nombreVialidad&quot;,&quot;vialidad2&quot;:&quot;vialidad2&quot;,&quot;nombreVialidad2&quot;:&quot;nombreVialidad2&quot;,&quot;puntoReferencia&quot;:&quot;puntoReferencia&quot;,&quot;codigoPostal&quot;:&quot;codigoPostal&quot;,&quot;ciudad&quot;:&quot;ciudad&quot;,&quot;parroquia&quot;:&quot;parroquia&quot;,&quot;municipio&quot;:&quot;municipio&quot;,&quot;estado&quot;:&quot;estado&quot;,&quot;pais&quot;:&quot;Venezuela&quot;,&quot;tipoUbicacion&quot;:&quot;tipoUbicacion&quot;},&quot;codigoPais&quot;:&quot;VE&quot;,&quot;mercadoId&quot;:0,&quot;clusterId&quot;:1,&quot;comentAprobacion&quot;:&quot;Prueba krt&quot;,&quot;tmveOwner&quot;:true,&quot;estatus&quot;:0,&quot;createdBy&quot;:&quot;krt&quot;}
 
-18:24:09.741 response time in milliseconds: 129
+10:42:39.477 response time in milliseconds: 888
 1 &lt; 400
-1 &lt; content-length: 259
-1 &lt; Content-Type: application/json
-{&quot;success&quot;:false,&quot;data&quot;:{&quot;code&quot;:&quot;400&quot;,&quot;status&quot;:&quot;BAD_REQUEST&quot;,&quot;message&quot;:&quot;Cannot invoke \&quot;String.split(String)\&quot; because \&quot;correlationId\&quot; is null&quot;,&quot;errors&quot;:[&quot;Cannot invoke \&quot;String.split(String)\&quot; because \&quot;correlationId\&quot; is null&quot;]},&quot;timestamp&quot;:1755555849790}
-
-</pre>
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-Then failed">
-  <span class="keyword indention">Then</span>
-  <span class="name">status 200</span>
-
-  <span class="lead-duration duration">0.007</span>
-
-</div>
-
-
-
-
-
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-11">
-          <a>status</a>
-      </div>
-      <div id="msg-11" class="collapse collapsable-details  in ">
-        <pre>status code was: 400, expected: 200, response time in milliseconds: 129, url: http://10.161.169.27:8517/api/v1/estaciones, response: 
-{&quot;success&quot;:false,&quot;data&quot;:{&quot;code&quot;:&quot;400&quot;,&quot;status&quot;:&quot;BAD_REQUEST&quot;,&quot;message&quot;:&quot;Cannot invoke \&quot;String.split(String)\&quot; because \&quot;correlationId\&quot; is null&quot;,&quot;errors&quot;:[&quot;Cannot invoke \&quot;String.split(String)\&quot; because \&quot;correlationId\&quot; is null&quot;]},&quot;timestamp&quot;:1755555849790}
-classpath:api/crearEstacion.feature:32</pre>
-      </div>
-    </div>
-  </div>
-
-
-
-
-  <div class="inner-level">
-    <div class="docstring indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-12">
-          <a>Doc string</a>
-      </div>
-      <div id="msg-12" class="collapse collapsable-details">
-        <pre>18:24:09.760 classpath:api/crearEstacion.feature:32
-Then status 200
-status code was: 400, expected: 200, response time in milliseconds: 129, url: http://10.161.169.27:8517/api/v1/estaciones, response: 
-{&quot;success&quot;:false,&quot;data&quot;:{&quot;code&quot;:&quot;400&quot;,&quot;status&quot;:&quot;BAD_REQUEST&quot;,&quot;message&quot;:&quot;Cannot invoke \&quot;String.split(String)\&quot; because \&quot;correlationId\&quot; is null&quot;,&quot;errors&quot;:[&quot;Cannot invoke \&quot;String.split(String)\&quot; because \&quot;correlationId\&quot; is null&quot;]},&quot;timestamp&quot;:1755555849790}
-classpath:api/crearEstacion.feature:32
-</pre>
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-And skipped">
-  <span class="keyword indention">And</span>
-  <span class="name">match response.success == true</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-And skipped">
-  <span class="keyword indention">And</span>
-  <span class="name">match response.data.codigo == estacionValidaRequest.codigo</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-And skipped">
-  <span class="keyword indention">And</span>
-  <span class="name">match response.data.nombre == estacionValidaRequest.nombre</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-* skipped">
-  <span class="keyword indention">*</span>
-  <span class="name">def responseText = karate.pretty(response)</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-* skipped">
-  <span class="keyword indention">*</span>
-  <span class="name">def isValid = schemaUtil.isValid(schemaText, responseText)</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-* skipped">
-  <span class="keyword indention">*</span>
-  <span class="name">match isValid == true</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-And skipped">
-  <span class="keyword indention">And</span>
-  <span class="name">print 'Estacion creada exitosamente:', response</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-And skipped">
-  <span class="keyword indention">And</span>
-  <span class="name">print '=== TIEMPO DE RESPUESTA DEL FEATURE ===', responseTime / 1000, 's'</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-  </div>
-</div>
-
-
-
-
-
-  </div>
-</div>
-
-
-<div class="element">
-
-
-<div class="tags indention">
-</div>
-
-
-  <span class="lead-duration duration">0.226</span>
-
-
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-13">
-
-<div class="brief passed">
-  <span class="keyword indention">Background</span>
-  <span class="name"></span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-  </span>
-  <div class="description indention"></div>
-
-  <div id="element-13" class="collapse collapsable-details ">
-
-
-
-
-
-<div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-14">
-
-<div class="brief passed">
-  <span class="keyword indention">Steps</span>
-  <span class="name"></span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-  </div>
-
-  <div id="steps-14" class="inner-level collapse collapsable-details ">
-      <div class="step">
-          <div class="comment indention"># 1. LLAMANDO AL SERVICIO AUTHTOKEN PARA HACER LOGIN Y OBTENER EL TOKEN</div>
-
-
-<div class="brief step-name-* passed">
-  <span class="keyword indention">*</span>
-  <span class="name">def validBodyRequest = read('classpath:JsonRequest/loginTokenRequest.json')</span>
-
-  <span class="lead-duration duration">0.002</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-* passed">
-  <span class="keyword indention">*</span>
-  <span class="name">def loginResponse = call read('classpath:api/loginToken.feature') { request: validBodyRequest }</span>
-
-  <span class="lead-duration duration">0.112</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name- passed">
-  <span class="keyword indention"></span>
-  <span class="name">api/loginToken.feature</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-&amp;gt; * passed">
-  <span class="keyword indention">&gt; *</span>
-  <span class="name">url loginUrl</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-&amp;gt; * passed">
-  <span class="keyword indention">&gt; *</span>
-  <span class="name">print loginUrl</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-  <div class="inner-level">
-    <div class="docstring indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-15">
-          <a>Doc string</a>
-      </div>
-      <div id="msg-15" class="collapse collapsable-details">
-        <pre>18:24:09.778 [print] http://10.161.169.27:8511/intraLogin 
-</pre>
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-&amp;gt; * passed">
-  <span class="keyword indention">&gt; *</span>
-  <span class="name">def schemaUtil = Java.type('util.JsonSchemaUtil')</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-&amp;gt; * passed">
-  <span class="keyword indention">&gt; *</span>
-  <span class="name">def schemaText = karate.readAsString('classpath:Schema/sc_loginToken.json')</span>
-
-  <span class="lead-duration duration">0.001</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-&amp;gt; * passed">
-  <span class="keyword indention">&gt; *</span>
-  <span class="name">def validBodyRequest = read('classpath:JsonRequest/loginTokenRequest.json')</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-&amp;gt; Given passed">
-  <span class="keyword indention">&gt; Given</span>
-  <span class="name">request validBodyRequest</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-&amp;gt; When passed">
-  <span class="keyword indention">&gt; When</span>
-  <span class="name">method POST</span>
-
-  <span class="lead-duration duration">0.093</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-  <div class="inner-level">
-    <div class="docstring indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-16">
-          <a>Doc string</a>
-      </div>
-      <div id="msg-16" class="collapse collapsable-details">
-        <pre>18:24:09.785 request:
-1 &gt; POST http://10.161.169.27:8511/intraLogin
-1 &gt; Content-Type: application/json; charset=UTF-8
-1 &gt; Content-Length: 39
-1 &gt; Host: 10.161.169.27:8511
-1 &gt; Connection: Keep-Alive
-1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
-1 &gt; Accept-Encoding: gzip,deflate
-{&quot;login&quot;:&quot;tns01&quot;,&quot;clave&quot;:&quot;T3st2024.+-&quot;}
-
-18:24:09.877 response time in milliseconds: 89
-1 &lt; 200
-1 &lt; Content-Type: application/json
-1 &lt; content-length: 326
-{&quot;token&quot;:&quot;eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IkQ3NjY5RDAzQjg1RDQwNzc4OEI5ODNCRURCNUYyNTNEIiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU1NTU1ODQ5LCJleHAiOjE3NTU1NTk0NDl9.vpVG0vNkkJqf10BwUNL7Ct8Rk5s3YWEg3WApzSYRtvhINNKoQAJf2P9xZuDWN1WK&quot;}
-
-</pre>
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-&amp;gt; Then passed">
-  <span class="keyword indention">&gt; Then</span>
-  <span class="name">status 200</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-          <div class="comment indention"># Validar que la respuesta contenga el campo token</div>
-
-
-<div class="brief step-name-&amp;gt; And passed">
-  <span class="keyword indention">&gt; And</span>
-  <span class="name">match response.token == '#string'</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-          <div class="comment indention"># Validar la estructura completa de la respuesta usando el schema JSON</div>
-
-
-<div class="brief step-name-&amp;gt; * passed">
-  <span class="keyword indention">&gt; *</span>
-  <span class="name">def responseText = karate.pretty(response)</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-&amp;gt; * passed">
-  <span class="keyword indention">&gt; *</span>
-  <span class="name">def isValid = schemaUtil.isValid(schemaText, responseText)</span>
-
-  <span class="lead-duration duration">0.005</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-&amp;gt; * passed">
-  <span class="keyword indention">&gt; *</span>
-  <span class="name">match isValid == true</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-          <div class="comment indention"># Tiempo de respuesta</div>
-
-
-<div class="brief step-name-&amp;gt; And passed">
-  <span class="keyword indention">&gt; And</span>
-  <span class="name">print '=== TIEMPO DE RESPUESTA DEL FEATURE loginToken ===', responseTime / 1000, 's'</span>
-
-  <span class="lead-duration duration">0.001</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-  <div class="inner-level">
-    <div class="docstring indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-17">
-          <a>Doc string</a>
-      </div>
-      <div id="msg-17" class="collapse collapsable-details">
-        <pre>18:24:09.886 [print] === TIEMPO DE RESPUESTA DEL FEATURE loginToken === 0.089 s 
-</pre>
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-* passed">
-  <span class="keyword indention">*</span>
-  <span class="name">def authToken = loginResponse.response.token</span>
-
-  <span class="lead-duration duration">0.001</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-          <div class="comment indention"># 2. CONFIGURANDO HEADERS PARA ESTACIONES</div>
-
-
-<div class="brief step-name-* passed">
-  <span class="keyword indention">*</span>
-  <span class="name">def headers = headersEstacionesConToken(authToken)</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-* passed">
-  <span class="keyword indention">*</span>
-  <span class="name">configure headers = headers</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-* passed">
-  <span class="keyword indention">*</span>
-  <span class="name">print 'HEADERS usados en creacion de estacion:', headers</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-  <div class="inner-level">
-    <div class="docstring indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-18">
-          <a>Doc string</a>
-      </div>
-      <div id="msg-18" class="collapse collapsable-details">
-        <pre>18:24:09.889 [print] HEADERS usados en creacion de estacion: {
-  &quot;Content-Type&quot;: &quot;application/json&quot;,
-  &quot;X-USER-ID&quot;: &quot;E11011&quot;,
-  &quot;X-CORRELATION-ID&quot;: &quot;1445|E11011|234234&quot;,
-  &quot;X-TOKEN-ID&quot;: &quot;eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IkQ3NjY5RDAzQjg1RDQwNzc4OEI5ODNCRURCNUYyNTNEIiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU1NTU1ODQ5LCJleHAiOjE3NTU1NTk0NDl9.vpVG0vNkkJqf10BwUNL7Ct8Rk5s3YWEg3WApzSYRtvhINNKoQAJf2P9xZuDWN1WK&quot;
-}
- 
-</pre>
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-* passed">
-  <span class="keyword indention">*</span>
-  <span class="name">print 'TOKEN obtenido:', authToken</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-  <div class="inner-level">
-    <div class="docstring indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-19">
-          <a>Doc string</a>
-      </div>
-      <div id="msg-19" class="collapse collapsable-details">
-        <pre>18:24:09.889 [print] TOKEN obtenido: eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IkQ3NjY5RDAzQjg1RDQwNzc4OEI5ODNCRURCNUYyNTNEIiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU1NTU1ODQ5LCJleHAiOjE3NTU1NTk0NDl9.vpVG0vNkkJqf10BwUNL7Ct8Rk5s3YWEg3WApzSYRtvhINNKoQAJf2P9xZuDWN1WK 
-</pre>
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-          <div class="comment indention"># 3. CARGANDO (REQUEST) CON DATOS DE PRUEBA</div>
-
-
-<div class="brief step-name-* passed">
-  <span class="keyword indention">*</span>
-  <span class="name">def estacionValidaRequest = read('classpath:JsonRequest/estacionValidaRequest.json')</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-* passed">
-  <span class="keyword indention">*</span>
-  <span class="name">def duplicadoCodigoRequest = read('classpath:JsonRequest/duplicadoCodigoRequest.json')</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-* passed">
-  <span class="keyword indention">*</span>
-  <span class="name">def camposFaltantesRequest = read('classpath:JsonRequest/camposFaltantesRequest.json')</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-          <div class="comment indention"># 4. CONFIGURANDO VALIDACION DE SCHEMA</div>
-
-
-<div class="brief step-name-* passed">
-  <span class="keyword indention">*</span>
-  <span class="name">def schemaUtil = Java.type('util.JsonSchemaUtil')</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-* passed">
-  <span class="keyword indention">*</span>
-  <span class="name">def schemaText = karate.readAsString('classpath:Schema/sc_crearEstacion.json')</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-* passed">
-  <span class="keyword indention">*</span>
-  <span class="name">def errorSchema = karate.readAsString('classpath:Schema/sc_errorResponse.json')</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-  </div>
-</div>
-
-
-
-
-
-  </div>
-</div>
-
-
-<div class="element">
-
-
-<div class="tags indention">
-    <b>Tags:</b>
-       <a href="report-tag_2220277830.html">@crearEstacion</a>
-       <a href="report-tag_293433676.html">@estacionCamposFaltantes</a>
-</div>
-
-
-  <span class="lead-duration duration">0.152</span>
-
-
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-20">
-
-<div class="brief passed">
-  <span class="keyword indention">Scenario</span>
-  <span class="name">El endpoint debe rechazar cuando se envian campos obligatorios vacios o nulos</span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-  </span>
-  <div class="description indention"></div>
-
-  <div id="element-20" class="collapse collapsable-details ">
-
-
-
-
-
-<div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-21">
-
-<div class="brief passed">
-  <span class="keyword indention">Steps</span>
-  <span class="name"></span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-  </div>
-
-  <div id="steps-21" class="inner-level collapse collapsable-details ">
-      <div class="step">
-          <div class="comment indention"># Este escenario usa un request con campos faltantes como codigo, nombre y direccion</div>
-
-
-<div class="brief step-name-Given passed">
-  <span class="keyword indention">Given</span>
-  <span class="name">url baseUrl</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-And passed">
-  <span class="keyword indention">And</span>
-  <span class="name">request camposFaltantesRequest</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-When passed">
-  <span class="keyword indention">When</span>
-  <span class="name">method POST</span>
-
-  <span class="lead-duration duration">0.130</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-  <div class="inner-level">
-    <div class="docstring indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-22">
-          <a>Doc string</a>
-      </div>
-      <div id="msg-22" class="collapse collapsable-details">
-        <pre>18:24:09.895 request:
-1 &gt; POST http://10.161.169.27:8517/api/v1/estaciones
-1 &gt; Content-Type: application/json; charset=UTF-8
-1 &gt; X-USER-ID: E11011
-1 &gt; X-CORRELATION-ID: 1445|E11011|234234
-1 &gt; X-TOKEN-ID: eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IkQ3NjY5RDAzQjg1RDQwNzc4OEI5ODNCRURCNUYyNTNEIiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU1NTU1ODQ5LCJleHAiOjE3NTU1NTk0NDl9.vpVG0vNkkJqf10BwUNL7Ct8Rk5s3YWEg3WApzSYRtvhINNKoQAJf2P9xZuDWN1WK
-1 &gt; Content-Length: 826
-1 &gt; Host: 10.161.169.27:8517
-1 &gt; Connection: Keep-Alive
-1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
-1 &gt; Accept-Encoding: gzip,deflate
-{&quot;codigo&quot;:&quot;&quot;,&quot;nombre&quot;:null,&quot;regionId&quot;:null,&quot;estadoId&quot;:null,&quot;municipioId&quot;:1,&quot;parroquiaId&quot;:1,&quot;atributos&quot;:[{&quot;tipo&quot;:&quot;CAPACIDAD&quot;,&quot;valor&quot;:&quot;800&quot;,&quot;descripcion&quot;:&quot;Capacidad media&quot;},{&quot;tipo&quot;:&quot;TECNOLOGIA&quot;,&quot;valor&quot;:&quot;LTE&quot;,&quot;descripcion&quot;:&quot;Tecnologia intermedia&quot;}],&quot;direccion&quot;:{&quot;conglomerado&quot;:&quot;CENTRO&quot;,&quot;nombreConglomerado&quot;:&quot;Centro Comercial&quot;,&quot;inmueble&quot;:&quot;EDIFICIO&quot;,&quot;nombreInmueble&quot;:&quot;Torre Norte&quot;,&quot;piso&quot;:&quot;3&quot;,&quot;numero&quot;:&quot;456&quot;,&quot;vialidad&quot;:&quot;AVENIDA&quot;,&quot;nombreVialidad&quot;:&quot;Av. Norte&quot;,&quot;vialidad2&quot;:&quot;CALLE&quot;,&quot;nombreVialidad2&quot;:&quot;Calle Este&quot;,&quot;puntoReferencia&quot;:&quot;Diagonal al hospital&quot;,&quot;codigoPostal&quot;:&quot;1010&quot;,&quot;ciudad&quot;:&quot;Ciudad Norte&quot;,&quot;parroquia&quot;:&quot;Centro&quot;,&quot;municipio&quot;:&quot;Capital&quot;,&quot;estado&quot;:&quot;Distrito Capital&quot;,&quot;pais&quot;:&quot;Venezuela&quot;,&quot;tipoUbicacion&quot;:&quot;URBANA&quot;},&quot;codigoPais&quot;:&quot;VE&quot;,&quot;mercadoId&quot;:1,&quot;clusterId&quot;:1,&quot;comentAprobacion&quot;:&quot;Estacion incompleta&quot;,&quot;estatus&quot;:1,&quot;createdBy&quot;:&quot;E33033&quot;}
-
-18:24:10.022 response time in milliseconds: 126
-1 &lt; 400
-1 &lt; content-length: 872
-1 &lt; Content-Type: application/json
-{&quot;success&quot;:false,&quot;data&quot;:{&quot;code&quot;:&quot;400&quot;,&quot;status&quot;:&quot;BAD_REQUEST&quot;,&quot;message&quot;:&quot;create.request.estadoId: must not be null, create.request.regionId: must not be null, create.request.nombre: must not be empty, create.request.codigo: must not be empty, create.request.nombre: must not be null&quot;,&quot;errors&quot;:[&quot;ve.com.telefonica.application.resources.StationController_Subclass create.request.estadoId: must not be null&quot;,&quot;ve.com.telefonica.application.resources.StationController_Subclass create.request.regionId: must not be null&quot;,&quot;ve.com.telefonica.application.resources.StationController_Subclass create.request.nombre: must not be empty&quot;,&quot;ve.com.telefonica.application.resources.StationController_Subclass create.request.codigo: must not be empty&quot;,&quot;ve.com.telefonica.application.resources.StationController_Subclass create.request.nombre: must not be null&quot;]},&quot;timestamp&quot;:1755555850052}
+1 &lt; content-length: 302
+1 &lt; content-type: application/json
+1 &lt; set-cookie: 7ebc866ebb4d2d727ca53353a6c0c030=734d6df9d2a531f96603fab754c67099; path=/; HttpOnly
+1 &lt; Set-Cookie: 7ebc866ebb4d2d727ca53353a6c0c030=734d6df9d2a531f96603fab754c67099; path=/; HttpOnly
+{&quot;success&quot;:false,&quot;data&quot;:{&quot;code&quot;:&quot;400&quot;,&quot;status&quot;:&quot;BAD_REQUEST&quot;,&quot;message&quot;:&quot;create.request.mercadoId: must be greater than or equal to 1&quot;,&quot;errors&quot;:[&quot;ve.com.telefonica.application.resources.StationController_Subclass create.request.mercadoId: must be greater than or equal to 1&quot;]},&quot;timestamp&quot;:1756478559290}
 
 </pre>
       </div>
@@ -2575,88 +1355,7 @@ classpath:api/crearEstacion.feature:32
   <span class="keyword indention">And</span>
   <span class="name">match response.data.code == &quot;400&quot;</span>
 
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-And passed">
-  <span class="keyword indention">And</span>
-  <span class="name">match response.data.status == &quot;BAD_REQUEST&quot;</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-And passed">
-  <span class="keyword indention">And</span>
-  <span class="name">match response.data.message contains &quot;must not be null&quot;</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-And passed">
-  <span class="keyword indention">And</span>
-  <span class="name">match response.data.message contains &quot;must not be empty&quot;</span>
-
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.001</span>
 
 </div>
 
@@ -2710,7 +1409,7 @@ classpath:api/crearEstacion.feature:32
   <span class="keyword indention">*</span>
   <span class="name">def isValid = schemaUtil.isValid(errorSchema, responseText)</span>
 
-  <span class="lead-duration duration">0.012</span>
+  <span class="lead-duration duration">0.016</span>
 
 </div>
 
@@ -2762,7 +1461,7 @@ classpath:api/crearEstacion.feature:32
 
 <div class="brief step-name-And passed">
   <span class="keyword indention">And</span>
-  <span class="name">print 'Error de validacion de campos faltantes:', response.data.message</span>
+  <span class="name">print 'Error creando estacion con id de Mercado en 0:', response.data.message</span>
 
   <span class="lead-duration duration">0.001</span>
 
@@ -2778,11 +1477,11 @@ classpath:api/crearEstacion.feature:32
 
   <div class="inner-level">
     <div class="docstring indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-23">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-11">
           <a>Doc string</a>
       </div>
-      <div id="msg-23" class="collapse collapsable-details">
-        <pre>18:24:10.046 [print] Error de validacion de campos faltantes: create.request.estadoId: must not be null, create.request.regionId: must not be null, create.request.nombre: must not be empty, create.request.codigo: must not be empty, create.request.nombre: must not be null 
+      <div id="msg-11" class="collapse collapsable-details">
+        <pre>10:42:39.501 [print] Error creando estacion con id de Mercado en 0: create.request.mercadoId: must be greater than or equal to 1 
 </pre>
       </div>
     </div>
@@ -2816,1320 +1515,15 @@ classpath:api/crearEstacion.feature:32
 
   <div class="inner-level">
     <div class="docstring indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-24">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-12">
           <a>Doc string</a>
       </div>
-      <div id="msg-24" class="collapse collapsable-details">
-        <pre>18:24:10.047 [print] === TIEMPO DE RESPUESTA DEL FEATURE === 0.126 s 
+      <div id="msg-12" class="collapse collapsable-details">
+        <pre>10:42:39.501 [print] === TIEMPO DE RESPUESTA DEL FEATURE === 0.888 s 
 </pre>
       </div>
     </div>
   </div>
-
-
-
-
-
-
-
-      </div>
-  </div>
-</div>
-
-
-
-
-
-  </div>
-</div>
-
-
-<div class="element">
-
-
-<div class="tags indention">
-</div>
-
-
-  <span class="lead-duration duration">0.224</span>
-
-
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-25">
-
-<div class="brief passed">
-  <span class="keyword indention">Background</span>
-  <span class="name"></span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-  </span>
-  <div class="description indention"></div>
-
-  <div id="element-25" class="collapse collapsable-details ">
-
-
-
-
-
-<div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-26">
-
-<div class="brief passed">
-  <span class="keyword indention">Steps</span>
-  <span class="name"></span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-  </div>
-
-  <div id="steps-26" class="inner-level collapse collapsable-details ">
-      <div class="step">
-          <div class="comment indention"># 1. LLAMANDO AL SERVICIO AUTHTOKEN PARA HACER LOGIN Y OBTENER EL TOKEN</div>
-
-
-<div class="brief step-name-* passed">
-  <span class="keyword indention">*</span>
-  <span class="name">def validBodyRequest = read('classpath:JsonRequest/loginTokenRequest.json')</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-* passed">
-  <span class="keyword indention">*</span>
-  <span class="name">def loginResponse = call read('classpath:api/loginToken.feature') { request: validBodyRequest }</span>
-
-  <span class="lead-duration duration">0.113</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name- passed">
-  <span class="keyword indention"></span>
-  <span class="name">api/loginToken.feature</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-&amp;gt; * passed">
-  <span class="keyword indention">&gt; *</span>
-  <span class="name">url loginUrl</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-&amp;gt; * passed">
-  <span class="keyword indention">&gt; *</span>
-  <span class="name">print loginUrl</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-  <div class="inner-level">
-    <div class="docstring indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-27">
-          <a>Doc string</a>
-      </div>
-      <div id="msg-27" class="collapse collapsable-details">
-        <pre>18:24:10.066 [print] http://10.161.169.27:8511/intraLogin 
-</pre>
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-&amp;gt; * passed">
-  <span class="keyword indention">&gt; *</span>
-  <span class="name">def schemaUtil = Java.type('util.JsonSchemaUtil')</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-&amp;gt; * passed">
-  <span class="keyword indention">&gt; *</span>
-  <span class="name">def schemaText = karate.readAsString('classpath:Schema/sc_loginToken.json')</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-&amp;gt; * passed">
-  <span class="keyword indention">&gt; *</span>
-  <span class="name">def validBodyRequest = read('classpath:JsonRequest/loginTokenRequest.json')</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-&amp;gt; Given passed">
-  <span class="keyword indention">&gt; Given</span>
-  <span class="name">request validBodyRequest</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-&amp;gt; When passed">
-  <span class="keyword indention">&gt; When</span>
-  <span class="name">method POST</span>
-
-  <span class="lead-duration duration">0.095</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-  <div class="inner-level">
-    <div class="docstring indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-28">
-          <a>Doc string</a>
-      </div>
-      <div id="msg-28" class="collapse collapsable-details">
-        <pre>18:24:10.070 request:
-1 &gt; POST http://10.161.169.27:8511/intraLogin
-1 &gt; Content-Type: application/json; charset=UTF-8
-1 &gt; Content-Length: 39
-1 &gt; Host: 10.161.169.27:8511
-1 &gt; Connection: Keep-Alive
-1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
-1 &gt; Accept-Encoding: gzip,deflate
-{&quot;login&quot;:&quot;tns01&quot;,&quot;clave&quot;:&quot;T3st2024.+-&quot;}
-
-18:24:10.160 response time in milliseconds: 90
-1 &lt; 200
-1 &lt; Content-Type: application/json
-1 &lt; content-length: 326
-{&quot;token&quot;:&quot;eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IjUzOEYyRTc5RDM1MkZENzRBQTI2RjdDOTk5MkYwMTFFIiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU1NTU1ODUwLCJleHAiOjE3NTU1NTk0NTB9.M7Ov6lchdFsU3UYJxy_VuYEMKDnCFPDDyE3YCLxkhjlpeSVDHIey1lvvPqw8InJy&quot;}
-
-</pre>
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-&amp;gt; Then passed">
-  <span class="keyword indention">&gt; Then</span>
-  <span class="name">status 200</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-          <div class="comment indention"># Validar que la respuesta contenga el campo token</div>
-
-
-<div class="brief step-name-&amp;gt; And passed">
-  <span class="keyword indention">&gt; And</span>
-  <span class="name">match response.token == '#string'</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-          <div class="comment indention"># Validar la estructura completa de la respuesta usando el schema JSON</div>
-
-
-<div class="brief step-name-&amp;gt; * passed">
-  <span class="keyword indention">&gt; *</span>
-  <span class="name">def responseText = karate.pretty(response)</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-&amp;gt; * passed">
-  <span class="keyword indention">&gt; *</span>
-  <span class="name">def isValid = schemaUtil.isValid(schemaText, responseText)</span>
-
-  <span class="lead-duration duration">0.003</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-&amp;gt; * passed">
-  <span class="keyword indention">&gt; *</span>
-  <span class="name">match isValid == true</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-          <div class="comment indention"># Tiempo de respuesta</div>
-
-
-<div class="brief step-name-&amp;gt; And passed">
-  <span class="keyword indention">&gt; And</span>
-  <span class="name">print '=== TIEMPO DE RESPUESTA DEL FEATURE loginToken ===', responseTime / 1000, 's'</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-  <div class="inner-level">
-    <div class="docstring indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-29">
-          <a>Doc string</a>
-      </div>
-      <div id="msg-29" class="collapse collapsable-details">
-        <pre>18:24:10.170 [print] === TIEMPO DE RESPUESTA DEL FEATURE loginToken === 0.09 s 
-</pre>
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-* passed">
-  <span class="keyword indention">*</span>
-  <span class="name">def authToken = loginResponse.response.token</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-          <div class="comment indention"># 2. CONFIGURANDO HEADERS PARA ESTACIONES</div>
-
-
-<div class="brief step-name-* passed">
-  <span class="keyword indention">*</span>
-  <span class="name">def headers = headersEstacionesConToken(authToken)</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-* passed">
-  <span class="keyword indention">*</span>
-  <span class="name">configure headers = headers</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-* passed">
-  <span class="keyword indention">*</span>
-  <span class="name">print 'HEADERS usados en creacion de estacion:', headers</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-  <div class="inner-level">
-    <div class="docstring indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-30">
-          <a>Doc string</a>
-      </div>
-      <div id="msg-30" class="collapse collapsable-details">
-        <pre>18:24:10.171 [print] HEADERS usados en creacion de estacion: {
-  &quot;Content-Type&quot;: &quot;application/json&quot;,
-  &quot;X-USER-ID&quot;: &quot;E11011&quot;,
-  &quot;X-CORRELATION-ID&quot;: &quot;1445|E11011|234234&quot;,
-  &quot;X-TOKEN-ID&quot;: &quot;eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IjUzOEYyRTc5RDM1MkZENzRBQTI2RjdDOTk5MkYwMTFFIiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU1NTU1ODUwLCJleHAiOjE3NTU1NTk0NTB9.M7Ov6lchdFsU3UYJxy_VuYEMKDnCFPDDyE3YCLxkhjlpeSVDHIey1lvvPqw8InJy&quot;
-}
- 
-</pre>
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-* passed">
-  <span class="keyword indention">*</span>
-  <span class="name">print 'TOKEN obtenido:', authToken</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-  <div class="inner-level">
-    <div class="docstring indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-31">
-          <a>Doc string</a>
-      </div>
-      <div id="msg-31" class="collapse collapsable-details">
-        <pre>18:24:10.171 [print] TOKEN obtenido: eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IjUzOEYyRTc5RDM1MkZENzRBQTI2RjdDOTk5MkYwMTFFIiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU1NTU1ODUwLCJleHAiOjE3NTU1NTk0NTB9.M7Ov6lchdFsU3UYJxy_VuYEMKDnCFPDDyE3YCLxkhjlpeSVDHIey1lvvPqw8InJy 
-</pre>
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-          <div class="comment indention"># 3. CARGANDO (REQUEST) CON DATOS DE PRUEBA</div>
-
-
-<div class="brief step-name-* passed">
-  <span class="keyword indention">*</span>
-  <span class="name">def estacionValidaRequest = read('classpath:JsonRequest/estacionValidaRequest.json')</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-* passed">
-  <span class="keyword indention">*</span>
-  <span class="name">def duplicadoCodigoRequest = read('classpath:JsonRequest/duplicadoCodigoRequest.json')</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-* passed">
-  <span class="keyword indention">*</span>
-  <span class="name">def camposFaltantesRequest = read('classpath:JsonRequest/camposFaltantesRequest.json')</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-          <div class="comment indention"># 4. CONFIGURANDO VALIDACION DE SCHEMA</div>
-
-
-<div class="brief step-name-* passed">
-  <span class="keyword indention">*</span>
-  <span class="name">def schemaUtil = Java.type('util.JsonSchemaUtil')</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-* passed">
-  <span class="keyword indention">*</span>
-  <span class="name">def schemaText = karate.readAsString('classpath:Schema/sc_crearEstacion.json')</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-* passed">
-  <span class="keyword indention">*</span>
-  <span class="name">def errorSchema = karate.readAsString('classpath:Schema/sc_errorResponse.json')</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-  </div>
-</div>
-
-
-
-
-
-  </div>
-</div>
-
-
-<div class="element">
-
-
-<div class="tags indention">
-    <b>Tags:</b>
-       <a href="report-tag_2220277830.html">@crearEstacion</a>
-       <a href="report-tag_373857611.html">@estacionCodigoDuplicado</a>
-</div>
-
-
-  <span class="lead-duration duration">0.113</span>
-
-
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-32">
-
-<div class="brief failed">
-  <span class="keyword indention">Scenario</span>
-  <span class="name">El endpoint debe rechazar cuando se envia un codigo de estacion ya existente</span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-  </span>
-  <div class="description indention"></div>
-
-  <div id="element-32" class="collapse collapsable-details  in ">
-
-
-
-
-
-<div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-33">
-
-<div class="brief failed">
-  <span class="keyword indention">Steps</span>
-  <span class="name"></span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-  </div>
-
-  <div id="steps-33" class="inner-level collapse collapsable-details  in ">
-      <div class="step">
-          <div class="comment indention"># Este escenario usa el mismo codigo que una estacion ya registrada para simular duplicidad</div>
-
-
-<div class="brief step-name-Given passed">
-  <span class="keyword indention">Given</span>
-  <span class="name">url baseUrl</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-And passed">
-  <span class="keyword indention">And</span>
-  <span class="name">request duplicadoCodigoRequest</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-When passed">
-  <span class="keyword indention">When</span>
-  <span class="name">method POST</span>
-
-  <span class="lead-duration duration">0.112</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-  <div class="inner-level">
-    <div class="docstring indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-34">
-          <a>Doc string</a>
-      </div>
-      <div id="msg-34" class="collapse collapsable-details">
-        <pre>18:24:10.180 request:
-1 &gt; POST http://10.161.169.27:8517/api/v1/estaciones
-1 &gt; Content-Type: application/json; charset=UTF-8
-1 &gt; X-USER-ID: E11011
-1 &gt; X-CORRELATION-ID: 1445|E11011|234234
-1 &gt; X-TOKEN-ID: eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IjUzOEYyRTc5RDM1MkZENzRBQTI2RjdDOTk5MkYwMTFFIiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU1NTU1ODUwLCJleHAiOjE3NTU1NTk0NTB9.M7Ov6lchdFsU3UYJxy_VuYEMKDnCFPDDyE3YCLxkhjlpeSVDHIey1lvvPqw8InJy
-1 &gt; Content-Length: 858
-1 &gt; Host: 10.161.169.27:8517
-1 &gt; Connection: Keep-Alive
-1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
-1 &gt; Accept-Encoding: gzip,deflate
-{&quot;codigo&quot;:&quot;ESTKRT&quot;,&quot;nombre&quot;:&quot;Estacion Duplicada KARATE&quot;,&quot;regionId&quot;:2,&quot;estadoId&quot;:2,&quot;municipioId&quot;:2,&quot;parroquiaId&quot;:2,&quot;atributos&quot;:[{&quot;tipo&quot;:&quot;CAPACIDAD&quot;,&quot;valor&quot;:&quot;500&quot;,&quot;descripcion&quot;:&quot;Capacidad reducida&quot;},{&quot;tipo&quot;:&quot;ENERGIA&quot;,&quot;valor&quot;:&quot;SOLAR&quot;,&quot;descripcion&quot;:&quot;Fuente alternativa&quot;}],&quot;direccion&quot;:{&quot;conglomerado&quot;:&quot;OESTE&quot;,&quot;nombreConglomerado&quot;:&quot;Centro Empresarial&quot;,&quot;inmueble&quot;:&quot;GALPON&quot;,&quot;nombreInmueble&quot;:&quot;Modulo C&quot;,&quot;piso&quot;:&quot;PB&quot;,&quot;numero&quot;:&quot;789&quot;,&quot;vialidad&quot;:&quot;CALLE&quot;,&quot;nombreVialidad&quot;:&quot;Calle Oeste&quot;,&quot;vialidad2&quot;:&quot;AVENIDA&quot;,&quot;nombreVialidad2&quot;:&quot;Av. Secundaria&quot;,&quot;puntoReferencia&quot;:&quot;Junto al centro log&iacute;stico&quot;,&quot;codigoPostal&quot;:&quot;3003&quot;,&quot;ciudad&quot;:&quot;Ciudad Oeste&quot;,&quot;parroquia&quot;:&quot;Oeste&quot;,&quot;municipio&quot;:&quot;Empresarial&quot;,&quot;estado&quot;:&quot;Estado Oeste&quot;,&quot;pais&quot;:&quot;Venezuela&quot;,&quot;tipoUbicacion&quot;:&quot;INDUSTRIAL&quot;},&quot;codigoPais&quot;:&quot;VE&quot;,&quot;mercadoId&quot;:2,&quot;clusterId&quot;:2,&quot;comentAprobacion&quot;:&quot;Intento duplicado&quot;,&quot;estatus&quot;:1,&quot;createdBy&quot;:&quot;E22022&quot;}
-
-18:24:10.290 response time in milliseconds: 109
-1 &lt; 400
-1 &lt; content-length: 259
-1 &lt; Content-Type: application/json
-{&quot;success&quot;:false,&quot;data&quot;:{&quot;code&quot;:&quot;400&quot;,&quot;status&quot;:&quot;BAD_REQUEST&quot;,&quot;message&quot;:&quot;Cannot invoke \&quot;String.split(String)\&quot; because \&quot;correlationId\&quot; is null&quot;,&quot;errors&quot;:[&quot;Cannot invoke \&quot;String.split(String)\&quot; because \&quot;correlationId\&quot; is null&quot;]},&quot;timestamp&quot;:1755555850328}
-
-</pre>
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-Then failed">
-  <span class="keyword indention">Then</span>
-  <span class="name">status 409</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-35">
-          <a>status</a>
-      </div>
-      <div id="msg-35" class="collapse collapsable-details  in ">
-        <pre>status code was: 400, expected: 409, response time in milliseconds: 109, url: http://10.161.169.27:8517/api/v1/estaciones, response: 
-{&quot;success&quot;:false,&quot;data&quot;:{&quot;code&quot;:&quot;400&quot;,&quot;status&quot;:&quot;BAD_REQUEST&quot;,&quot;message&quot;:&quot;Cannot invoke \&quot;String.split(String)\&quot; because \&quot;correlationId\&quot; is null&quot;,&quot;errors&quot;:[&quot;Cannot invoke \&quot;String.split(String)\&quot; because \&quot;correlationId\&quot; is null&quot;]},&quot;timestamp&quot;:1755555850328}
-classpath:api/crearEstacion.feature:66</pre>
-      </div>
-    </div>
-  </div>
-
-
-
-
-  <div class="inner-level">
-    <div class="docstring indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-36">
-          <a>Doc string</a>
-      </div>
-      <div id="msg-36" class="collapse collapsable-details">
-        <pre>18:24:10.290 classpath:api/crearEstacion.feature:66
-Then status 409
-status code was: 400, expected: 409, response time in milliseconds: 109, url: http://10.161.169.27:8517/api/v1/estaciones, response: 
-{&quot;success&quot;:false,&quot;data&quot;:{&quot;code&quot;:&quot;400&quot;,&quot;status&quot;:&quot;BAD_REQUEST&quot;,&quot;message&quot;:&quot;Cannot invoke \&quot;String.split(String)\&quot; because \&quot;correlationId\&quot; is null&quot;,&quot;errors&quot;:[&quot;Cannot invoke \&quot;String.split(String)\&quot; because \&quot;correlationId\&quot; is null&quot;]},&quot;timestamp&quot;:1755555850328}
-classpath:api/crearEstacion.feature:66
-</pre>
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-And skipped">
-  <span class="keyword indention">And</span>
-  <span class="name">match response.success == false</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-And skipped">
-  <span class="keyword indention">And</span>
-  <span class="name">match response.data.code == &quot;409&quot;</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-And skipped">
-  <span class="keyword indention">And</span>
-  <span class="name">match response.data.message contains 'Codigo ya registrado'</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-* skipped">
-  <span class="keyword indention">*</span>
-  <span class="name">def responseText = karate.pretty(response)</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-* skipped">
-  <span class="keyword indention">*</span>
-  <span class="name">def isValid = schemaUtil.isValid(errorSchema, responseText)</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-* skipped">
-  <span class="keyword indention">*</span>
-  <span class="name">match isValid == true</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-And skipped">
-  <span class="keyword indention">And</span>
-  <span class="name">print 'Error por codigo duplicado:', response.data.message</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-And skipped">
-  <span class="keyword indention">And</span>
-  <span class="name">print '=== TIEMPO DE RESPUESTA DEL FEATURE ===', responseTime / 1000, 's'</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
 
 
 

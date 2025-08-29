@@ -3,6 +3,8 @@ Feature: Actualizar una estacion mediante el endpoint PUT /api/v1/estaciones/{id
 
   Background:
     # 1. LLAMANDO AL SERVICIO AUTHTOKEN PARA HACER LOGIN Y OBTENER EL TOKEN
+    * configure logPrettyResponse = false
+    * configure logPrettyRequest = false
     * def validBodyRequest = read('classpath:JsonRequest/loginTokenRequest.json')
     * def loginResponse = call read('classpath:api/loginToken.feature') { request: validBodyRequest }
     * def authToken = loginResponse.response.token
@@ -22,7 +24,7 @@ Feature: Actualizar una estacion mediante el endpoint PUT /api/v1/estaciones/{id
 
   @actualizarEstacionValida
   Scenario: Actualizar estacion con datos validos
-    # Este escenario valida que el endpoint actualice correctamente una estación existente
+    # Este escenario valida que el endpoint actualice correctamente una estacion existente
     Given url baseUrl + '/' + estacionId
     And request estacionActualizadaRequest
     When method PUT
@@ -33,5 +35,5 @@ Feature: Actualizar una estacion mediante el endpoint PUT /api/v1/estaciones/{id
     * def responseText = karate.pretty(response)
     * def isValid = schemaUtil.isValid(schemaText, responseText)
     * match isValid == true
-    And print 'Estación actualizada exitosamente:', response
+    And print 'Estacion actualizada exitosamente:', response
     And print '=== TIEMPO DE RESPUESTA DEL FEATURE ===', responseTime / 1000, 's'

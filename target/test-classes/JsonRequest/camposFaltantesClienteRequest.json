@@ -7,9 +7,19 @@
   "parroquiaId": 45,
   "atributos": [
     {
-      "additionalProp1": "TipoA",
-      "additionalProp2": "Activo",
-      "additionalProp3": "Interior"
+      "tipo": "TIPO_ESTACION",
+      "valor": "CLIENTE",
+      "descripcion": "Estacion del lado cliente"
+    },
+    {
+      "tipo": "ESTADO",
+      "valor": "ACTIVO",
+      "descripcion": "Estacion activa para operaciones"
+    },
+    {
+      "tipo": "UBICACION",
+      "valor": "INTERIOR",
+      "descripcion": "Estacion ubicada en interior"
     }
   ],
   "direccion": {

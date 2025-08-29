@@ -1,10 +1,10 @@
 function fn() {
     var env = karate.env || 'dev';
     var baseUrl = '';
-    var loginUrl = 'http://10.161.169.27:8511/intraLogin';
+    var loginUrl = 'http://ms-auth-oss-git-dev-front-oss.apps.tmve-nprod-1.tmve-qa.com/intraLogin';
 
     if (env === 'dev') {
-        baseUrl = 'http://10.161.169.27:8517/api/v1/estaciones';
+        baseUrl = 'http://estaciones-bff-git-dev-front-oss.apps.tmve-nprod-1.tmve-qa.com/api/v1/estaciones/';
     } else if (env === 'e2e') {
         baseUrl = 'http://examples.com';
     }

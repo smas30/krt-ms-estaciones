@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "required": ["success", "data", "timestamp"],
+  "properties": {
+    "success": {
+      "type": "boolean"
+    },
+    "data": {
+      "type": "number"
+    },
+    "timestamp": {
+      "type": "number"
+    }
+  },
+  "additionalProperties": false
+}

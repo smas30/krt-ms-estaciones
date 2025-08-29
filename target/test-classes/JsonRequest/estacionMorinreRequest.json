@@ -7,9 +7,19 @@
   "parroquiaId": 1,
   "atributos": [
     {
-      "Estacion Prueba1": "Prueba1",
-      "Estacion Prueba2": "Prueba2",
-      "Estacion Prueba3": "Prueba3"
+      "tipo": "ESTACION_PRUEBA",
+      "valor": "PRUEBA1",
+      "descripcion": "Primera prueba de estacion"
+    },
+    {
+      "tipo": "ESTACION_PRUEBA",
+      "valor": "PRUEBA2",
+      "descripcion": "Segunda prueba de estacion"
+    },
+    {
+      "tipo": "ESTACION_PRUEBA",
+      "valor": "PRUEBA3",
+      "descripcion": "Tercera prueba de estacion"
     }
   ],
   "direccion": {

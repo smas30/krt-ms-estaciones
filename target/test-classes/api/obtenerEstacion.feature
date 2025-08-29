@@ -3,6 +3,8 @@ Feature: Obtener estaciones mediante el endpoint GET /api/v1/estaciones
 
   Background:
      # 1. LLAMANDO AL SERVICIO AUTHTOKEN PARA HACER LOGIN Y OBTENER EL TOKEN
+    * configure logPrettyResponse = false
+    * configure logPrettyRequest = false
     * def loginBody = read('classpath:JsonRequest/loginTokenRequest.json')
     * def loginResponse = call read('classpath:api/loginToken.feature') { request: loginBody }
     * def authToken = loginResponse.response.token
@@ -40,7 +42,7 @@ Feature: Obtener estaciones mediante el endpoint GET /api/v1/estaciones
 
   @paginacionEstaciones
   Scenario: Validar paginacion usando limit y page en GET de estaciones
-  # Página 1
+  # Pagina 1
     Given url baseUrl
     And param limit = 100
     And param page = 6
@@ -48,9 +50,9 @@ Feature: Obtener estaciones mediante el endpoint GET /api/v1/estaciones
     Then status 200
     And match response.success == true
     * def paginaUno = response.data.data
-    * print 'Página 1:', karate.pretty(paginaUno)
+    * print 'Pagina 1:', karate.pretty(paginaUno)
 
-  # Página 2
+  # Pagina 2
     Given url baseUrl
     And param limit = 5
     And param page = 3
@@ -58,7 +60,7 @@ Feature: Obtener estaciones mediante el endpoint GET /api/v1/estaciones
     Then status 200
     And match response.success == true
     * def paginaDos = response.data.data
-    * print 'Página 2:', karate.pretty(paginaDos)
+    * print 'Pagina 2:', karate.pretty(paginaDos)
 
   # Validar que los elementos no se repiten
     * def codigosUno = paginaUno.map(x => x.codigo)

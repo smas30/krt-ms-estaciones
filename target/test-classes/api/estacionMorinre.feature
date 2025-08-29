@@ -10,7 +10,7 @@ Feature: Actualizar una estacion modificando la direccion para verificar el camb
     # 2. CONFIGURANDO HEADERS
     * def headers = headersEstacionesConToken(authToken)
     * configure headers = headers
-    * print 'HEADERS usados en actualización Morinre:', headers
+    * print 'HEADERS usados en actualizacion Morinre:', headers
     * print 'TOKEN obtenido:', authToken
 
     # 3. CARGANDO REQUEST CON CAMBIO EN DIRECCION
@@ -32,6 +32,6 @@ Feature: Actualizar una estacion modificando la direccion para verificar el camb
     * def responseText = karate.pretty(response)
     * def isValid = schemaUtil.isValid(schemaText, responseText)
     * match isValid == true
-    And print 'Estación actualizada para Morinre:', response.data.estacion
+    And print 'Estacion actualizada para Morinre:', response.data.estacion
     And print 'Estatus Morinre actualizado:', response.data.estacion.estatusMorinre
     And print '=== TIEMPO DE RESPUESTA DEL FEATURE ===', responseTime / 1000, 's'
