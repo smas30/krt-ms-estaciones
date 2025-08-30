@@ -8,13 +8,9 @@ Feature: Obtener calculo de estacion mediante el endpoint GET /api/v1/estaciones
     * def validBodyRequest = read('classpath:JsonRequest/loginTokenRequest.json')
     * def loginResponse = call read('classpath:api/loginToken.feature') { request: validBodyRequest }
     * def authToken = loginResponse.response.token
-
     # 2. CONFIGURANDO HEADERS PARA ESTACIONES
     * def headers = headersEstacionesConToken(authToken)
     * configure headers = headers
-    * print 'HEADERS usados en calculo de estacion:', headers
-    * print 'TOKEN obtenido:', authToken
-
     # 3. DEFINIENDO PARAMETROS DE CONSULTA
     * def regionId = 1
     * def noRegionId = 5000
@@ -47,7 +43,7 @@ Feature: Obtener calculo de estacion mediante el endpoint GET /api/v1/estaciones
     And headers headers
     And param regionId = noRegionId
     When method GET
-    Then status 200
+    Then status 404
     And match response.success == false
     * def responseText = karate.pretty(response)
     * def isValid = schemaUtil.isValid(errorSchema, responseText)

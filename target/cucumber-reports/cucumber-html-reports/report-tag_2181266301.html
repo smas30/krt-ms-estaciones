@@ -41,7 +41,7 @@ $(document).ready(function() {
 
 
 
-<title>Cucumber Reports (no 1.0) - Tag: @obtenerEstacionPorId</title>
+<title>Cucumber Reports (no 1.0) - Tag: @calculoIdEstacion</title>
 
 </head>
 <body>
@@ -76,7 +76,7 @@ $(document).ready(function() {
     <tr class="info">
       <td>krt-ms-estaciones</td>
         <td>1.0</td>
-      <td>29 ago. 2025, 10:46</td>
+      <td>30 ago. 2025, 10:25</td>
     </tr>
   </tbody>
 </table>
@@ -128,19 +128,19 @@ $(document).ready(function() {
 
         <tbody>
         <tr>
-          <td class="tagname">@obtenerEstacionPorId</td>
-          <td      class="passed"    >3</td>
+          <td class="tagname">@calculoIdEstacion</td>
+          <td      class="passed"    >4</td>
           <td      class="failed"    >1</td>
-          <td     class="skipped"   >3</td>
+          <td     class="skipped"   >5</td>
           <td >0</td>
           <td >0</td>
-          <td class="total">7</td>
+          <td class="total">10</td>
 
           <td >0</td>
           <td  class="failed"    >1</td>
           <td class="total">1</td>
 
-          <td class="duration" data-value="543867600">0.543</td>
+          <td class="duration" data-value="2387951100">2.387</td>
           <td class="failed">Failed</td>
         </tr>
         </tbody>
@@ -173,25 +173,25 @@ $(document).ready(function() {
 <div class="element">
     <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_4_4119610707.html">api/obtenerEstacionPorId.feature</a>
+      <a href="report-feature_2141835536.html">api/calculoIdEstacion.feature</a>
     </div>
 
 
 <div class="tags indention">
     <b>Tags:</b>
-       <a href="report-tag_4015419830.html">@obtenerPorId</a>
-       <a href="report-tag_307059126.html">@obtenerEstacionPorId</a>
+       <a href="report-tag_2181266301.html">@calculoIdEstacion</a>
+       <a href="report-tag_2211496130.html">@regionNoExiste</a>
 </div>
 
 
-  <span class="lead-duration duration">0.543</span>
+  <span class="lead-duration duration">2.387</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
-  <span class="name">Obtener una estacion por ID especifico y verificar que el servicio responde con status 200 y los datos de la estacion</span>
+  <span class="name">Enviar regionId inexistente y validar respuesta</span>
 
 
      <i class="chevron fa fa-fw"></i>
@@ -223,9 +223,36 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-* passed">
-  <span class="keyword indention">*</span>
-  <span class="name">def id = 20</span>
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url baseUrl + '/calculo/id'</span>
+
+  <span class="lead-duration duration">0.007</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">headers headers</span>
 
   <span class="lead-duration duration">0.000</span>
 
@@ -250,11 +277,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Given passed">
-  <span class="keyword indention">Given</span>
-  <span class="name">url baseUrl + '/' + id</span>
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">param regionId = noRegionId</span>
 
-  <span class="lead-duration duration">0.005</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -281,7 +308,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method GET</span>
 
-  <span class="lead-duration duration">0.526</span>
+  <span class="lead-duration duration">2.366</span>
 
 </div>
 
@@ -299,25 +326,25 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-3" class="collapse collapsable-details">
-        <pre>09:30:32.723 request:
-1 &gt; GET http://estaciones-bff-git-dev-front-oss.apps.tmve-nprod-1.tmve-qa.com/api/v1/estaciones//20
+        <pre>09:13:39.506 request:
+1 &gt; GET http://estaciones-bff-git-dev-front-oss.apps.tmve-nprod-1.tmve-qa.com/api/v1/estaciones//calculo/id?regionId=5000
 1 &gt; Content-Type: application/json
 1 &gt; X-USER-ID: E11011
 1 &gt; X-CORRELATION-ID: 1445|E11011|234234
-1 &gt; X-TOKEN-ID: eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IjlBRkYyMUY4RjQ3ODQwRkYzNjREOTg2NjBERUYwRkVGIiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU2NDc0MjMxLCJleHAiOjE3NTY0Nzc4MzF9.aa9YHgKIZOGpAcZgnmTGslZp3pSlRAoJr7Ul9vno4WS31U4bljEM4sgWLLvQMANq
+1 &gt; X-TOKEN-ID: eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IkM3OTRGOURDREQ4QzA4MjhENDYwNENGNTk0N0Q5REZFIiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU2NTU5NjE4LCJleHAiOjE3NTY1NjMyMTh9.BT_wx3pU2fVVs-xYS8vyNTt6UCgFzppIpqcqPDVm8lPODfDVjwar3C1Q1crZKJoU
 1 &gt; Host: estaciones-bff-git-dev-front-oss.apps.tmve-nprod-1.tmve-qa.com
 1 &gt; Connection: Keep-Alive
 1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
 1 &gt; Accept-Encoding: gzip,deflate
 
 
-09:30:33.253 response time in milliseconds: 530
-1 &lt; 400
-1 &lt; content-length: 395
-1 &lt; content-type: application/json
-1 &lt; set-cookie: 7ebc866ebb4d2d727ca53353a6c0c030=739fd5a9a7733606de7260d59fb218e7; path=/; HttpOnly
-1 &lt; Set-Cookie: 7ebc866ebb4d2d727ca53353a6c0c030=739fd5a9a7733606de7260d59fb218e7; path=/; HttpOnly
-{&quot;success&quot;:false,&quot;data&quot;:{&quot;code&quot;:&quot;400&quot;,&quot;status&quot;:&quot;BAD_REQUEST&quot;,&quot;message&quot;:&quot;Error injecting ve.com.telefonica.infrastructure.MDireccionesService ve.com.telefonica.domain.service.DefaultStationService.serviceDireccion&quot;,&quot;errors&quot;:[&quot;Error injecting ve.com.telefonica.infrastructure.MDireccionesService ve.com.telefonica.domain.service.DefaultStationService.serviceDireccion&quot;]},&quot;timestamp&quot;:1756474233064}
+09:13:41.870 response time in milliseconds: 2364
+1 &lt; 200
+1 &lt; content-length: 43
+1 &lt; content-type: application/json;charset=UTF-8
+1 &lt; set-cookie: 7ebc866ebb4d2d727ca53353a6c0c030=126a0d116249904aeec188af06a28666; path=/; HttpOnly
+1 &lt; Set-Cookie: 7ebc866ebb4d2d727ca53353a6c0c030=126a0d116249904aeec188af06a28666; path=/; HttpOnly
+{&quot;success&quot;:false,&quot;timestamp&quot;:1756559621875}
 
 </pre>
       </div>
@@ -336,9 +363,9 @@ $(document).ready(function() {
 
 <div class="brief step-name-Then failed">
   <span class="keyword indention">Then</span>
-  <span class="name">status 200</span>
+  <span class="name">status 404</span>
 
-  <span class="lead-duration duration">0.011</span>
+  <span class="lead-duration duration">0.013</span>
 
 </div>
 
@@ -353,9 +380,9 @@ $(document).ready(function() {
           <a>status</a>
       </div>
       <div id="msg-4" class="collapse collapsable-details  in ">
-        <pre>status code was: 400, expected: 200, response time in milliseconds: 530, url: http://estaciones-bff-git-dev-front-oss.apps.tmve-nprod-1.tmve-qa.com/api/v1/estaciones//20, response: 
-{&quot;success&quot;:false,&quot;data&quot;:{&quot;code&quot;:&quot;400&quot;,&quot;status&quot;:&quot;BAD_REQUEST&quot;,&quot;message&quot;:&quot;Error injecting ve.com.telefonica.infrastructure.MDireccionesService ve.com.telefonica.domain.service.DefaultStationService.serviceDireccion&quot;,&quot;errors&quot;:[&quot;Error injecting ve.com.telefonica.infrastructure.MDireccionesService ve.com.telefonica.domain.service.DefaultStationService.serviceDireccion&quot;]},&quot;timestamp&quot;:1756474233064}
-classpath:api/obtenerEstacionPorId.feature:23</pre>
+        <pre>status code was: 200, expected: 404, response time in milliseconds: 2364, url: http://estaciones-bff-git-dev-front-oss.apps.tmve-nprod-1.tmve-qa.com/api/v1/estaciones//calculo/id?regionId=5000, response: 
+{&quot;success&quot;:false,&quot;timestamp&quot;:1756559621875}
+classpath:api/calculoIdEstacion.feature:46</pre>
       </div>
     </div>
   </div>
@@ -369,11 +396,11 @@ classpath:api/obtenerEstacionPorId.feature:23</pre>
           <a>Doc string</a>
       </div>
       <div id="msg-5" class="collapse collapsable-details">
-        <pre>09:30:33.273 classpath:api/obtenerEstacionPorId.feature:23
-Then status 200
-status code was: 400, expected: 200, response time in milliseconds: 530, url: http://estaciones-bff-git-dev-front-oss.apps.tmve-nprod-1.tmve-qa.com/api/v1/estaciones//20, response: 
-{&quot;success&quot;:false,&quot;data&quot;:{&quot;code&quot;:&quot;400&quot;,&quot;status&quot;:&quot;BAD_REQUEST&quot;,&quot;message&quot;:&quot;Error injecting ve.com.telefonica.infrastructure.MDireccionesService ve.com.telefonica.domain.service.DefaultStationService.serviceDireccion&quot;,&quot;errors&quot;:[&quot;Error injecting ve.com.telefonica.infrastructure.MDireccionesService ve.com.telefonica.domain.service.DefaultStationService.serviceDireccion&quot;]},&quot;timestamp&quot;:1756474233064}
-classpath:api/obtenerEstacionPorId.feature:23
+        <pre>09:13:41.897 classpath:api/calculoIdEstacion.feature:46
+Then status 404
+status code was: 200, expected: 404, response time in milliseconds: 2364, url: http://estaciones-bff-git-dev-front-oss.apps.tmve-nprod-1.tmve-qa.com/api/v1/estaciones//calculo/id?regionId=5000, response: 
+{&quot;success&quot;:false,&quot;timestamp&quot;:1756559621875}
+classpath:api/calculoIdEstacion.feature:46
 </pre>
       </div>
     </div>
@@ -391,7 +418,7 @@ classpath:api/obtenerEstacionPorId.feature:23
 
 <div class="brief step-name-And skipped">
   <span class="keyword indention">And</span>
-  <span class="name">match response.success == true</span>
+  <span class="name">match response.success == false</span>
 
   <span class="lead-duration duration">0.000</span>
 
@@ -418,7 +445,61 @@ classpath:api/obtenerEstacionPorId.feature:23
 
 <div class="brief step-name-* skipped">
   <span class="keyword indention">*</span>
-  <span class="name">print 'Datos obtenidos en la consulta', id, ':', response</span>
+  <span class="name">def responseText = karate.pretty(response)</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def isValid = schemaUtil.isValid(errorSchema, responseText)</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">match isValid == true</span>
 
   <span class="lead-duration duration">0.000</span>
 
@@ -445,7 +526,7 @@ classpath:api/obtenerEstacionPorId.feature:23
 
 <div class="brief step-name-And skipped">
   <span class="keyword indention">And</span>
-  <span class="name">print '=== TIEMPO DE RESPUESTA DEL FEATURE ===', responseTime / 1000, 's'</span>
+  <span class="name">print 'Respuesta para region inexistente:', response</span>
 
   <span class="lead-duration duration">0.000</span>
 

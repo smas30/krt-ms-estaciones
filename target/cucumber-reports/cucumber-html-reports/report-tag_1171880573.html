@@ -41,7 +41,7 @@ $(document).ready(function() {
 
 
 
-<title>Cucumber Reports (no 1.0) - Feature: api/loginToken.feature</title>
+<title>Cucumber Reports (no 1.0) - Tag: @calculoId</title>
 
 </head>
 <body>
@@ -76,7 +76,7 @@ $(document).ready(function() {
     <tr class="info">
       <td>krt-ms-estaciones</td>
         <td>1.0</td>
-      <td>29 ago. 2025, 09:30</td>
+      <td>30 ago. 2025, 08:49</td>
     </tr>
   </tbody>
 </table>
@@ -89,7 +89,7 @@ $(document).ready(function() {
 
 <div id="report-lead" class="container-fluid">
   <div class="col-md-10 col-md-offset-1">
-    <h2>Feature Report</h2>
+    <h2>Tag Report</h2>
   </div>
 </div>
 
@@ -108,7 +108,7 @@ $(document).ready(function() {
     <th colspan="2">Features</th>
   </tr>
   <tr>
-    <th>Feature</th>
+    <th>Tag</th>
     <th class="passed">Passed</th>
     <th class="failed">Failed</th>
     <th class="skipped">Skipped</th>
@@ -128,7 +128,7 @@ $(document).ready(function() {
 
         <tbody>
         <tr>
-          <td class="tagname">api/loginToken.feature</td>
+          <td class="tagname">@calculoId</td>
           <td      class="passed"    >13</td>
           <td >0</td>
           <td >0</td>
@@ -140,7 +140,7 @@ $(document).ready(function() {
           <td >0</td>
           <td class="total">1</td>
 
-          <td class="duration" data-value="2583971600">2.583</td>
+          <td class="duration" data-value="1651632900">1.651</td>
           <td class="passed">Passed</td>
         </tr>
         </tbody>
@@ -167,38 +167,31 @@ $(document).ready(function() {
 <div class="container-fluid" id="report">
   <div class="row">
     <div class="col-md-10 col-md-offset-1">
-      <div class="feature">
+      <div class="elements">
 
-<div class="tags indention">
-</div>
-
-
-<div class="brief passed">
-  <span class="keyword indention">Feature</span>
-  <span class="name">api/loginToken.feature</span>
-
-
-</div>
-
-        <div class="description indention">Servicio de autenticacion de la gerencia de soporte a la operacion</div>
-
-        <div class="elements inner-level">
 
 <div class="element">
+    <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_2141835536.html">api/calculoIdEstacion.feature</a>
+    </div>
 
 
 <div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_1171880573.html">@calculoId</a>
+       <a href="report-tag_2181266301.html">@calculoIdEstacion</a>
 </div>
 
 
-  <span class="lead-duration duration">0.081</span>
+  <span class="lead-duration duration">1.651</span>
 
 
   <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
 
 <div class="brief passed">
-  <span class="keyword indention">Background</span>
-  <span class="name"></span>
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Obtener calculo de estacion por region valida</span>
 
 
      <i class="chevron fa fa-fw"></i>
@@ -228,213 +221,66 @@ $(document).ready(function() {
 
   <div id="steps-2" class="inner-level collapse collapsable-details ">
       <div class="step">
-
-
-<div class="brief step-name-* passed">
-  <span class="keyword indention">*</span>
-  <span class="name">url loginUrl</span>
-
-  <span class="lead-duration duration">0.003</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-* passed">
-  <span class="keyword indention">*</span>
-  <span class="name">print loginUrl</span>
-
-  <span class="lead-duration duration">0.004</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-  <div class="inner-level">
-    <div class="docstring indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-3">
-          <a>Doc string</a>
-      </div>
-      <div id="msg-3" class="collapse collapsable-details">
-        <pre>09:27:16.667 [print] http://ms-auth-oss-git-dev-front-oss.apps.tmve-nprod-1.tmve-qa.com/intraLogin 
-</pre>
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-* passed">
-  <span class="keyword indention">*</span>
-  <span class="name">def schemaUtil = Java.type('util.JsonSchemaUtil')</span>
-
-  <span class="lead-duration duration">0.009</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-* passed">
-  <span class="keyword indention">*</span>
-  <span class="name">def schemaText = karate.readAsString('classpath:Schema/sc_loginToken.json')</span>
-
-  <span class="lead-duration duration">0.015</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-* passed">
-  <span class="keyword indention">*</span>
-  <span class="name">def validBodyRequest = read('classpath:JsonRequest/loginTokenRequest.json')</span>
-
-  <span class="lead-duration duration">0.048</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-  </div>
-</div>
-
-
-
-
-
-  </div>
-</div>
-
-
-<div class="element">
-
-
-<div class="tags indention">
-    <b>Tags:</b>
-       <a href="report-tag_1348781135.html">@loginToken</a>
-</div>
-
-
-  <span class="lead-duration duration">2.502</span>
-
-
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-4">
-
-<div class="brief passed">
-  <span class="keyword indention">Scenario</span>
-  <span class="name">La respuesta del endpoint entrega un token JWT valido</span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-  </span>
-  <div class="description indention"></div>
-
-  <div id="element-4" class="collapse collapsable-details ">
-
-
-
-
-
-<div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-5">
-
-<div class="brief passed">
-  <span class="keyword indention">Steps</span>
-  <span class="name"></span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-  </div>
-
-  <div id="steps-5" class="inner-level collapse collapsable-details ">
-      <div class="step">
+          <div class="comment indention"># Este escenario valida que el endpoint devuelva correctamente el calculo del id para una region</div>
 
 
 <div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
-  <span class="name">request validBodyRequest</span>
+  <span class="name">url baseUrl + '/calculo/id'</span>
+
+  <span class="lead-duration duration">0.006</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">headers headers</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">param regionId = regionId</span>
 
   <span class="lead-duration duration">0.000</span>
 
@@ -461,9 +307,9 @@ $(document).ready(function() {
 
 <div class="brief step-name-When passed">
   <span class="keyword indention">When</span>
-  <span class="name">method POST</span>
+  <span class="name">method GET</span>
 
-  <span class="lead-duration duration">2.020</span>
+  <span class="lead-duration duration">1.622</span>
 
 </div>
 
@@ -477,27 +323,29 @@ $(document).ready(function() {
 
   <div class="inner-level">
     <div class="docstring indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-6">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-3">
           <a>Doc string</a>
       </div>
-      <div id="msg-6" class="collapse collapsable-details">
-        <pre>09:27:17.149 request:
-1 &gt; POST http://ms-auth-oss-git-dev-front-oss.apps.tmve-nprod-1.tmve-qa.com/intraLogin
-1 &gt; Content-Type: application/json; charset=UTF-8
-1 &gt; Content-Length: 39
-1 &gt; Host: ms-auth-oss-git-dev-front-oss.apps.tmve-nprod-1.tmve-qa.com
+      <div id="msg-3" class="collapse collapsable-details">
+        <pre>08:49:37.984 request:
+1 &gt; GET http://estaciones-bff-git-dev-front-oss.apps.tmve-nprod-1.tmve-qa.com/api/v1/estaciones//calculo/id?regionId=1
+1 &gt; Content-Type: application/json
+1 &gt; X-USER-ID: E11011
+1 &gt; X-CORRELATION-ID: 1445|E11011|234234
+1 &gt; X-TOKEN-ID: eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6Ijc5N0E2QjY4RkNCNEEzNEUyQTZBM0E5ODA3QUIyOTk3Iiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU2NTU4MTc3LCJleHAiOjE3NTY1NjE3Nzd9.MzGBmtlfiLsV5Fc09Qdk1XqzedlwYysnpPVDFdnRIdY9nkAnLdzlamtzx7hCA6zv
+1 &gt; Host: estaciones-bff-git-dev-front-oss.apps.tmve-nprod-1.tmve-qa.com
 1 &gt; Connection: Keep-Alive
 1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
 1 &gt; Accept-Encoding: gzip,deflate
-{&quot;login&quot;:&quot;tns01&quot;,&quot;clave&quot;:&quot;T3st2024.+-&quot;}
 
-09:27:18.762 response time in milliseconds: 1606
+
+08:49:39.602 response time in milliseconds: 1605
 1 &lt; 200
-1 &lt; content-type: application/json
-1 &lt; content-length: 326
-1 &lt; set-cookie: 346a326bcc8fc21fd3f034fd94d160bb=b93258c5db05ebda8c79fad18868405b; path=/; HttpOnly
-1 &lt; Set-Cookie: 346a326bcc8fc21fd3f034fd94d160bb=b93258c5db05ebda8c79fad18868405b; path=/; HttpOnly
-{&quot;token&quot;:&quot;eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IjIzNTBCOEZCMDM4NUMwQzlBQzA1MUFCMkQ4NUZFOUQwIiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU2NDc0MDM3LCJleHAiOjE3NTY0Nzc2Mzd9.N-Lfj0PtL3zlhlaHEoSg4RaieihSDKZPy5p3lpELkanjYuZRdcblxD21s0vPhJMv&quot;}
+1 &lt; content-length: 55
+1 &lt; content-type: application/json;charset=UTF-8
+1 &lt; set-cookie: 7ebc866ebb4d2d727ca53353a6c0c030=126a0d116249904aeec188af06a28666; path=/; HttpOnly
+1 &lt; Set-Cookie: 7ebc866ebb4d2d727ca53353a6c0c030=126a0d116249904aeec188af06a28666; path=/; HttpOnly
+{&quot;success&quot;:true,&quot;data&quot;:51109,&quot;timestamp&quot;:1756558179591}
 
 </pre>
       </div>
@@ -539,14 +387,13 @@ $(document).ready(function() {
 
       </div>
       <div class="step">
-          <div class="comment indention"># Validar que la respuesta contenga el campo token</div>
 
 
 <div class="brief step-name-And passed">
   <span class="keyword indention">And</span>
-  <span class="name">match response.token == '#string'</span>
+  <span class="name">match response.success == true</span>
 
-  <span class="lead-duration duration">0.010</span>
+  <span class="lead-duration duration">0.001</span>
 
 </div>
 
@@ -567,14 +414,67 @@ $(document).ready(function() {
 
       </div>
       <div class="step">
-          <div class="comment indention"># Validar la estructura completa de la respuesta usando el schema JSON</div>
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">match response.data == '#number'</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">match response.timestamp == '#number'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
 
 
 <div class="brief step-name-* passed">
   <span class="keyword indention">*</span>
   <span class="name">def responseText = karate.pretty(response)</span>
 
-  <span class="lead-duration duration">0.019</span>
+  <span class="lead-duration duration">0.001</span>
 
 </div>
 
@@ -601,7 +501,7 @@ $(document).ready(function() {
   <span class="keyword indention">*</span>
   <span class="name">def isValid = schemaUtil.isValid(schemaText, responseText)</span>
 
-  <span class="lead-duration duration">0.433</span>
+  <span class="lead-duration duration">0.011</span>
 
 </div>
 
@@ -649,14 +549,13 @@ $(document).ready(function() {
 
       </div>
       <div class="step">
-          <div class="comment indention"># Tiempo de respuesta</div>
 
 
 <div class="brief step-name-And passed">
   <span class="keyword indention">And</span>
-  <span class="name">print '=== TIEMPO DE RESPUESTA DEL FEATURE loginToken ===', responseTime / 1000, 's'</span>
+  <span class="name">print 'Calculo del Id estacion obtenido exitosamente:', response</span>
 
-  <span class="lead-duration duration">0.017</span>
+  <span class="lead-duration duration">0.002</span>
 
 </div>
 
@@ -670,11 +569,54 @@ $(document).ready(function() {
 
   <div class="inner-level">
     <div class="docstring indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-7">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-4">
           <a>Doc string</a>
       </div>
-      <div id="msg-7" class="collapse collapsable-details">
-        <pre>09:27:19.245 [print] === TIEMPO DE RESPUESTA DEL FEATURE loginToken === 1.606 s 
+      <div id="msg-4" class="collapse collapsable-details">
+        <pre>08:49:39.622 [print] Calculo del Id estacion obtenido exitosamente: {
+  &quot;success&quot;: true,
+  &quot;data&quot;: 51109,
+  &quot;timestamp&quot;: 1756558179591
+}
+ 
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">print '=== TIEMPO DE RESPUESTA DEL FEATURE ===', responseTime / 1000, 's'</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-5">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-5" class="collapse collapsable-details">
+        <pre>08:49:39.622 [print] === TIEMPO DE RESPUESTA DEL FEATURE === 1.605 s 
 </pre>
       </div>
     </div>
@@ -697,7 +639,6 @@ $(document).ready(function() {
   </div>
 </div>
 
-        </div>
 
       </div>
     </div>

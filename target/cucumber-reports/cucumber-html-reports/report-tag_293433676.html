@@ -76,7 +76,7 @@ $(document).ready(function() {
     <tr class="info">
       <td>krt-ms-estaciones</td>
         <td>1.0</td>
-      <td>29 ago. 2025, 10:32</td>
+      <td>30 ago. 2025, 10:25</td>
     </tr>
   </tbody>
 </table>
@@ -129,9 +129,9 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">@estacionCamposFaltantes</td>
-          <td >0</td>
-          <td >0</td>
-          <td     class="skipped"   >14</td>
+          <td      class="passed"    >7</td>
+          <td      class="failed"    >1</td>
+          <td     class="skipped"   >6</td>
           <td >0</td>
           <td >0</td>
           <td class="total">14</td>
@@ -140,7 +140,7 @@ $(document).ready(function() {
           <td  class="failed"    >1</td>
           <td class="total">1</td>
 
-          <td class="duration" data-value="0">0.000</td>
+          <td class="duration" data-value="542088200">0.542</td>
           <td class="failed">Failed</td>
         </tr>
         </tbody>
@@ -173,7 +173,7 @@ $(document).ready(function() {
 <div class="element">
     <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_2266774105.html">api/crearEstacion.feature</a>
+      <a href="report-feature_1_2266774105.html">api/crearEstacion.feature</a>
     </div>
 
 
@@ -184,7 +184,7 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.542</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
@@ -224,7 +224,7 @@ $(document).ready(function() {
           <div class="comment indention"># Este escenario usa un request con campos faltantes como codigo, nombre y direccion</div>
 
 
-<div class="brief step-name-Given skipped">
+<div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
   <span class="name">url baseUrl</span>
 
@@ -251,7 +251,7 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-And skipped">
+<div class="brief step-name-And passed">
   <span class="keyword indention">And</span>
   <span class="name">request camposFaltantesRequest</span>
 
@@ -278,11 +278,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-When skipped">
+<div class="brief step-name-When passed">
   <span class="keyword indention">When</span>
   <span class="name">method POST</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.537</span>
 
 </div>
 
@@ -294,6 +294,37 @@ $(document).ready(function() {
 
 
 
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-3">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-3" class="collapse collapsable-details">
+        <pre>10:24:40.671 request:
+1 &gt; POST http://estaciones-bff-git-dev-front-oss.apps.tmve-nprod-1.tmve-qa.com/api/v1/estaciones/
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; X-USER-ID: E11011
+1 &gt; X-CORRELATION-ID: 1445|E11011|234234
+1 &gt; X-TOKEN-ID: eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IkQwMEMyMjkxRDUzOEJBMDBCMjJEMzk4REY3M0NEM0YwIiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU2NTYzODgwLCJleHAiOjE3NTY1Njc0ODB9._z8KR8c41f2rva7CzbSukk_7I4B2wp6rJJac6FXqmgpAUEwSW6mYZBVJ3MszZIUM
+1 &gt; Content-Length: 826
+1 &gt; Host: estaciones-bff-git-dev-front-oss.apps.tmve-nprod-1.tmve-qa.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;codigo&quot;:&quot;&quot;,&quot;nombre&quot;:null,&quot;regionId&quot;:null,&quot;estadoId&quot;:null,&quot;municipioId&quot;:1,&quot;parroquiaId&quot;:1,&quot;atributos&quot;:[{&quot;tipo&quot;:&quot;CAPACIDAD&quot;,&quot;valor&quot;:&quot;800&quot;,&quot;descripcion&quot;:&quot;Capacidad media&quot;},{&quot;tipo&quot;:&quot;TECNOLOGIA&quot;,&quot;valor&quot;:&quot;LTE&quot;,&quot;descripcion&quot;:&quot;Tecnologia intermedia&quot;}],&quot;direccion&quot;:{&quot;conglomerado&quot;:&quot;CENTRO&quot;,&quot;nombreConglomerado&quot;:&quot;Centro Comercial&quot;,&quot;inmueble&quot;:&quot;EDIFICIO&quot;,&quot;nombreInmueble&quot;:&quot;Torre Norte&quot;,&quot;piso&quot;:&quot;3&quot;,&quot;numero&quot;:&quot;456&quot;,&quot;vialidad&quot;:&quot;AVENIDA&quot;,&quot;nombreVialidad&quot;:&quot;Av. Norte&quot;,&quot;vialidad2&quot;:&quot;CALLE&quot;,&quot;nombreVialidad2&quot;:&quot;Calle Este&quot;,&quot;puntoReferencia&quot;:&quot;Diagonal al hospital&quot;,&quot;codigoPostal&quot;:&quot;1010&quot;,&quot;ciudad&quot;:&quot;Ciudad Norte&quot;,&quot;parroquia&quot;:&quot;Centro&quot;,&quot;municipio&quot;:&quot;Capital&quot;,&quot;estado&quot;:&quot;Distrito Capital&quot;,&quot;pais&quot;:&quot;Venezuela&quot;,&quot;tipoUbicacion&quot;:&quot;URBANA&quot;},&quot;codigoPais&quot;:&quot;VE&quot;,&quot;mercadoId&quot;:1,&quot;clusterId&quot;:1,&quot;comentAprobacion&quot;:&quot;Estacion incompleta&quot;,&quot;estatus&quot;:1,&quot;createdBy&quot;:&quot;E33033&quot;}
+
+10:24:41.205 response time in milliseconds: 534
+1 &lt; 400
+1 &lt; content-length: 882
+1 &lt; content-type: application/json
+1 &lt; set-cookie: 7ebc866ebb4d2d727ca53353a6c0c030=9ebf70f993b47330852a058d80b6f286; path=/; HttpOnly
+1 &lt; Set-Cookie: 7ebc866ebb4d2d727ca53353a6c0c030=9ebf70f993b47330852a058d80b6f286; path=/; HttpOnly
+{&quot;success&quot;:false,&quot;data&quot;:{&quot;code&quot;:&quot;400&quot;,&quot;status&quot;:&quot;BAD_REQUEST&quot;,&quot;message&quot;:&quot;create.request.nombre: El nombre de la estaci&oacute;n es obligatorio, create.request.codigo: El c&oacute;digo de la estaci&oacute;n es obligatorio, create.request.regionId: El ID de la regi&oacute;n es obligatorio, create.request.estadoId: El ID del estado es obligatorio&quot;,&quot;errors&quot;:[&quot;ve.com.telefonica.application.resources.StationController_Subclass create.request.nombre: El nombre de la estaci&oacute;n es obligatorio&quot;,&quot;ve.com.telefonica.application.resources.StationController_Subclass create.request.codigo: El c&oacute;digo de la estaci&oacute;n es obligatorio&quot;,&quot;ve.com.telefonica.application.resources.StationController_Subclass create.request.regionId: El ID de la regi&oacute;n es obligatorio&quot;,&quot;ve.com.telefonica.application.resources.StationController_Subclass create.request.estadoId: El ID del estado es obligatorio&quot;]},&quot;timestamp&quot;:1756563881215}
+
+</pre>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -305,7 +336,7 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then skipped">
+<div class="brief step-name-Then passed">
   <span class="keyword indention">Then</span>
   <span class="name">status 400</span>
 
@@ -332,11 +363,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-And skipped">
+<div class="brief step-name-And passed">
   <span class="keyword indention">And</span>
   <span class="name">match response.success == false</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.001</span>
 
 </div>
 
@@ -359,7 +390,7 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-And skipped">
+<div class="brief step-name-And passed">
   <span class="keyword indention">And</span>
   <span class="name">match response.data.code == &quot;400&quot;</span>
 
@@ -386,7 +417,7 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-And skipped">
+<div class="brief step-name-And passed">
   <span class="keyword indention">And</span>
   <span class="name">match response.data.status == &quot;BAD_REQUEST&quot;</span>
 
@@ -413,11 +444,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-And skipped">
+<div class="brief step-name-And failed">
   <span class="keyword indention">And</span>
   <span class="name">match response.data.message contains &quot;must not be null&quot;</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.001</span>
 
 </div>
 
@@ -426,9 +457,43 @@ $(document).ready(function() {
 
 
 
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-4">
+          <a>match</a>
+      </div>
+      <div id="msg-4" class="collapse collapsable-details  in ">
+        <pre>match failed: CONTAINS
+  $ | actual does not contain expected (STRING:STRING)
+  'create.request.nombre: El nombre de la estaci&oacute;n es obligatorio, create.request.codigo: El c&oacute;digo de la estaci&oacute;n es obligatorio, create.request.regionId: El ID de la regi&oacute;n es obligatorio, create.request.estadoId: El ID del estado es obligatorio'
+  'must not be null'
+
+classpath:api/crearEstacion.feature:55</pre>
+      </div>
+    </div>
+  </div>
 
 
 
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-5">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-5" class="collapse collapsable-details">
+        <pre>10:24:41.212 classpath:api/crearEstacion.feature:55
+And match response.data.message contains &quot;must not be null&quot;
+match failed: CONTAINS
+  $ | actual does not contain expected (STRING:STRING)
+  'create.request.nombre: El nombre de la estaci&oacute;n es obligatorio, create.request.codigo: El c&oacute;digo de la estaci&oacute;n es obligatorio, create.request.regionId: El ID de la regi&oacute;n es obligatorio, create.request.estadoId: El ID del estado es obligatorio'
+  'must not be null'
+
+classpath:api/crearEstacion.feature:55
+</pre>
+      </div>
+    </div>
+  </div>
 
 
 

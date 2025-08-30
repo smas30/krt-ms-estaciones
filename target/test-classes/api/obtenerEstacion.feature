@@ -8,15 +8,11 @@ Feature: Obtener estaciones mediante el endpoint GET /api/v1/estaciones
     * def loginBody = read('classpath:JsonRequest/loginTokenRequest.json')
     * def loginResponse = call read('classpath:api/loginToken.feature') { request: loginBody }
     * def authToken = loginResponse.response.token
-
     # 2. CONFIGURANDO HEADERS PARA ESTACIONES
     * def headers = headersEstacionesConToken(authToken)
     * configure headers = headers
     * print 'HEADERS usados en creacion de estacion:', headers
     * print 'TOKEN obtenido:', authToken
-
-    # 3. URL base desde config
-    * def endpoint = karate.baseUrl
 
   @obtenerEstacion
   Scenario: Obtener todas las estaciones sin filtros
@@ -30,7 +26,6 @@ Feature: Obtener estaciones mediante el endpoint GET /api/v1/estaciones
     And print '=== TIEMPO DE RESPUESTA DEL FEATURE ===', responseTime / 1000, 's'
 
   @obtenerEstacionPorCodigo
-    #ESTKRT
   Scenario: Obtener estaciones por codigo
     Given url baseUrl
     And param codigo = 'cod600'
@@ -51,7 +46,6 @@ Feature: Obtener estaciones mediante el endpoint GET /api/v1/estaciones
     And match response.success == true
     * def paginaUno = response.data.data
     * print 'Pagina 1:', karate.pretty(paginaUno)
-
   # Pagina 2
     Given url baseUrl
     And param limit = 5
@@ -62,7 +56,7 @@ Feature: Obtener estaciones mediante el endpoint GET /api/v1/estaciones
     * def paginaDos = response.data.data
     * print 'Pagina 2:', karate.pretty(paginaDos)
 
-  # Validar que los elementos no se repiten
+  # Validar que los elementos de las paginas no se repiten
     * def codigosUno = paginaUno.map(x => x.codigo)
     * def codigosDos = paginaDos.map(x => x.codigo)
     * match codigosUno != codigosDos

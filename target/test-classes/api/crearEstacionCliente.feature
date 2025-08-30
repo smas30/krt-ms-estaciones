@@ -58,5 +58,5 @@ Feature: Crear una nueva estacion del lado cliente mediante POST /estaciones
     * def responseText = karate.pretty(response)
     * def isValid = schemaUtil.isValid(errorSchema, responseText)
     * match isValid == true
-    And print 'Error creando estacion con cluster en 0:', response.data.message
+    And print 'Error creando estacion para cliente con cluster en 0:', response.data.message
     And print '=== TIEMPO DE RESPUESTA DEL FEATURE ===', responseTime / 1000, 's'
