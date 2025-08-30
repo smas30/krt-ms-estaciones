@@ -76,7 +76,7 @@ $(document).ready(function() {
     <tr class="info">
       <td>krt-ms-estaciones</td>
         <td>1.0</td>
-      <td>29 ago. 2025, 10:46</td>
+      <td>30 ago. 2025, 10:25</td>
     </tr>
   </tbody>
 </table>
@@ -129,19 +129,19 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">@crearEstacion</td>
-          <td      class="passed"    >11</td>
+          <td      class="passed"    >24</td>
+          <td      class="failed"    >3</td>
+          <td     class="skipped"   >21</td>
           <td >0</td>
           <td >0</td>
-          <td >0</td>
-          <td >0</td>
-          <td class="total">11</td>
+          <td class="total">48</td>
 
           <td  class="passed"    >1</td>
-          <td >0</td>
-          <td class="total">1</td>
+          <td  class="failed"    >3</td>
+          <td class="total">4</td>
 
-          <td class="duration" data-value="920747800">0.920</td>
-          <td class="passed">Passed</td>
+          <td class="duration" data-value="18735106600">18.735</td>
+          <td class="failed">Failed</td>
         </tr>
         </tbody>
 
@@ -173,25 +173,25 @@ $(document).ready(function() {
 <div class="element">
     <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_2266774105.html">api/crearEstacion.feature</a>
+      <a href="report-feature_1_2266774105.html">api/crearEstacion.feature</a>
     </div>
 
 
 <div class="tags indention">
     <b>Tags:</b>
+       <a href="report-tag_3316662052.html">@estacionValida</a>
        <a href="report-tag_2220277830.html">@crearEstacion</a>
-       <a href="report-tag_1188508968.html">@mercadoIdEnCeroRequest</a>
 </div>
 
 
-  <span class="lead-duration duration">0.920</span>
+  <span class="lead-duration duration">1.152</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Scenario</span>
-  <span class="name">El endpoint debe rechazar cuando se envia un id de mercado en cero</span>
+  <span class="name">Crear estacion con datos validos</span>
 
 
      <i class="chevron fa fa-fw"></i>
@@ -200,16 +200,16 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-1" class="collapse collapsable-details ">
+  <div id="element-1" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-2">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-2">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -219,9 +219,9 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-2" class="inner-level collapse collapsable-details ">
+  <div id="steps-2" class="inner-level collapse collapsable-details  in ">
       <div class="step">
-          <div class="comment indention"># Este escenario usa el mismo codigo que una estacion ya registrada para simular duplicidad</div>
+          <div class="comment indention"># Este escenario valida que el endpoint cree correctamente una estacion con datos completos y correctos</div>
 
 
 <div class="brief step-name-Given passed">
@@ -253,7 +253,7 @@ $(document).ready(function() {
 
 <div class="brief step-name-And passed">
   <span class="keyword indention">And</span>
-  <span class="name">request mercadoIdEnCeroRequest</span>
+  <span class="name">request estacionValidaRequest</span>
 
   <span class="lead-duration duration">0.000</span>
 
@@ -282,7 +282,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method POST</span>
 
-  <span class="lead-duration duration">0.894</span>
+  <span class="lead-duration duration">1.146</span>
 
 </div>
 
@@ -300,26 +300,471 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-3" class="collapse collapsable-details">
-        <pre>10:42:38.586 request:
+        <pre>10:24:38.992 request:
 1 &gt; POST http://estaciones-bff-git-dev-front-oss.apps.tmve-nprod-1.tmve-qa.com/api/v1/estaciones/
 1 &gt; Content-Type: application/json; charset=UTF-8
 1 &gt; X-USER-ID: E11011
 1 &gt; X-CORRELATION-ID: 1445|E11011|234234
-1 &gt; X-TOKEN-ID: eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IjE0OTFFRTZGREVDNjc1NTVEODdGM0I5RjcxOTdCRjk4Iiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU2NDc4NTU3LCJleHAiOjE3NTY0ODIxNTd9.UPRH8lS0vehi5LU2ObGZ-WqAcg9SWIU8hHFD4kQaLpcaseTANT9iSxrKJ1lAEqnJ
-1 &gt; Content-Length: 813
+1 &gt; X-TOKEN-ID: eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6Ijk1MDBBMjg5QTY3MDU5MTg5NTQyMEE1QzAyMDAzMDI2Iiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU2NTYzODc3LCJleHAiOjE3NTY1Njc0Nzd9.qH3bnnUIVXNwTHYY4SauusXUX_cAhdQ0drvFaWONe3SomLWm6UhmUKTRdCDlMTB2
+1 &gt; Content-Length: 900
 1 &gt; Host: estaciones-bff-git-dev-front-oss.apps.tmve-nprod-1.tmve-qa.com
 1 &gt; Connection: Keep-Alive
 1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
 1 &gt; Accept-Encoding: gzip,deflate
-{&quot;codigo&quot;:&quot;krt60&quot;,&quot;nombre&quot;:&quot;Estacion Movistar krt&quot;,&quot;regionId&quot;:1,&quot;estadoId&quot;:1,&quot;municipioId&quot;:1,&quot;parroquiaId&quot;:1,&quot;atributos&quot;:[{&quot;Estacion Prueba1&quot;:&quot;Prueba1&quot;,&quot;Estacion Prueba2&quot;:&quot;Prueba2&quot;,&quot;Estacion Prueba3&quot;:&quot;Prueba3&quot;}],&quot;direccion&quot;:{&quot;conglomerado&quot;:&quot;conglomerado&quot;,&quot;nombreConglomerado&quot;:&quot;nombreConglomerado&quot;,&quot;inmueble&quot;:&quot;inmueble&quot;,&quot;nombreInmueble&quot;:&quot;nombreInmueble&quot;,&quot;piso&quot;:&quot;1&quot;,&quot;numero&quot;:&quot;1&quot;,&quot;vialidad&quot;:&quot;7&quot;,&quot;nombreVialidad&quot;:&quot;nombreVialidad&quot;,&quot;vialidad2&quot;:&quot;vialidad2&quot;,&quot;nombreVialidad2&quot;:&quot;nombreVialidad2&quot;,&quot;puntoReferencia&quot;:&quot;puntoReferencia&quot;,&quot;codigoPostal&quot;:&quot;codigoPostal&quot;,&quot;ciudad&quot;:&quot;ciudad&quot;,&quot;parroquia&quot;:&quot;parroquia&quot;,&quot;municipio&quot;:&quot;municipio&quot;,&quot;estado&quot;:&quot;estado&quot;,&quot;pais&quot;:&quot;Venezuela&quot;,&quot;tipoUbicacion&quot;:&quot;tipoUbicacion&quot;},&quot;codigoPais&quot;:&quot;VE&quot;,&quot;mercadoId&quot;:0,&quot;clusterId&quot;:1,&quot;comentAprobacion&quot;:&quot;Prueba krt&quot;,&quot;tmveOwner&quot;:true,&quot;estatus&quot;:0,&quot;createdBy&quot;:&quot;krt&quot;}
+{&quot;codigo&quot;:&quot;ESTKRT&quot;,&quot;nombre&quot;:&quot;Estacion Central KARATE&quot;,&quot;regionId&quot;:1,&quot;estadoId&quot;:1,&quot;municipioId&quot;:1,&quot;parroquiaId&quot;:1,&quot;atributos&quot;:[{&quot;tipo&quot;:&quot;CAPACIDAD&quot;,&quot;valor&quot;:&quot;1000&quot;,&quot;descripcion&quot;:&quot;Capacidad maxima de usuarios&quot;},{&quot;tipo&quot;:&quot;TECNOLOGIA&quot;,&quot;valor&quot;:&quot;4G&quot;,&quot;descripcion&quot;:&quot;Tecnologia disponible&quot;}],&quot;direccion&quot;:{&quot;conglomerado&quot;:&quot;CENTRO&quot;,&quot;nombreConglomerado&quot;:&quot;Centro Comercial&quot;,&quot;inmueble&quot;:&quot;EDIFICIO&quot;,&quot;nombreInmueble&quot;:&quot;Torre Principal&quot;,&quot;piso&quot;:&quot;1&quot;,&quot;numero&quot;:&quot;123&quot;,&quot;vialidad&quot;:&quot;AVENIDA&quot;,&quot;nombreVialidad&quot;:&quot;Av. Principal&quot;,&quot;vialidad2&quot;:&quot;CALLE&quot;,&quot;nombreVialidad2&quot;:&quot;Calle Secundaria&quot;,&quot;puntoReferencia&quot;:&quot;Frente al Parque Central&quot;,&quot;codigoPostal&quot;:&quot;1001&quot;,&quot;ciudad&quot;:&quot;Ciudad Capital&quot;,&quot;parroquia&quot;:&quot;Centro&quot;,&quot;municipio&quot;:&quot;Capital&quot;,&quot;estado&quot;:&quot;Distrito Capital&quot;,&quot;pais&quot;:&quot;Venezuela&quot;,&quot;tipoUbicacion&quot;:&quot;URBANA&quot;},&quot;codigoPais&quot;:&quot;VE&quot;,&quot;mercadoId&quot;:1,&quot;clusterId&quot;:1,&quot;comentAprobacion&quot;:&quot;Estacion aprobada para operacion KARATE&quot;,&quot;estatus&quot;:1,&quot;createdBy&quot;:&quot;E11011&quot;}
 
-10:42:39.477 response time in milliseconds: 888
-1 &lt; 400
-1 &lt; content-length: 302
+10:24:40.136 response time in milliseconds: 1141
+1 &lt; 404
+1 &lt; content-length: 195
 1 &lt; content-type: application/json
-1 &lt; set-cookie: 7ebc866ebb4d2d727ca53353a6c0c030=734d6df9d2a531f96603fab754c67099; path=/; HttpOnly
-1 &lt; Set-Cookie: 7ebc866ebb4d2d727ca53353a6c0c030=734d6df9d2a531f96603fab754c67099; path=/; HttpOnly
-{&quot;success&quot;:false,&quot;data&quot;:{&quot;code&quot;:&quot;400&quot;,&quot;status&quot;:&quot;BAD_REQUEST&quot;,&quot;message&quot;:&quot;create.request.mercadoId: must be greater than or equal to 1&quot;,&quot;errors&quot;:[&quot;ve.com.telefonica.application.resources.StationController_Subclass create.request.mercadoId: must be greater than or equal to 1&quot;]},&quot;timestamp&quot;:1756478559290}
+1 &lt; set-cookie: 7ebc866ebb4d2d727ca53353a6c0c030=126a0d116249904aeec188af06a28666; path=/; HttpOnly
+1 &lt; Set-Cookie: 7ebc866ebb4d2d727ca53353a6c0c030=126a0d116249904aeec188af06a28666; path=/; HttpOnly
+{&quot;success&quot;:false,&quot;data&quot;:{&quot;code&quot;:&quot;404&quot;,&quot;status&quot;:&quot;NOT_FOUND&quot;,&quot;message&quot;:&quot;NOT_FOUND: RefCluster with ID 1 not found&quot;,&quot;errors&quot;:[&quot;NOT_FOUND: RefCluster with ID 1 not found&quot;]},&quot;timestamp&quot;:1756563880147}
+
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then failed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+
+  <span class="lead-duration duration">0.006</span>
+
+</div>
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-4">
+          <a>status</a>
+      </div>
+      <div id="msg-4" class="collapse collapsable-details  in ">
+        <pre>status code was: 404, expected: 200, response time in milliseconds: 1141, url: http://estaciones-bff-git-dev-front-oss.apps.tmve-nprod-1.tmve-qa.com/api/v1/estaciones/, response: 
+{&quot;success&quot;:false,&quot;data&quot;:{&quot;code&quot;:&quot;404&quot;,&quot;status&quot;:&quot;NOT_FOUND&quot;,&quot;message&quot;:&quot;NOT_FOUND: RefCluster with ID 1 not found&quot;,&quot;errors&quot;:[&quot;NOT_FOUND: RefCluster with ID 1 not found&quot;]},&quot;timestamp&quot;:1756563880147}
+classpath:api/crearEstacion.feature:35</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-5">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-5" class="collapse collapsable-details">
+        <pre>10:24:40.140 classpath:api/crearEstacion.feature:35
+Then status 200
+status code was: 404, expected: 200, response time in milliseconds: 1141, url: http://estaciones-bff-git-dev-front-oss.apps.tmve-nprod-1.tmve-qa.com/api/v1/estaciones/, response: 
+{&quot;success&quot;:false,&quot;data&quot;:{&quot;code&quot;:&quot;404&quot;,&quot;status&quot;:&quot;NOT_FOUND&quot;,&quot;message&quot;:&quot;NOT_FOUND: RefCluster with ID 1 not found&quot;,&quot;errors&quot;:[&quot;NOT_FOUND: RefCluster with ID 1 not found&quot;]},&quot;timestamp&quot;:1756563880147}
+classpath:api/crearEstacion.feature:35
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">match response.success == true</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">match response.data.codigo == estacionValidaRequest.codigo</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">match response.data.nombre == estacionValidaRequest.nombre</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def responseText = karate.pretty(response)</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def isValid = schemaUtil.isValid(schemaText, responseText)</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">match isValid == true</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">print 'Estacion creada exitosamente:', response</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">print '=== TIEMPO DE RESPUESTA DEL FEATURE ===', responseTime / 1000, 's'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+    <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_1_2266774105.html">api/crearEstacion.feature</a>
+    </div>
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_2220277830.html">@crearEstacion</a>
+       <a href="report-tag_293433676.html">@estacionCamposFaltantes</a>
+</div>
+
+
+  <span class="lead-duration duration">0.542</span>
+
+
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-6">
+
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">El endpoint debe rechazar cuando se envian campos obligatorios vacios o nulos</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-6" class="collapse collapsable-details  in ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-7">
+
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-7" class="inner-level collapse collapsable-details  in ">
+      <div class="step">
+          <div class="comment indention"># Este escenario usa un request con campos faltantes como codigo, nombre y direccion</div>
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url baseUrl</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">request camposFaltantesRequest</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">method POST</span>
+
+  <span class="lead-duration duration">0.537</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-8">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-8" class="collapse collapsable-details">
+        <pre>10:24:40.671 request:
+1 &gt; POST http://estaciones-bff-git-dev-front-oss.apps.tmve-nprod-1.tmve-qa.com/api/v1/estaciones/
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; X-USER-ID: E11011
+1 &gt; X-CORRELATION-ID: 1445|E11011|234234
+1 &gt; X-TOKEN-ID: eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IkQwMEMyMjkxRDUzOEJBMDBCMjJEMzk4REY3M0NEM0YwIiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU2NTYzODgwLCJleHAiOjE3NTY1Njc0ODB9._z8KR8c41f2rva7CzbSukk_7I4B2wp6rJJac6FXqmgpAUEwSW6mYZBVJ3MszZIUM
+1 &gt; Content-Length: 826
+1 &gt; Host: estaciones-bff-git-dev-front-oss.apps.tmve-nprod-1.tmve-qa.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;codigo&quot;:&quot;&quot;,&quot;nombre&quot;:null,&quot;regionId&quot;:null,&quot;estadoId&quot;:null,&quot;municipioId&quot;:1,&quot;parroquiaId&quot;:1,&quot;atributos&quot;:[{&quot;tipo&quot;:&quot;CAPACIDAD&quot;,&quot;valor&quot;:&quot;800&quot;,&quot;descripcion&quot;:&quot;Capacidad media&quot;},{&quot;tipo&quot;:&quot;TECNOLOGIA&quot;,&quot;valor&quot;:&quot;LTE&quot;,&quot;descripcion&quot;:&quot;Tecnologia intermedia&quot;}],&quot;direccion&quot;:{&quot;conglomerado&quot;:&quot;CENTRO&quot;,&quot;nombreConglomerado&quot;:&quot;Centro Comercial&quot;,&quot;inmueble&quot;:&quot;EDIFICIO&quot;,&quot;nombreInmueble&quot;:&quot;Torre Norte&quot;,&quot;piso&quot;:&quot;3&quot;,&quot;numero&quot;:&quot;456&quot;,&quot;vialidad&quot;:&quot;AVENIDA&quot;,&quot;nombreVialidad&quot;:&quot;Av. Norte&quot;,&quot;vialidad2&quot;:&quot;CALLE&quot;,&quot;nombreVialidad2&quot;:&quot;Calle Este&quot;,&quot;puntoReferencia&quot;:&quot;Diagonal al hospital&quot;,&quot;codigoPostal&quot;:&quot;1010&quot;,&quot;ciudad&quot;:&quot;Ciudad Norte&quot;,&quot;parroquia&quot;:&quot;Centro&quot;,&quot;municipio&quot;:&quot;Capital&quot;,&quot;estado&quot;:&quot;Distrito Capital&quot;,&quot;pais&quot;:&quot;Venezuela&quot;,&quot;tipoUbicacion&quot;:&quot;URBANA&quot;},&quot;codigoPais&quot;:&quot;VE&quot;,&quot;mercadoId&quot;:1,&quot;clusterId&quot;:1,&quot;comentAprobacion&quot;:&quot;Estacion incompleta&quot;,&quot;estatus&quot;:1,&quot;createdBy&quot;:&quot;E33033&quot;}
+
+10:24:41.205 response time in milliseconds: 534
+1 &lt; 400
+1 &lt; content-length: 882
+1 &lt; content-type: application/json
+1 &lt; set-cookie: 7ebc866ebb4d2d727ca53353a6c0c030=9ebf70f993b47330852a058d80b6f286; path=/; HttpOnly
+1 &lt; Set-Cookie: 7ebc866ebb4d2d727ca53353a6c0c030=9ebf70f993b47330852a058d80b6f286; path=/; HttpOnly
+{&quot;success&quot;:false,&quot;data&quot;:{&quot;code&quot;:&quot;400&quot;,&quot;status&quot;:&quot;BAD_REQUEST&quot;,&quot;message&quot;:&quot;create.request.nombre: El nombre de la estaci&oacute;n es obligatorio, create.request.codigo: El c&oacute;digo de la estaci&oacute;n es obligatorio, create.request.regionId: El ID de la regi&oacute;n es obligatorio, create.request.estadoId: El ID del estado es obligatorio&quot;,&quot;errors&quot;:[&quot;ve.com.telefonica.application.resources.StationController_Subclass create.request.nombre: El nombre de la estaci&oacute;n es obligatorio&quot;,&quot;ve.com.telefonica.application.resources.StationController_Subclass create.request.codigo: El c&oacute;digo de la estaci&oacute;n es obligatorio&quot;,&quot;ve.com.telefonica.application.resources.StationController_Subclass create.request.regionId: El ID de la regi&oacute;n es obligatorio&quot;,&quot;ve.com.telefonica.application.resources.StationController_Subclass create.request.estadoId: El ID del estado es obligatorio&quot;]},&quot;timestamp&quot;:1756563881215}
 
 </pre>
       </div>
@@ -394,7 +839,512 @@ $(document).ready(function() {
   <span class="keyword indention">And</span>
   <span class="name">match response.data.code == &quot;400&quot;</span>
 
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">match response.data.status == &quot;BAD_REQUEST&quot;</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And failed">
+  <span class="keyword indention">And</span>
+  <span class="name">match response.data.message contains &quot;must not be null&quot;</span>
+
   <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-9">
+          <a>match</a>
+      </div>
+      <div id="msg-9" class="collapse collapsable-details  in ">
+        <pre>match failed: CONTAINS
+  $ | actual does not contain expected (STRING:STRING)
+  'create.request.nombre: El nombre de la estaci&oacute;n es obligatorio, create.request.codigo: El c&oacute;digo de la estaci&oacute;n es obligatorio, create.request.regionId: El ID de la regi&oacute;n es obligatorio, create.request.estadoId: El ID del estado es obligatorio'
+  'must not be null'
+
+classpath:api/crearEstacion.feature:55</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-10">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-10" class="collapse collapsable-details">
+        <pre>10:24:41.212 classpath:api/crearEstacion.feature:55
+And match response.data.message contains &quot;must not be null&quot;
+match failed: CONTAINS
+  $ | actual does not contain expected (STRING:STRING)
+  'create.request.nombre: El nombre de la estaci&oacute;n es obligatorio, create.request.codigo: El c&oacute;digo de la estaci&oacute;n es obligatorio, create.request.regionId: El ID de la regi&oacute;n es obligatorio, create.request.estadoId: El ID del estado es obligatorio'
+  'must not be null'
+
+classpath:api/crearEstacion.feature:55
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">match response.data.message contains &quot;must not be empty&quot;</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def responseText = karate.pretty(response)</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def isValid = schemaUtil.isValid(errorSchema, responseText)</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">match isValid == true</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">print 'Error de validacion de campos faltantes:', response.data.message</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">print '=== TIEMPO DE RESPUESTA DEL FEATURE ===', responseTime / 1000, 's'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+    <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_1_2266774105.html">api/crearEstacion.feature</a>
+    </div>
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_4114250604.html">@clusterEnCeroRequest</a>
+       <a href="report-tag_2220277830.html">@crearEstacion</a>
+</div>
+
+
+  <span class="lead-duration duration">16.033</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-11">
+
+<div class="brief passed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">El endpoint debe rechazar cuando se envia un codigo de estacion ya existente</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-11" class="collapse collapsable-details ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-12">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-12" class="inner-level collapse collapsable-details ">
+      <div class="step">
+          <div class="comment indention"># Este escenario usa el mismo codigo que una estacion ya registrada para simular duplicidad</div>
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url baseUrl</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">request clusterEnCeroRequest</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">method POST</span>
+
+  <span class="lead-duration duration">16.023</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-13">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-13" class="collapse collapsable-details">
+        <pre>10:24:41.727 request:
+1 &gt; POST http://estaciones-bff-git-dev-front-oss.apps.tmve-nprod-1.tmve-qa.com/api/v1/estaciones/
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; X-USER-ID: E11011
+1 &gt; X-CORRELATION-ID: 1445|E11011|234234
+1 &gt; X-TOKEN-ID: eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IjRDQzMyQjA4NUY4NTkxNjkyMDEzM0UyRDU1NEI5N0VBIiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU2NTYzODgxLCJleHAiOjE3NTY1Njc0ODF9.qYfeKT5okrodb9owTx8AGDT3Tr4agcC8CeF05TREBxFgjKobvxByfUknC0en2hWC
+1 &gt; Content-Length: 813
+1 &gt; Host: estaciones-bff-git-dev-front-oss.apps.tmve-nprod-1.tmve-qa.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;codigo&quot;:&quot;krt60&quot;,&quot;nombre&quot;:&quot;Estacion Movistar krt&quot;,&quot;regionId&quot;:1,&quot;estadoId&quot;:1,&quot;municipioId&quot;:1,&quot;parroquiaId&quot;:1,&quot;atributos&quot;:[{&quot;Estacion Prueba1&quot;:&quot;Prueba1&quot;,&quot;Estacion Prueba2&quot;:&quot;Prueba2&quot;,&quot;Estacion Prueba3&quot;:&quot;Prueba3&quot;}],&quot;direccion&quot;:{&quot;conglomerado&quot;:&quot;conglomerado&quot;,&quot;nombreConglomerado&quot;:&quot;nombreConglomerado&quot;,&quot;inmueble&quot;:&quot;inmueble&quot;,&quot;nombreInmueble&quot;:&quot;nombreInmueble&quot;,&quot;piso&quot;:&quot;1&quot;,&quot;numero&quot;:&quot;1&quot;,&quot;vialidad&quot;:&quot;7&quot;,&quot;nombreVialidad&quot;:&quot;nombreVialidad&quot;,&quot;vialidad2&quot;:&quot;vialidad2&quot;,&quot;nombreVialidad2&quot;:&quot;nombreVialidad2&quot;,&quot;puntoReferencia&quot;:&quot;puntoReferencia&quot;,&quot;codigoPostal&quot;:&quot;codigoPostal&quot;,&quot;ciudad&quot;:&quot;ciudad&quot;,&quot;parroquia&quot;:&quot;parroquia&quot;,&quot;municipio&quot;:&quot;municipio&quot;,&quot;estado&quot;:&quot;estado&quot;,&quot;pais&quot;:&quot;Venezuela&quot;,&quot;tipoUbicacion&quot;:&quot;tipoUbicacion&quot;},&quot;codigoPais&quot;:&quot;VE&quot;,&quot;mercadoId&quot;:1,&quot;clusterId&quot;:0,&quot;comentAprobacion&quot;:&quot;Prueba krt&quot;,&quot;tmveOwner&quot;:true,&quot;estatus&quot;:0,&quot;createdBy&quot;:&quot;krt&quot;}
+
+10:24:57.750 response time in milliseconds: 16023
+1 &lt; 400
+1 &lt; content-length: 531
+1 &lt; content-type: application/json
+1 &lt; set-cookie: 7ebc866ebb4d2d727ca53353a6c0c030=126a0d116249904aeec188af06a28666; path=/; HttpOnly
+1 &lt; Set-Cookie: 7ebc866ebb4d2d727ca53353a6c0c030=126a0d116249904aeec188af06a28666; path=/; HttpOnly
+{&quot;success&quot;:false,&quot;data&quot;:{&quot;code&quot;:&quot;400&quot;,&quot;status&quot;:&quot;BAD_REQUEST&quot;,&quot;message&quot;:&quot;Multiple exceptions caught:\n\t[Exception 0] io.netty.channel.ConnectTimeoutException: connection timed out after 15000 ms: /10.161.169.27:8513\n\t[Exception 1] java.lang.RuntimeException: ConnectException %s&quot;,&quot;errors&quot;:[&quot;Multiple exceptions caught:\n\t[Exception 0] io.netty.channel.ConnectTimeoutException: connection timed out after 15000 ms: /10.161.169.27:8513\n\t[Exception 1] java.lang.RuntimeException: ConnectException %s&quot;]},&quot;timestamp&quot;:1756563897764}
+
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 400</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">match response.success == false</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">match response.data.code == &quot;400&quot;</span>
+
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -421,7 +1371,7 @@ $(document).ready(function() {
   <span class="keyword indention">*</span>
   <span class="name">def responseText = karate.pretty(response)</span>
 
-  <span class="lead-duration duration">0.003</span>
+  <span class="lead-duration duration">0.001</span>
 
 </div>
 
@@ -448,7 +1398,7 @@ $(document).ready(function() {
   <span class="keyword indention">*</span>
   <span class="name">def isValid = schemaUtil.isValid(errorSchema, responseText)</span>
 
-  <span class="lead-duration duration">0.016</span>
+  <span class="lead-duration duration">0.006</span>
 
 </div>
 
@@ -500,9 +1450,9 @@ $(document).ready(function() {
 
 <div class="brief step-name-And passed">
   <span class="keyword indention">And</span>
-  <span class="name">print 'Error creando estacion con id de Mercado en 0:', response.data.message</span>
+  <span class="name">print 'Error creando estacion con cluster en 0:', response.data.message</span>
 
-  <span class="lead-duration duration">0.001</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -516,11 +1466,13 @@ $(document).ready(function() {
 
   <div class="inner-level">
     <div class="docstring indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-4">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-14">
           <a>Doc string</a>
       </div>
-      <div id="msg-4" class="collapse collapsable-details">
-        <pre>10:42:39.501 [print] Error creando estacion con id de Mercado en 0: create.request.mercadoId: must be greater than or equal to 1 
+      <div id="msg-14" class="collapse collapsable-details">
+        <pre>10:24:57.755 [print] Error creando estacion con cluster en 0: Multiple exceptions caught:
+	[Exception 0] io.netty.channel.ConnectTimeoutException: connection timed out after 15000 ms: /10.161.169.27:8513
+	[Exception 1] java.lang.RuntimeException: ConnectException %s 
 </pre>
       </div>
     </div>
@@ -540,7 +1492,7 @@ $(document).ready(function() {
   <span class="keyword indention">And</span>
   <span class="name">print '=== TIEMPO DE RESPUESTA DEL FEATURE ===', responseTime / 1000, 's'</span>
 
-  <span class="lead-duration duration">0.001</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -554,15 +1506,433 @@ $(document).ready(function() {
 
   <div class="inner-level">
     <div class="docstring indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-5">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-15">
           <a>Doc string</a>
       </div>
-      <div id="msg-5" class="collapse collapsable-details">
-        <pre>10:42:39.501 [print] === TIEMPO DE RESPUESTA DEL FEATURE === 0.888 s 
+      <div id="msg-15" class="collapse collapsable-details">
+        <pre>10:24:57.755 [print] === TIEMPO DE RESPUESTA DEL FEATURE === 16.023 s 
 </pre>
       </div>
     </div>
   </div>
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+    <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_1_2266774105.html">api/crearEstacion.feature</a>
+    </div>
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_2220277830.html">@crearEstacion</a>
+       <a href="report-tag_1188508968.html">@mercadoIdEnCeroRequest</a>
+</div>
+
+
+  <span class="lead-duration duration">1.007</span>
+
+
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-16">
+
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">El endpoint debe rechazar cuando se envia un id de mercado en cero</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-16" class="collapse collapsable-details  in ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-17">
+
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-17" class="inner-level collapse collapsable-details  in ">
+      <div class="step">
+          <div class="comment indention"># Este escenario usa el mismo codigo que una estacion ya registrada para simular duplicidad</div>
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url baseUrl</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">request mercadoIdEnCeroRequest</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">method POST</span>
+
+  <span class="lead-duration duration">1.007</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-18">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-18" class="collapse collapsable-details">
+        <pre>10:24:58.298 request:
+1 &gt; POST http://estaciones-bff-git-dev-front-oss.apps.tmve-nprod-1.tmve-qa.com/api/v1/estaciones/
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; X-USER-ID: E11011
+1 &gt; X-CORRELATION-ID: 1445|E11011|234234
+1 &gt; X-TOKEN-ID: eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IjRCNUIyMTA0NDNDRkZBMTk5RTQxQzg2ODU3QTAzMjVGIiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU2NTYzODk4LCJleHAiOjE3NTY1Njc0OTh9.1eBa5SQRKq-EpKgMNiZWJPh2FLQ3Q4rZpo254cXDAMXalcPKz9T3nHESX_-eF0Yq
+1 &gt; Content-Length: 813
+1 &gt; Host: estaciones-bff-git-dev-front-oss.apps.tmve-nprod-1.tmve-qa.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;codigo&quot;:&quot;krt60&quot;,&quot;nombre&quot;:&quot;Estacion Movistar krt&quot;,&quot;regionId&quot;:1,&quot;estadoId&quot;:1,&quot;municipioId&quot;:1,&quot;parroquiaId&quot;:1,&quot;atributos&quot;:[{&quot;Estacion Prueba1&quot;:&quot;Prueba1&quot;,&quot;Estacion Prueba2&quot;:&quot;Prueba2&quot;,&quot;Estacion Prueba3&quot;:&quot;Prueba3&quot;}],&quot;direccion&quot;:{&quot;conglomerado&quot;:&quot;conglomerado&quot;,&quot;nombreConglomerado&quot;:&quot;nombreConglomerado&quot;,&quot;inmueble&quot;:&quot;inmueble&quot;,&quot;nombreInmueble&quot;:&quot;nombreInmueble&quot;,&quot;piso&quot;:&quot;1&quot;,&quot;numero&quot;:&quot;1&quot;,&quot;vialidad&quot;:&quot;7&quot;,&quot;nombreVialidad&quot;:&quot;nombreVialidad&quot;,&quot;vialidad2&quot;:&quot;vialidad2&quot;,&quot;nombreVialidad2&quot;:&quot;nombreVialidad2&quot;,&quot;puntoReferencia&quot;:&quot;puntoReferencia&quot;,&quot;codigoPostal&quot;:&quot;codigoPostal&quot;,&quot;ciudad&quot;:&quot;ciudad&quot;,&quot;parroquia&quot;:&quot;parroquia&quot;,&quot;municipio&quot;:&quot;municipio&quot;,&quot;estado&quot;:&quot;estado&quot;,&quot;pais&quot;:&quot;Venezuela&quot;,&quot;tipoUbicacion&quot;:&quot;tipoUbicacion&quot;},&quot;codigoPais&quot;:&quot;VE&quot;,&quot;mercadoId&quot;:0,&quot;clusterId&quot;:1,&quot;comentAprobacion&quot;:&quot;Prueba krt&quot;,&quot;tmveOwner&quot;:true,&quot;estatus&quot;:0,&quot;createdBy&quot;:&quot;krt&quot;}
+
+10:24:59.300 response time in milliseconds: 1002
+1 &lt; 404
+1 &lt; content-length: 195
+1 &lt; content-type: application/json
+1 &lt; set-cookie: 7ebc866ebb4d2d727ca53353a6c0c030=126a0d116249904aeec188af06a28666; path=/; HttpOnly
+1 &lt; Set-Cookie: 7ebc866ebb4d2d727ca53353a6c0c030=126a0d116249904aeec188af06a28666; path=/; HttpOnly
+{&quot;success&quot;:false,&quot;data&quot;:{&quot;code&quot;:&quot;404&quot;,&quot;status&quot;:&quot;NOT_FOUND&quot;,&quot;message&quot;:&quot;NOT_FOUND: RefCluster with ID 1 not found&quot;,&quot;errors&quot;:[&quot;NOT_FOUND: RefCluster with ID 1 not found&quot;]},&quot;timestamp&quot;:1756563899320}
+
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then failed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 400</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-19">
+          <a>status</a>
+      </div>
+      <div id="msg-19" class="collapse collapsable-details  in ">
+        <pre>status code was: 404, expected: 400, response time in milliseconds: 1002, url: http://estaciones-bff-git-dev-front-oss.apps.tmve-nprod-1.tmve-qa.com/api/v1/estaciones/, response: 
+{&quot;success&quot;:false,&quot;data&quot;:{&quot;code&quot;:&quot;404&quot;,&quot;status&quot;:&quot;NOT_FOUND&quot;,&quot;message&quot;:&quot;NOT_FOUND: RefCluster with ID 1 not found&quot;,&quot;errors&quot;:[&quot;NOT_FOUND: RefCluster with ID 1 not found&quot;]},&quot;timestamp&quot;:1756563899320}
+classpath:api/crearEstacion.feature:84</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-20">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-20" class="collapse collapsable-details">
+        <pre>10:24:59.300 classpath:api/crearEstacion.feature:84
+Then status 400
+status code was: 404, expected: 400, response time in milliseconds: 1002, url: http://estaciones-bff-git-dev-front-oss.apps.tmve-nprod-1.tmve-qa.com/api/v1/estaciones/, response: 
+{&quot;success&quot;:false,&quot;data&quot;:{&quot;code&quot;:&quot;404&quot;,&quot;status&quot;:&quot;NOT_FOUND&quot;,&quot;message&quot;:&quot;NOT_FOUND: RefCluster with ID 1 not found&quot;,&quot;errors&quot;:[&quot;NOT_FOUND: RefCluster with ID 1 not found&quot;]},&quot;timestamp&quot;:1756563899320}
+classpath:api/crearEstacion.feature:84
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">match response.success == false</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">match response.data.code == &quot;400&quot;</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def responseText = karate.pretty(response)</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def isValid = schemaUtil.isValid(errorSchema, responseText)</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">match isValid == true</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">print 'Error creando estacion con id de Mercado en 0:', response.data.message</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">print '=== TIEMPO DE RESPUESTA DEL FEATURE ===', responseTime / 1000, 's'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
 
 
 

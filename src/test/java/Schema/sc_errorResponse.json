@@ -6,6 +6,10 @@
       "type": "boolean",
       "enum": [false]
     },
+    "timestamp": {
+      "type": "integer",
+      "minimum": 0
+    },
     "data": {
       "type": "object",
       "properties": {
@@ -18,10 +22,6 @@
         }
       },
       "required": ["code", "status", "message", "errors"]
-    },
-    "timestamp": {
-      "type": "integer",
-      "minimum": 0
     }
   },
   "required": ["success", "timestamp"]

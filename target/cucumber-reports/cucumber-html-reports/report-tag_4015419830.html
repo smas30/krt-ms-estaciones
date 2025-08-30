@@ -76,7 +76,7 @@ $(document).ready(function() {
     <tr class="info">
       <td>krt-ms-estaciones</td>
         <td>1.0</td>
-      <td>29 ago. 2025, 10:46</td>
+      <td>30 ago. 2025, 10:25</td>
     </tr>
   </tbody>
 </table>
@@ -129,19 +129,19 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">@obtenerPorId</td>
-          <td      class="passed"    >3</td>
-          <td      class="failed"    >1</td>
-          <td     class="skipped"   >3</td>
+          <td      class="passed"    >7</td>
+          <td >0</td>
+          <td >0</td>
           <td >0</td>
           <td >0</td>
           <td class="total">7</td>
 
+          <td  class="passed"    >1</td>
           <td >0</td>
-          <td  class="failed"    >1</td>
           <td class="total">1</td>
 
-          <td class="duration" data-value="543867600">0.543</td>
-          <td class="failed">Failed</td>
+          <td class="duration" data-value="1045576900">1.045</td>
+          <td class="passed">Passed</td>
         </tr>
         </tbody>
 
@@ -180,16 +180,15 @@ $(document).ready(function() {
 <div class="tags indention">
     <b>Tags:</b>
        <a href="report-tag_4015419830.html">@obtenerPorId</a>
-       <a href="report-tag_307059126.html">@obtenerEstacionPorId</a>
 </div>
 
 
-  <span class="lead-duration duration">0.543</span>
+  <span class="lead-duration duration">1.045</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Scenario</span>
   <span class="name">Obtener una estacion por ID especifico y verificar que el servicio responde con status 200 y los datos de la estacion</span>
 
@@ -200,16 +199,16 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-1" class="collapse collapsable-details  in ">
+  <div id="element-1" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-2">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-2">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -219,7 +218,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-2" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-2" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -254,7 +253,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">url baseUrl + '/' + id</span>
 
-  <span class="lead-duration duration">0.005</span>
+  <span class="lead-duration duration">0.010</span>
 
 </div>
 
@@ -281,7 +280,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method GET</span>
 
-  <span class="lead-duration duration">0.526</span>
+  <span class="lead-duration duration">1.032</span>
 
 </div>
 
@@ -299,25 +298,25 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-3" class="collapse collapsable-details">
-        <pre>09:30:32.723 request:
+        <pre>08:46:33.899 request:
 1 &gt; GET http://estaciones-bff-git-dev-front-oss.apps.tmve-nprod-1.tmve-qa.com/api/v1/estaciones//20
 1 &gt; Content-Type: application/json
 1 &gt; X-USER-ID: E11011
 1 &gt; X-CORRELATION-ID: 1445|E11011|234234
-1 &gt; X-TOKEN-ID: eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IjlBRkYyMUY4RjQ3ODQwRkYzNjREOTg2NjBERUYwRkVGIiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU2NDc0MjMxLCJleHAiOjE3NTY0Nzc4MzF9.aa9YHgKIZOGpAcZgnmTGslZp3pSlRAoJr7Ul9vno4WS31U4bljEM4sgWLLvQMANq
+1 &gt; X-TOKEN-ID: eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IjVDRDYxOUEwMUE2REExOERCQjIyQTg1RjMwRkUwREM2Iiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU2NTU3OTkzLCJleHAiOjE3NTY1NjE1OTN9.yCb0dfpddl8BB7Mg5uUR3yRivNcW1bgi2ucYn88TNIU-dG4qsYXJv54rL2DxRvvT
 1 &gt; Host: estaciones-bff-git-dev-front-oss.apps.tmve-nprod-1.tmve-qa.com
 1 &gt; Connection: Keep-Alive
 1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
 1 &gt; Accept-Encoding: gzip,deflate
 
 
-09:30:33.253 response time in milliseconds: 530
-1 &lt; 400
-1 &lt; content-length: 395
-1 &lt; content-type: application/json
-1 &lt; set-cookie: 7ebc866ebb4d2d727ca53353a6c0c030=739fd5a9a7733606de7260d59fb218e7; path=/; HttpOnly
-1 &lt; Set-Cookie: 7ebc866ebb4d2d727ca53353a6c0c030=739fd5a9a7733606de7260d59fb218e7; path=/; HttpOnly
-{&quot;success&quot;:false,&quot;data&quot;:{&quot;code&quot;:&quot;400&quot;,&quot;status&quot;:&quot;BAD_REQUEST&quot;,&quot;message&quot;:&quot;Error injecting ve.com.telefonica.infrastructure.MDireccionesService ve.com.telefonica.domain.service.DefaultStationService.serviceDireccion&quot;,&quot;errors&quot;:[&quot;Error injecting ve.com.telefonica.infrastructure.MDireccionesService ve.com.telefonica.domain.service.DefaultStationService.serviceDireccion&quot;]},&quot;timestamp&quot;:1756474233064}
+08:46:34.931 response time in milliseconds: 1032
+1 &lt; 200
+1 &lt; content-length: 847
+1 &lt; content-type: application/json;charset=UTF-8
+1 &lt; set-cookie: 7ebc866ebb4d2d727ca53353a6c0c030=9ebf70f993b47330852a058d80b6f286; path=/; HttpOnly
+1 &lt; Set-Cookie: 7ebc866ebb4d2d727ca53353a6c0c030=9ebf70f993b47330852a058d80b6f286; path=/; HttpOnly
+{&quot;success&quot;:true,&quot;data&quot;:{&quot;estacion&quot;:{&quot;id&quot;:20,&quot;idEstacion&quot;:16154,&quot;codigo&quot;:&quot;cod20&quot;,&quot;nombre&quot;:&quot;SAN_BERNARDINO\t\t\t\t\t\t\t\t\t\t\t  &quot;,&quot;regionId&quot;:1,&quot;estadoId&quot;:10,&quot;municipioId&quot;:80,&quot;parroquiaId&quot;:295,&quot;direccion&quot;:&quot;AVENIDA LOS PROCERES . CALLE CARLOS SOUBLETTE . EDIFICIO FENICIA.  NULL. REFERENCIA AL NOR-OESTE DEL CENTRO MEDICO. LOCALIDAD SAN BERNARDINO. CIUDAD INFORMACION NO CARGADA.\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t&quot;,&quot;codigoPais&quot;:&quot;VE&quot;,&quot;mercadoId&quot;:1,&quot;clusterId&quot;:54,&quot;atributos&quot;:[{}],&quot;comentAprobacion&quot;:&quot;&quot;,&quot;tmveOwner&quot;:true,&quot;estatus&quot;:1,&quot;estatusMorinre&quot;:3,&quot;createdBy&quot;:&quot;ROOT&quot;},&quot;direccionTemporal&quot;:{&quot;estacionId&quot;:0,&quot;regionId&quot;:0,&quot;estadoId&quot;:0,&quot;municipioId&quot;:0,&quot;parroquiaId&quot;:0,&quot;direccion&quot;:&quot;&quot;,&quot;estatusMorinre&quot;:0}},&quot;timestamp&quot;:1756557994929}
 
 </pre>
       </div>
@@ -334,11 +333,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then failed">
+<div class="brief step-name-Then passed">
   <span class="keyword indention">Then</span>
   <span class="name">status 200</span>
 
-  <span class="lead-duration duration">0.011</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -347,37 +346,9 @@ $(document).ready(function() {
 
 
 
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-4">
-          <a>status</a>
-      </div>
-      <div id="msg-4" class="collapse collapsable-details  in ">
-        <pre>status code was: 400, expected: 200, response time in milliseconds: 530, url: http://estaciones-bff-git-dev-front-oss.apps.tmve-nprod-1.tmve-qa.com/api/v1/estaciones//20, response: 
-{&quot;success&quot;:false,&quot;data&quot;:{&quot;code&quot;:&quot;400&quot;,&quot;status&quot;:&quot;BAD_REQUEST&quot;,&quot;message&quot;:&quot;Error injecting ve.com.telefonica.infrastructure.MDireccionesService ve.com.telefonica.domain.service.DefaultStationService.serviceDireccion&quot;,&quot;errors&quot;:[&quot;Error injecting ve.com.telefonica.infrastructure.MDireccionesService ve.com.telefonica.domain.service.DefaultStationService.serviceDireccion&quot;]},&quot;timestamp&quot;:1756474233064}
-classpath:api/obtenerEstacionPorId.feature:23</pre>
-      </div>
-    </div>
-  </div>
 
 
 
-
-  <div class="inner-level">
-    <div class="docstring indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-5">
-          <a>Doc string</a>
-      </div>
-      <div id="msg-5" class="collapse collapsable-details">
-        <pre>09:30:33.273 classpath:api/obtenerEstacionPorId.feature:23
-Then status 200
-status code was: 400, expected: 200, response time in milliseconds: 530, url: http://estaciones-bff-git-dev-front-oss.apps.tmve-nprod-1.tmve-qa.com/api/v1/estaciones//20, response: 
-{&quot;success&quot;:false,&quot;data&quot;:{&quot;code&quot;:&quot;400&quot;,&quot;status&quot;:&quot;BAD_REQUEST&quot;,&quot;message&quot;:&quot;Error injecting ve.com.telefonica.infrastructure.MDireccionesService ve.com.telefonica.domain.service.DefaultStationService.serviceDireccion&quot;,&quot;errors&quot;:[&quot;Error injecting ve.com.telefonica.infrastructure.MDireccionesService ve.com.telefonica.domain.service.DefaultStationService.serviceDireccion&quot;]},&quot;timestamp&quot;:1756474233064}
-classpath:api/obtenerEstacionPorId.feature:23
-</pre>
-      </div>
-    </div>
-  </div>
 
 
 
@@ -389,7 +360,7 @@ classpath:api/obtenerEstacionPorId.feature:23
       <div class="step">
 
 
-<div class="brief step-name-And skipped">
+<div class="brief step-name-And passed">
   <span class="keyword indention">And</span>
   <span class="name">match response.success == true</span>
 
@@ -416,11 +387,11 @@ classpath:api/obtenerEstacionPorId.feature:23
       <div class="step">
 
 
-<div class="brief step-name-* skipped">
+<div class="brief step-name-* passed">
   <span class="keyword indention">*</span>
   <span class="name">print 'Datos obtenidos en la consulta', id, ':', response</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.001</span>
 
 </div>
 
@@ -432,6 +403,55 @@ classpath:api/obtenerEstacionPorId.feature:23
 
 
 
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-4">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-4" class="collapse collapsable-details">
+        <pre>08:46:34.931 [print] Datos obtenidos en la consulta 20 : {
+  &quot;success&quot;: true,
+  &quot;data&quot;: {
+    &quot;estacion&quot;: {
+      &quot;id&quot;: 20,
+      &quot;idEstacion&quot;: 16154,
+      &quot;codigo&quot;: &quot;cod20&quot;,
+      &quot;nombre&quot;: &quot;SAN_BERNARDINO\t\t\t\t\t\t\t\t\t\t\t  &quot;,
+      &quot;regionId&quot;: 1,
+      &quot;estadoId&quot;: 10,
+      &quot;municipioId&quot;: 80,
+      &quot;parroquiaId&quot;: 295,
+      &quot;direccion&quot;: &quot;AVENIDA LOS PROCERES . CALLE CARLOS SOUBLETTE . EDIFICIO FENICIA.  NULL. REFERENCIA AL NOR-OESTE DEL CENTRO MEDICO. LOCALIDAD SAN BERNARDINO. CIUDAD INFORMACION NO CARGADA.\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t&quot;,
+      &quot;codigoPais&quot;: &quot;VE&quot;,
+      &quot;mercadoId&quot;: 1,
+      &quot;clusterId&quot;: 54,
+      &quot;atributos&quot;: [
+        {
+        }
+      ],
+      &quot;comentAprobacion&quot;: &quot;&quot;,
+      &quot;tmveOwner&quot;: true,
+      &quot;estatus&quot;: 1,
+      &quot;estatusMorinre&quot;: 3,
+      &quot;createdBy&quot;: &quot;ROOT&quot;
+    },
+    &quot;direccionTemporal&quot;: {
+      &quot;estacionId&quot;: 0,
+      &quot;regionId&quot;: 0,
+      &quot;estadoId&quot;: 0,
+      &quot;municipioId&quot;: 0,
+      &quot;parroquiaId&quot;: 0,
+      &quot;direccion&quot;: &quot;&quot;,
+      &quot;estatusMorinre&quot;: 0
+    }
+  },
+  &quot;timestamp&quot;: 1756557994929
+}
+ 
+</pre>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -443,7 +463,7 @@ classpath:api/obtenerEstacionPorId.feature:23
       <div class="step">
 
 
-<div class="brief step-name-And skipped">
+<div class="brief step-name-And passed">
   <span class="keyword indention">And</span>
   <span class="name">print '=== TIEMPO DE RESPUESTA DEL FEATURE ===', responseTime / 1000, 's'</span>
 
@@ -459,6 +479,17 @@ classpath:api/obtenerEstacionPorId.feature:23
 
 
 
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-5">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-5" class="collapse collapsable-details">
+        <pre>08:46:34.931 [print] === TIEMPO DE RESPUESTA DEL FEATURE === 1.032 s 
+</pre>
+      </div>
+    </div>
+  </div>
 
 
 
